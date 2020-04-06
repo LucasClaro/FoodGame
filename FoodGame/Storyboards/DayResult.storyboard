@@ -10,7 +10,7 @@
         <!--Day View Controller-->
         <scene sceneID="BZ0-N4-nIg">
             <objects>
-                <viewController id="bLP-Uv-z1T" customClass="DayViewController" customModule="StarRank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bLP-Uv-z1T" customClass="DayViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Itc-Ko-j97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-jL-do6">
+                                <rect key="frame" x="114" y="730" width="185" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jogar novamente">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eP9-E0-pxw" kind="show" id="MnV-an-sLk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l12-2I-KHN">
+                                <rect key="frame" x="158" y="786" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Menu Inicial"/>
+                                <connections>
+                                    <segue destination="rC9-pL-ZDJ" kind="show" id="1Cm-ey-8F5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -199,6 +218,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLi-an-xgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3059.4202898550725" y="-837.05357142857144"/>
+        </scene>
+        <!--ImagineTheGame-->
+        <scene sceneID="hJc-Xa-8d4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImagineTheGame" id="eP9-E0-pxw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mpW-7R-QqP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwc-l3-2Am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2430" y="-640"/>
+        </scene>
+        <!--StartMenu-->
+        <scene sceneID="Iax-Qi-nwi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StartMenu" id="rC9-pL-ZDJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0xd-Wg-iot"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5c-dV-Ni9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2506" y="-597"/>
         </scene>
     </scenes>
     <resources>

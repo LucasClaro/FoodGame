@@ -15,6 +15,7 @@
 		B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6948C64242D45C800A2315C /* LaunchScreen.storyboard */; };
 		B6948C71242D45C800A2315C /* FoodGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C70242D45C800A2315C /* FoodGameTests.swift */; };
 		B6948C7C242D45C800A2315C /* FoodGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C7B242D45C800A2315C /* FoodGameUITests.swift */; };
+		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
 		F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274045E243B90C800855269 /* ImagineTheGame.swift */; };
 		F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740460243B90E800855269 /* ImagineTheGame.storyboard */; };
 		F2740463243B936700855269 /* MealResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2740462243B936700855269 /* MealResult.swift */; };
@@ -55,6 +56,7 @@
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
 		B6948C7D242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
 		F274045E243B90C800855269 /* ImagineTheGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagineTheGame.swift; sourceTree = "<group>"; };
 		F2740460243B90E800855269 /* ImagineTheGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagineTheGame.storyboard; sourceTree = "<group>"; };
 		F2740462243B936700855269 /* MealResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResult.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				F2740460243B90E800855269 /* ImagineTheGame.storyboard */,
 				F2740466243B939500855269 /* MealResult.storyboard */,
 				F2740468243B93A300855269 /* DayResult.storyboard */,
+				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
+				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
 				F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */,
 				F2740469243B93A300855269 /* DayResult.storyboard in Resources */,
 				B6948C63242D45C800A2315C /* Assets.xcassets in Resources */,
