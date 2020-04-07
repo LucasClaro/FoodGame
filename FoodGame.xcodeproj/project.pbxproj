@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02777BB9243BD74000521891 /* felipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02777BB8243BD74000521891 /* felipe.swift */; };
+		02777BBC243BD75200521891 /* felipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* felipe.storyboard */; };
 		050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBE4243BD7D200FF22DB /* Config.storyboard */; };
 		050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE6243BD87500FF22DB /* ConfigViewController.swift */; };
 		050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02777BB8243BD74000521891 /* felipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = felipe.swift; sourceTree = "<group>"; };
+		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/felipe.storyboard; sourceTree = "<group>"; };
 		050ADBE4243BD7D200FF22DB /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		050ADBE6243BD87500FF22DB /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				B6948C62242D45C800A2315C /* Assets.xcassets */,
 				B6948C64242D45C800A2315C /* LaunchScreen.storyboard */,
 				B6948C67242D45C800A2315C /* Info.plist */,
+				02777BB8243BD74000521891 /* felipe.swift */,
+				02777BBA243BD75200521891 /* felipe.storyboard */,
 				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
 				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
 				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
@@ -306,6 +312,7 @@
 			files = (
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
+				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
 				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
 				F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */,
 				F2740469243B93A300855269 /* DayResult.storyboard in Resources */,
@@ -338,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02777BB9243BD74000521891 /* felipe.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
 				F2740463243B936700855269 /* MealResult.swift in Sources */,
 				B6948C5E242D45C600A2315C /* ViewController.swift in Sources */,
@@ -385,6 +393,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		02777BBA243BD75200521891 /* felipe.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02777BBB243BD75200521891 /* Base */,
+			);
+			name = felipe.storyboard;
+			sourceTree = "<group>";
+		};
 		B6948C5F242D45C600A2315C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
