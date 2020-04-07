@@ -149,13 +149,11 @@
 				B6948C62242D45C800A2315C /* Assets.xcassets */,
 				B6948C64242D45C800A2315C /* LaunchScreen.storyboard */,
 				B6948C67242D45C800A2315C /* Info.plist */,
-				050ADBE4243BD7D200FF22DB /* Config.storyboard */,
 				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
 				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
 				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
 				050ADBEC243BDA5100FF22DB /* TableCell.swift */,
 				050ADBEE243BDA9000FF22DB /* TableViewController.swift */,
-				050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */,
 				050ADBF3243BDBEE00FF22DB /* TutorialPageViewController.swift */,
 			);
 			path = FoodGame;
@@ -182,6 +180,8 @@
 		F274045C243B907C00855269 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				050ADBE4243BD7D200FF22DB /* Config.storyboard */,
+				050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */,
 				F2740460243B90E800855269 /* ImagineTheGame.storyboard */,
 				F2740466243B939500855269 /* MealResult.storyboard */,
 				F2740468243B93A300855269 /* DayResult.storyboard */,
@@ -350,7 +350,6 @@
 				B6948C5C242D45C600A2315C /* SceneDelegate.swift in Sources */,
 				050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

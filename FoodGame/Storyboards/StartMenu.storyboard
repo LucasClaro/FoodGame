@@ -32,6 +32,9 @@
                                 <state key="normal" title="Configurações" image="x.circle" catalog="system">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="M4M-kR-hEF" kind="show" id="QWP-Py-cI2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botões que realmente vão ter no jogo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-6r-DpL">
                                 <rect key="frame" x="116" y="295" width="182" height="60"/>
@@ -63,6 +66,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-d8-5LV">
+                                <rect key="frame" x="169" y="688" width="76" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Tutorial"/>
+                                <connections>
+                                    <segue destination="XmL-9z-xXS" kind="show" id="7aE-5g-oIf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
@@ -73,10 +85,12 @@
             </objects>
             <point key="canvasLocation" x="-2628.985507246377" y="-628.125"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Config-->
         <scene sceneID="ncO-gS-c2b">
             <objects>
-                <viewControllerPlaceholder id="M4M-kR-hEF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Config" id="M4M-kR-hEF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Scb-Ve-2dM"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-D9-nmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2083.3333333333335" y="-638.16964285714278"/>
@@ -90,6 +104,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPV-w1-MWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2083.3333333333335" y="-498.21428571428567"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="Mk5-7L-55R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="XmL-9z-xXS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ppo-r4-VMC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5z-z4-rTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2103" y="-427"/>
         </scene>
     </scenes>
     <resources>
