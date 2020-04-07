@@ -75,6 +75,15 @@
                                     <segue destination="XmL-9z-xXS" kind="show" id="7aE-5g-oIf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-RB-YVp">
+                                <rect key="frame" x="142" y="748" width="130" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Personagem"/>
+                                <connections>
+                                    <segue destination="uLB-oY-Cpu" kind="show" id="acF-Qa-Eew"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
@@ -93,7 +102,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-D9-nmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2083.3333333333335" y="-638.16964285714278"/>
+            <point key="canvasLocation" x="-2083" y="-663"/>
         </scene>
         <!--ImagineTheGame-->
         <scene sceneID="M9e-Ok-1pg">
@@ -103,7 +112,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPV-w1-MWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2083.3333333333335" y="-498.21428571428567"/>
+            <point key="canvasLocation" x="-2062" y="-628"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="Mk5-7L-55R">
@@ -113,7 +122,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5z-z4-rTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2103" y="-427"/>
+            <point key="canvasLocation" x="-2104" y="-594"/>
+        </scene>
+        <!--felipe-->
+        <scene sceneID="5el-2r-5qA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="felipe" id="uLB-oY-Cpu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QVK-jv-2dM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sH-md-pQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2096" y="-537"/>
         </scene>
     </scenes>
     <resources>
