@@ -120,6 +120,13 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		05D70B5D243F97D9006E6094 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		B6948C4D242D45C600A2315C = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +206,7 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				05D70B5D243F97D9006E6094 /* Tutorial */,
 				F274045E243B90C800855269 /* ImagineTheGame.swift */,
 				F2740462243B936700855269 /* MealResult.swift */,
 				F2740464243B937E00855269 /* DayResult.swift */,
