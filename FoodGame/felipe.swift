@@ -106,7 +106,7 @@ class segunda: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
 
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
@@ -165,7 +165,7 @@ class terceira: UIViewController{
     @IBOutlet var temHipertensao: UISwitch!
     @IBOutlet var temIntolerancia: UISwitch!
     @IBOutlet var isVegetariano: UISwitch!
-    var vetor: [Int] = []
+    var vetor: [String] = []
     var i = 0
     
     
@@ -183,34 +183,56 @@ class terceira: UIViewController{
     
     @IBAction func switchDiab(_ sender: UISwitch) {
         if temDiabetes.isOn{
-            temDiabetes.tag = 1;
-            vetor.append(1)
+            vetor.append("1")
             i += 1
-            
-            
+        }
+        if temDiabetes.isOn == false{
+            if let index = vetor.firstIndex(of: "1"){
+                vetor.remove(at: index)
+                print("Removido")
+            }
         }
     }
     @IBAction func switchHiper(_ sender: UISwitch) {
         if temHipertensao.isOn{
-            temHipertensao.tag = 2;
-            vetor.append(2)
+            vetor.append("2")
             i+=1
-                }
+        }
+        
+        if temHipertensao.isOn == false{
+            if let index = vetor.firstIndex(of: "2"){
+                vetor.remove(at: index)
+                print("Removido")
+            }
+        }
+        
     }
         
     
     @IBAction func switchInto(_ sender: UISwitch) {
-        if temIntolerancia.isOn{
-            temIntolerancia.tag = 3;
-            vetor.append(3)
-            i+=1
-        } 
+            if temIntolerancia.isOn {
+                vetor.append("3")
+                i+=1
+            }
+        
+            if temIntolerancia.isOn == false {
+                if let index = vetor.firstIndex(of: "3"){
+                    vetor.remove(at: index)
+                    print("Removido")
+                }
+            }
     }
     @IBAction func switchVeggie(_ sender: UISwitch) {
         if isVegetariano.isOn{
-            isVegetariano.tag = 4;
-            vetor.append(4)
+            vetor.append("4")
             i+=1
+        }
+        
+        if isVegetariano.isOn == false{
+            if let index = vetor.firstIndex(of: "4"){
+                vetor.remove(at: index)
+                print("Removido")
+            }
         }
     }
     
@@ -247,7 +269,7 @@ class dados{
 }
 
 class prato: UIViewController{
-    var vetor: [Int] = []
+    var vetor: [String] = []
     
     @IBOutlet weak var varNao: UIButton!
     @IBOutlet weak var varSim: UIButton!
@@ -256,7 +278,7 @@ class prato: UIViewController{
     
     @IBAction func botaoSim(_ sender: UIButton) {
         for i in 0..<vetor.count{
-            if vetor[i] == 3{
+            if vetor[i] == "3"{
                 confirma = true;
                 achou = true;
             }
@@ -274,8 +296,6 @@ class prato: UIViewController{
         if segue.identifier == "sim"{
             if let result = segue.destination as? telaResult{
                 result.prato = confirma
-                
-                
             }
         }
         if segue.identifier == "nao"{

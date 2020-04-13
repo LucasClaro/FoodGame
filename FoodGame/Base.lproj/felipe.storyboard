@@ -250,7 +250,6 @@
         <!--Navigation Controller-->
         <scene sceneID="LVy-EP-ytq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P9B-yp-mo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sEi-Cy-hWV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="WER-6P-Uuc">
@@ -266,6 +265,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Ag-OY-qff"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9B-yp-mo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="-38"/>
         </scene>
@@ -329,14 +329,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-lc-qec">
-                                <rect key="frame" x="184" y="472" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="P3k-jj-AXH" kind="show" id="R5q-Cw-Lgo"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX1-dC-soo">
                                 <rect key="frame" x="35" y="78" width="344" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -356,22 +348,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFG-sm-Mze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4037.68115942029" y="-38.169642857142854"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pdx-Pn-QRL">
-            <objects>
-                <viewController id="P3k-jj-AXH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YFS-lG-szA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="3kX-TI-tWa"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="UOw-2i-iIY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="chS-7d-m1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4786" y="-38"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
