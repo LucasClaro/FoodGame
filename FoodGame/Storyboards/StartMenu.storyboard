@@ -81,7 +81,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="M4M-kR-hEF" kind="presentation" id="QWP-Py-cI2"/>
+                                    <segue destination="M4M-kR-hEF" kind="show" id="QWP-Py-cI2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJq-JS-edg">

@@ -271,11 +271,11 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F2E83C30244635D50085BF25 /* Results */,
-				F2E83C2F244635C60085BF25 /* Menus */,
 				05BFA2A024465B41006E126A /* Configuracao */,
 				B6DD84AE2444FB6000106F25 /* Controles */,
+				F2E83C2F244635C60085BF25 /* Menus */,
 				B6DD84AB2444F1DC00106F25 /* Pause */,
+				F2E83C30244635D50085BF25 /* Results */,
 				05D70B5D243F97D9006E6094 /* Tutorial */,
 			);
 			path = src;
