@@ -10,12 +10,11 @@
 import UIKit
 import AVFoundation
 
-class ConfigViewController: UIViewController {
+class ConfigViewController: UITableViewController {
     
     @IBOutlet weak var musicVol: UISlider!
     @IBOutlet weak var soundVol: UISlider!
-    @IBOutlet weak var lblMV: UILabel!
-    @IBOutlet weak var lblSV: UILabel!
+    
     var mv = 0.0,sv = 0.0
     var player = AVAudioPlayer()
     
@@ -38,11 +37,11 @@ class ConfigViewController: UIViewController {
     @objc func musicVolChange()
     {
         player.volume = musicVol.value
-        lblMV.text = "\(musicVol.value)"
+
     }
     @objc func soundVolChange()
     {
-        lblSV.text = "\(soundVol.value)"
+        
     }
     /*
     // MARK: - Navigation
