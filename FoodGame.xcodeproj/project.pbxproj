@@ -29,6 +29,9 @@
 		B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6948C64242D45C800A2315C /* LaunchScreen.storyboard */; };
 		B6948C71242D45C800A2315C /* FoodGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C70242D45C800A2315C /* FoodGameTests.swift */; };
 		B6948C7C242D45C800A2315C /* FoodGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C7B242D45C800A2315C /* FoodGameUITests.swift */; };
+		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
+		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
+		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
 		F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274045E243B90C800855269 /* ImagineTheGame.swift */; };
 		F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740460243B90E800855269 /* ImagineTheGame.storyboard */; };
@@ -84,6 +87,9 @@
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
 		B6948C7D242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
+		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
+		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
 		F274045E243B90C800855269 /* ImagineTheGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagineTheGame.swift; sourceTree = "<group>"; };
 		F2740460243B90E800855269 /* ImagineTheGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagineTheGame.storyboard; sourceTree = "<group>"; };
@@ -207,6 +213,22 @@
 			path = FoodGameUITests;
 			sourceTree = "<group>";
 		};
+		B6DD84AB2444F1DC00106F25 /* Pause */ = {
+			isa = PBXGroup;
+			children = (
+				B6DD84AC2444F1EF00106F25 /* PauseVC.swift */,
+			);
+			path = Pause;
+			sourceTree = "<group>";
+		};
+		B6DD84AE2444FB6000106F25 /* Controles */ = {
+			isa = PBXGroup;
+			children = (
+				B6DD84AF2444FBD600106F25 /* CustonButton.swift */,
+			);
+			path = Controles;
+			sourceTree = "<group>";
+		};
 		F274045C243B907C00855269 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +238,7 @@
 				F2740466243B939500855269 /* MealResult.storyboard */,
 				F2740468243B93A300855269 /* DayResult.storyboard */,
 				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
+				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -223,6 +246,8 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B6DD84AE2444FB6000106F25 /* Controles */,
+				B6DD84AB2444F1DC00106F25 /* Pause */,
 				05D70B5D243F97D9006E6094 /* Tutorial */,
 				F274045E243B90C800855269 /* ImagineTheGame.swift */,
 				F2740462243B936700855269 /* MealResult.swift */,
@@ -347,6 +372,7 @@
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
 				F2740467243B939500855269 /* MealResult.storyboard in Resources */,
+				B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +399,7 @@
 			files = (
 				02777BB9243BD74000521891 /* felipe.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
+				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
 				F2740463243B936700855269 /* MealResult.swift in Sources */,
 				B6948C5E242D45C600A2315C /* ViewController.swift in Sources */,
 				B6948C5A242D45C600A2315C /* AppDelegate.swift in Sources */,
@@ -386,6 +413,7 @@
 				B6948C5C242D45C600A2315C /* SceneDelegate.swift in Sources */,
 				050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
+				B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
