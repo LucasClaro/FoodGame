@@ -90,6 +90,14 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
         }
     }
     
+    func fowardPage()
+    {
+        currentIndex += 1
+        if let nextViewControllers = contentViewController(at: currentIndex){
+            setViewControllers([nextViewControllers], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
