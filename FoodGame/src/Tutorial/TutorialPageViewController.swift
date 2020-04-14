@@ -14,8 +14,10 @@ protocol TutorialPageViewControllerDelegate : class {
 
 class TutorialPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    let titleTu = ["O que é","Como funciona","Não sei","F"]
     let pageHeadings = ["Designed by FreepikPrimeira tela","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
     let pageSubHeadings = ["1111111111111111111111111","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    
     let pageImages = ["img.jpg","img.jpg","img.jpg","img.jpg"]
     
     weak var tutorialDelegate : TutorialPageViewControllerDelegate?
@@ -58,9 +60,19 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
         }
         
         if let pageContentViewController = UIStoryboard.init(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: "TutorialContentViewController") as? TutorialContentViewController {
-            pageContentViewController.imageFile = pageImages[index]
-            pageContentViewController.heading = pageHeadings[index]
-            pageContentViewController.subHeading = pageSubHeadings[index]
+            pageContentViewController.titleText = titleTu[index]
+            
+            pageContentViewController.imageFileTop = pageImages[index]
+            pageContentViewController.headingTop = pageHeadings[index]
+            pageContentViewController.subHeadingTop = pageSubHeadings[index]
+            
+            pageContentViewController.imageFileMid = pageImages[index]
+            pageContentViewController.headingMid = pageHeadings[index]
+            pageContentViewController.subHeadingMid = pageSubHeadings[index]
+            
+            pageContentViewController.imageFileBot = pageImages[index]
+            pageContentViewController.headingBot = pageHeadings[index]
+            pageContentViewController.subHeadingBot = pageSubHeadings[index]
             pageContentViewController.index = index
             
             return pageContentViewController

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SxB-Ol-lSK">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,7 +10,7 @@
         <!--Tutorial Page View Controller-->
         <scene sceneID="cZY-Kg-Nat">
             <objects>
-                <pageViewController storyboardIdentifier="TutorialPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="U10-vg-E23" customClass="TutorialPageViewController" customModule="proofPageView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="TutorialPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="U10-vg-E23" customClass="TutorialPageViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaL-04-9KY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="53"/>
@@ -18,35 +18,111 @@
         <!--Tutorial Content View Controller-->
         <scene sceneID="B9q-EI-Bnc">
             <objects>
-                <viewController storyboardIdentifier="TutorialContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vEU-0C-Co2" customClass="TutorialContentViewController" customModule="proofPageView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vEU-0C-Co2" customClass="TutorialContentViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFp-sZ-mwU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Lic-7r-lVo">
-                                <rect key="frame" x="25" y="94" width="364" height="428"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-XA-DxE">
+                                <rect key="frame" x="176.33333333333334" y="79" width="61.666666666666657" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-Nr-wUH">
+                                <rect key="frame" x="70" y="153" width="274" height="360"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-Gj-6gV">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="323"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="C2t-Gj-6gV" secondAttribute="height" multiplier="364:323" id="DTa-Ao-syR"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-lB-g1b">
-                                        <rect key="frame" x="137.5" y="373" width="89.5" height="55"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-R9-IKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-ab-YWR">
-                                                <rect key="frame" x="6" y="0.0" width="77.5" height="22.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
-                                                <rect key="frame" x="0.0" y="32.5" width="89.5" height="22.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-Gj-6gV">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="ahc-aR-9kA"/>
+                                                    <constraint firstAttribute="width" secondItem="C2t-Gj-6gV" secondAttribute="height" multiplier="1:1" id="nJ3-PW-EmU"/>
+                                                    <constraint firstAttribute="height" constant="100" id="yaR-7a-a5C"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-lB-g1b">
+                                                <rect key="frame" x="110" y="22.666666666666654" width="164" height="54.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-ab-YWR">
+                                                        <rect key="frame" x="43.333333333333336" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
+                                                        <rect key="frame" x="0.0" y="32.333333333333343" width="164" height="22.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Na5-L0-5wS" firstAttribute="leading" secondItem="WJP-lB-g1b" secondAttribute="leading" id="xpJ-H9-go6"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="omL-ir-12H">
+                                        <rect key="frame" x="0.0" y="130" width="274" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FiK-9q-jQV">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="FES-JO-e3B"/>
+                                                    <constraint firstAttribute="height" constant="100" id="tCp-Yd-DXN"/>
+                                                    <constraint firstAttribute="width" secondItem="FiK-9q-jQV" secondAttribute="height" multiplier="1:1" id="x18-l7-Z9a"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7bp-JN-CYF">
+                                                <rect key="frame" x="115" y="22.666666666666682" width="159" height="54.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-LR-DBi">
+                                                        <rect key="frame" x="40.999999999999993" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-Ny-pS0">
+                                                        <rect key="frame" x="34.999999999999993" y="32.333333333333314" width="89.333333333333314" height="22.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-7S-XNq">
+                                        <rect key="frame" x="0.0" y="260" width="274" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-GD-VBH">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="D2b-xK-7dL"/>
+                                                    <constraint firstAttribute="width" constant="100" id="gKE-10-qpb"/>
+                                                    <constraint firstAttribute="width" secondItem="RNb-GD-VBH" secondAttribute="height" multiplier="1:1" id="k2E-RU-40c"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FKV-XR-kGa">
+                                                <rect key="frame" x="115" y="22.666666666666682" width="159" height="54.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWA-st-K74">
+                                                        <rect key="frame" x="40.999999999999993" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-6C-vRG">
+                                                        <rect key="frame" x="34.999999999999993" y="32.333333333333314" width="89.333333333333314" height="22.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -54,18 +130,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Lic-7r-lVo" firstAttribute="leading" secondItem="EcJ-r3-lFD" secondAttribute="leading" constant="25" id="AgS-Ig-auZ"/>
-                            <constraint firstItem="EcJ-r3-lFD" firstAttribute="trailing" secondItem="Lic-7r-lVo" secondAttribute="trailing" constant="25" id="dZX-7e-as2"/>
-                            <constraint firstItem="EcJ-r3-lFD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lic-7r-lVo" secondAttribute="bottom" constant="10" id="qyZ-bW-nNB"/>
-                            <constraint firstItem="Lic-7r-lVo" firstAttribute="top" secondItem="EcJ-r3-lFD" secondAttribute="top" constant="50" id="yZp-Od-6E3"/>
+                            <constraint firstItem="Afg-Nr-wUH" firstAttribute="top" secondItem="Fdw-XA-DxE" secondAttribute="bottom" constant="38" id="7RZ-8H-37c"/>
+                            <constraint firstItem="Afg-Nr-wUH" firstAttribute="centerX" secondItem="mFp-sZ-mwU" secondAttribute="centerX" id="I0g-6u-7QV"/>
+                            <constraint firstItem="Afg-Nr-wUH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EcJ-r3-lFD" secondAttribute="leading" constant="70" id="Xy4-A5-LmL"/>
+                            <constraint firstItem="Fdw-XA-DxE" firstAttribute="centerX" secondItem="mFp-sZ-mwU" secondAttribute="centerX" id="lFf-XV-ssH"/>
+                            <constraint firstItem="Fdw-XA-DxE" firstAttribute="top" secondItem="EcJ-r3-lFD" secondAttribute="top" constant="35" id="xzD-va-v4b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EcJ-r3-lFD"/>
                     </view>
                     <size key="freeformSize" width="414" height="655"/>
                     <connections>
-                        <outlet property="contentImageView" destination="C2t-Gj-6gV" id="ZQ0-zu-ZtC"/>
-                        <outlet property="headingLabel" destination="yEb-ab-YWR" id="YQ0-AQ-Uhi"/>
-                        <outlet property="subHeadingLabel" destination="Na5-L0-5wS" id="bA1-OV-6fC"/>
+                        <outlet property="contentImageViewBot" destination="RNb-GD-VBH" id="YRU-Ey-ooH"/>
+                        <outlet property="contentImageViewMid" destination="FiK-9q-jQV" id="2RQ-DB-Z9G"/>
+                        <outlet property="contentImageViewTop" destination="C2t-Gj-6gV" id="ZQ0-zu-ZtC"/>
+                        <outlet property="headingLabelBot" destination="xWA-st-K74" id="7V5-JH-m4q"/>
+                        <outlet property="headingLabelMid" destination="hAB-LR-DBi" id="PgR-H0-Eye"/>
+                        <outlet property="headingLabelTop" destination="yEb-ab-YWR" id="YQ0-AQ-Uhi"/>
+                        <outlet property="subHeadingLabelBot" destination="pEi-6C-vRG" id="4j0-wl-7wu"/>
+                        <outlet property="subHeadingLabelMid" destination="B1w-Ny-pS0" id="HqD-ic-Tmg"/>
+                        <outlet property="subHeadingLabelTop" destination="Na5-L0-5wS" id="bA1-OV-6fC"/>
+                        <outlet property="titleTu" destination="Fdw-XA-DxE" id="SIl-hN-C1u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mso-yA-hsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -75,7 +159,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="BrX-k1-MPT">
             <objects>
-                <viewController storyboardIdentifier="TutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SxB-Ol-lSK" customClass="TutorialViewController" customModule="proofPageView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SxB-Ol-lSK" customClass="TutorialViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZE-qr-fOB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +178,7 @@
                                 <rect key="frame" x="0.0" y="655" width="414" height="241"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-fR-GPh">
-                                        <rect key="frame" x="134.5" y="72" width="145" height="97"/>
+                                        <rect key="frame" x="134.66666666666666" y="72" width="144.99999999999997" height="97"/>
                                         <subviews>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="AXd-hC-mFC">
                                                 <rect key="frame" x="45" y="0.0" width="55" height="37"/>
