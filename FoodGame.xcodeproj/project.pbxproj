@@ -140,6 +140,18 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		05BFA2A024465B41006E126A /* Configuracao */ = {
+			isa = PBXGroup;
+			children = (
+				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
+				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
+				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
+				050ADBEC243BDA5100FF22DB /* TableCell.swift */,
+				050ADBEE243BDA9000FF22DB /* TableViewController.swift */,
+			);
+			path = Configuracao;
+			sourceTree = "<group>";
+		};
 		05D70B5D243F97D9006E6094 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +206,6 @@
 				B6948C67242D45C800A2315C /* Info.plist */,
 				02777BB8243BD74000521891 /* felipe.swift */,
 				02777BBA243BD75200521891 /* felipe.storyboard */,
-				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
-				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
-				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
-				050ADBEC243BDA5100FF22DB /* TableCell.swift */,
-				050ADBEE243BDA9000FF22DB /* TableViewController.swift */,
 			);
 			path = FoodGame;
 			sourceTree = "<group>";
@@ -266,6 +273,7 @@
 			children = (
 				F2E83C30244635D50085BF25 /* Results */,
 				F2E83C2F244635C60085BF25 /* Menus */,
+				05BFA2A024465B41006E126A /* Configuracao */,
 				B6DD84AE2444FB6000106F25 /* Controles */,
 				B6DD84AB2444F1DC00106F25 /* Pause */,
 				05D70B5D243F97D9006E6094 /* Tutorial */,
