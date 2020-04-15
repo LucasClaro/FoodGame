@@ -10,7 +10,7 @@
         <!--Personagem-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="inicioClass" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="name" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1011.5942028985507" y="-38.169642857142854"/>
         </scene>
-        <!--Segunda-->
+        <!--Age-->
         <scene sceneID="3LZ-0T-0RR">
             <objects>
-                <viewController id="ikL-ns-CLe" customClass="segunda" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ikL-ns-CLe" customClass="age" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4Z-uq-5u5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="1795.6521739130437" y="-38.169642857142854"/>
         </scene>
-        <!--Terceira-->
+        <!--Conditions-->
         <scene sceneID="skl-Gk-kwJ">
             <objects>
-                <viewController id="Xss-a5-b9W" customClass="terceira" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xss-a5-b9W" customClass="conditions" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CwW-5w-ece">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
