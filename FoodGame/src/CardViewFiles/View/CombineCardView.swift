@@ -32,7 +32,11 @@ class CombineCardView: UIView {
     let fraseLabelp:UILabel = .textLabelBold(32, textColor: .white, numberOfLines: 2)
     let fraseLabels:UILabel = .textLabel(24, textColor: .white, textAlignment: .center ,numberOfLines: 3)
     
+    
+  
+  
     let aceitaImageView : UIImageView = .iconCard(named: "aceita")
+    
     let rejeitaImageView : UIImageView = .iconCard(named: "rejeita")
     
     override init(frame: CGRect) {

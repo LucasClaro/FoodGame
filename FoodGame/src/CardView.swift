@@ -103,7 +103,7 @@ class CardViewController: UIViewController {
                     card.rejeitaImageView.alpha = rotateAngle * 5 * -1
                     
                 }
-                
+                    
                 card.transform = CGAffineTransform(rotationAngle: rotateAngle)
                 
                 if gesture.state == .ended {
