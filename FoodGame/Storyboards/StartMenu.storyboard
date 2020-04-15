@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--N vai ter essa nav aqui n-->
+        <!--Menu-->
         <scene sceneID="8OK-Yf-GA3">
             <objects>
-                <viewController id="pk8-01-NiG" customClass="InitialMenuViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pk8-01-NiG" userLabel="Menu" customClass="InitialMenuViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aj7-tM-SQM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="N vai ter essa nav aqui n" id="ZSS-By-edb"/>
                     <connections>
                         <outlet property="buttonConfiguration" destination="eQQ-1g-v3R" id="s4B-cR-bff"/>
                         <outlet property="buttonPlay" destination="Jb3-u2-KSp" id="sl1-F8-Ldn"/>

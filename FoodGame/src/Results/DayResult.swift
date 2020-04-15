@@ -5,6 +5,11 @@ class DayViewController: UIViewController {
   // MARK: Variables
   
   // ViewController objects
+  @IBOutlet weak var uiViewDayInfos: UIView!
+  
+  @IBOutlet weak var buttonPlayAgain: UIButton!
+  @IBOutlet weak var buttonMenu: UIButton!
+  
   @IBOutlet var labelMealTips: UILabel!
   
   @IBOutlet var arrayOfStars: [UIImageView]!
@@ -16,18 +21,32 @@ class DayViewController: UIViewController {
   
   // MARK: View Lifecycle
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    adjustLayout()
+    coloringStars()
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     navigationController?.setNavigationBarHidden(true, animated: false)
-    
-    coloringStars()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     
     navigationController?.setNavigationBarHidden(false, animated: false)
+  }
+  
+  // MARK: Layout Methods
+  
+  func adjustLayout() {
+    
+    uiViewDayInfos.layer.cornerRadius = 30
+    buttonPlayAgain.layer.cornerRadius = 30
+    buttonMenu.layer.cornerRadius = 30
   }
   
   // MARK: Internal Logic Methods
