@@ -144,8 +144,13 @@ class segunda: UIViewController, UITextFieldDelegate{
             idadeatual.text = "Insira um valor"
                } else {
                 let conta = 2020 - idade!
-            idadeatual.text = "Legal! Então sua idade esse ano é \(conta)"
-            self.bttTela3.isHidden = false
+            if(conta < 0 || conta > 110){
+                idadeatual.text = "Insira um valor válido"
+            } else {
+                idadeatual.text = "Legal! Então sua idade esse ano é \(conta)"
+                self.bttTela3.isHidden = false
+            }
+            
             }
         
         idadeatual.isHidden = false
