@@ -37,6 +37,11 @@
 		B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6948C64242D45C800A2315C /* LaunchScreen.storyboard */; };
 		B6948C71242D45C800A2315C /* FoodGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C70242D45C800A2315C /* FoodGameTests.swift */; };
 		B6948C7C242D45C800A2315C /* FoodGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C7B242D45C800A2315C /* FoodGameUITests.swift */; };
+		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
+		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
+		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
+		F23C0345244645D800BC921A /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C0344244645D800BC921A /* Game.storyboard */; };
+		F23C034824464C2E00BC921A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C034724464C2E00BC921A /* Game.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
 		F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274045E243B90C800855269 /* ImagineTheGame.swift */; };
 		F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740460243B90E800855269 /* ImagineTheGame.storyboard */; };
@@ -44,6 +49,8 @@
 		F2740465243B937E00855269 /* DayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2740464243B937E00855269 /* DayResult.swift */; };
 		F2740467243B939500855269 /* MealResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740466243B939500855269 /* MealResult.storyboard */; };
 		F2740469243B93A300855269 /* DayResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740468243B93A300855269 /* DayResult.storyboard */; };
+		F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */; };
+		F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E83C31244636320085BF25 /* InitialMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +107,11 @@
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
 		B6948C7D242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
+		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
+		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
+		F23C0344244645D800BC921A /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		F23C034724464C2E00BC921A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
 		F274045E243B90C800855269 /* ImagineTheGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagineTheGame.swift; sourceTree = "<group>"; };
 		F2740460243B90E800855269 /* ImagineTheGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagineTheGame.storyboard; sourceTree = "<group>"; };
@@ -107,6 +119,8 @@
 		F2740464243B937E00855269 /* DayResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayResult.swift; sourceTree = "<group>"; };
 		F2740466243B939500855269 /* MealResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealResult.storyboard; sourceTree = "<group>"; };
 		F2740468243B93A300855269 /* DayResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayResult.storyboard; sourceTree = "<group>"; };
+		F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		F2E83C31244636320085BF25 /* InitialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +154,18 @@
 				050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		05BFA2A024465B41006E126A /* Configuracao */ = {
+			isa = PBXGroup;
+			children = (
+				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
+				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
+				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
+				050ADBEC243BDA5100FF22DB /* TableCell.swift */,
+				050ADBEE243BDA9000FF22DB /* TableViewController.swift */,
+			);
+			path = Configuracao;
 			sourceTree = "<group>";
 		};
 		05D70B5D243F97D9006E6094 /* Tutorial */ = {
@@ -241,11 +267,6 @@
 				B6948C67242D45C800A2315C /* Info.plist */,
 				02777BB8243BD74000521891 /* felipe.swift */,
 				02777BBA243BD75200521891 /* felipe.storyboard */,
-				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
-				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
-				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
-				050ADBEC243BDA5100FF22DB /* TableCell.swift */,
-				050ADBEE243BDA9000FF22DB /* TableViewController.swift */,
 			);
 			path = FoodGame;
 			sourceTree = "<group>";
@@ -268,9 +289,35 @@
 			path = FoodGameUITests;
 			sourceTree = "<group>";
 		};
+		B6DD84AB2444F1DC00106F25 /* Pause */ = {
+			isa = PBXGroup;
+			children = (
+				B6DD84AC2444F1EF00106F25 /* PauseVC.swift */,
+			);
+			path = Pause;
+			sourceTree = "<group>";
+		};
+		B6DD84AE2444FB6000106F25 /* Controles */ = {
+			isa = PBXGroup;
+			children = (
+				B6DD84AF2444FBD600106F25 /* CustonButton.swift */,
+			);
+			path = Controles;
+			sourceTree = "<group>";
+		};
+		F23C0346244645EA00BC921A /* Jogo */ = {
+			isa = PBXGroup;
+			children = (
+				F23C0344244645D800BC921A /* Game.storyboard */,
+				F23C034724464C2E00BC921A /* Game.swift */,
+			);
+			path = Jogo;
+			sourceTree = "<group>";
+		};
 		F274045C243B907C00855269 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				F23C0346244645EA00BC921A /* Jogo */,
 				050ADBE4243BD7D200FF22DB /* Config.storyboard */,
 				050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */,
 				F2740460243B90E800855269 /* ImagineTheGame.storyboard */,
@@ -278,6 +325,7 @@
 				F2740468243B93A300855269 /* DayResult.storyboard */,
 				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
 				78C661102445FA52000AEC7B /* CardView.storyboard */,
+				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -286,13 +334,34 @@
 			isa = PBXGroup;
 			children = (
 				78C661142445FC14000AEC7B /* CardViewFiles */,
+				05BFA2A024465B41006E126A /* Configuracao */,
+				B6DD84AE2444FB6000106F25 /* Controles */,
+				F2E83C2F244635C60085BF25 /* Menus */,
+				B6DD84AB2444F1DC00106F25 /* Pause */,
+				F2E83C30244635D50085BF25 /* Results */,
 				05D70B5D243F97D9006E6094 /* Tutorial */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F2E83C2F244635C60085BF25 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				F2E83C31244636320085BF25 /* InitialMenu.swift */,
+				F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		F2E83C30244635D50085BF25 /* Results */ = {
+			isa = PBXGroup;
+			children = (
 				F274045E243B90C800855269 /* ImagineTheGame.swift */,
 				F2740462243B936700855269 /* MealResult.swift */,
 				F2740464243B937E00855269 /* DayResult.swift */,
 				78C661122445FB0E000AEC7B /* CardView.swift */,
 			);
-			path = src;
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +470,7 @@
 			files = (
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
+				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
 				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				78C661112445FA52000AEC7B /* CardView.storyboard in Resources */,
@@ -412,6 +482,7 @@
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
 				F2740467243B939500855269 /* MealResult.storyboard in Resources */,
+				B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +508,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02777BB9243BD74000521891 /* felipe.swift in Sources */,
+				F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
+				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
 				F2740463243B936700855269 /* MealResult.swift in Sources */,
 				B6948C5E242D45C600A2315C /* ViewController.swift in Sources */,
 				78C661192445FC94000AEC7B /* UILabel.swift in Sources */,
@@ -446,6 +519,8 @@
 				05D70B63243F99D1006E6094 /* TutorialPageViewController.swift in Sources */,
 				050ADBEF243BDA9000FF22DB /* TableViewController.swift in Sources */,
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
+				F23C034824464C2E00BC921A /* Game.swift in Sources */,
+				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,
 				78C6611B2445FCFB000AEC7B /* UIImageView.swift in Sources */,
@@ -458,6 +533,7 @@
 				050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */,
 				78C661132445FB0E000AEC7B /* CardView.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
+				B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

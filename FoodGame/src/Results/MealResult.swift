@@ -11,8 +11,6 @@ class MealViewController: UIViewController {
   // MARK: Variables
   
   // ViewController objects
-  @IBOutlet weak var barButtonBack: UIBarButtonItem!
-  @IBOutlet weak var barButtonGo: UIBarButtonItem!
   
   @IBOutlet weak var labelCurrentMeal: UILabel!
   
@@ -21,6 +19,12 @@ class MealViewController: UIViewController {
   @IBOutlet weak var labelQuantityOfVegetables: UILabel!
   
   @IBOutlet weak var labelMealTips: UILabel!
+  
+  @IBOutlet weak var uiViewMealInfos: UIView!
+  
+  @IBOutlet weak var buttonHome: UIButton!
+  @IBOutlet weak var buttonDish: UIButton!
+  @IBOutlet weak var buttonNextMeal: UIButton!
   
   @IBOutlet var arrayOfStars: [UIImageView]!
   
@@ -34,29 +38,73 @@ class MealViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    labelCurrentMeal.text = currentMeal
+    checkCurrentMeal()
     
-    labelQuantityOfCarbohydrates.text = String(mealDict["\(currentMeal)"]!.carbohydrates)
-    labelQuantityOfProteins.text = String(mealDict["\(currentMeal)"]!.proteins)
-    labelQuantityOfVegetables.text = String(mealDict["\(currentMeal)"]!.vegetables)
+    adjustLayout()
+    
+    labelQuantityOfCarbohydrates.text = "Carboidratos:                         \(mealDict["\(currentMeal)"]!.carbohydrates)/5"
+    labelQuantityOfProteins.text = "Proteinas:                                \(mealDict["\(currentMeal)"]!.proteins)/5"
+    labelQuantityOfVegetables.text = "Vegetais:                                  \(mealDict["\(currentMeal)"]!.vegetables)/5"
     
     coloringStars()
     
-    checkCurrentMeal()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationController?.setNavigationBarHidden(true, animated: false)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    navigationController?.setNavigationBarHidden(false, animated: false)
+  }
+  
+  // MARK: Layout Methods
+  
+  func adjustLayout() {
+    
+    switch currentMeal {
+    case "Café":
+      view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.7450980392, blue: 0.1725490196, alpha: 1)
+      break
+    case "Almoço":
+      view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
+      break
+    case "Janta":
+      view.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2745098039, blue: 0.4431372549, alpha: 1)
+      break
+    default:
+      print("Erro na troca de cores da tela")
+    }
+
+    uiViewMealInfos.layer.cornerRadius = 30
+    buttonDish.layer.cornerRadius = 30
+    buttonNextMeal.layer.cornerRadius = 30
+    buttonHome.layer.cornerRadius = 30
   }
   
   // MARK: Internal Logic Methods
   
   //Verifica se o Index é "Janta", e liga o avançar
   func checkCurrentMeal() {
-    if(currentMeal == "Janta") {
-      barButtonBack.title = nil
-      barButtonBack.isEnabled = false
-      
-      barButtonGo.title = "Avançar"
-      barButtonGo.isEnabled = true
+    if currentMeal == "Janta" {
+      buttonNextMeal.setTitle("Como foi seu dia", for: .normal)
     }
   }
+  
+  @IBAction func nextMeal(_ sender: UIButton) {
+    if currentMeal != "Janta" {
+      performSegue(withIdentifier: "GameVC", sender: nil)
+
+    } else {
+      performSegue(withIdentifier: "DayResultVC", sender: nil)
+      
+    }
+  }
+  
   
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {

@@ -11,24 +11,45 @@ import UIKit
 class TutorialViewController: UIViewController, TutorialPageViewControllerDelegate {
 
     @IBOutlet weak var pageController: UIPageControl!
-    @IBOutlet weak var btnJogar: UIButton!
-    		
+    @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var btnSkip: UIButton!
+    
     var tutorialPageViewController : TutorialPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnJogar.isHidden = true
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func nextButtonTapped()
+    {
+        if let index = tutorialPageViewController?.currentIndex {
+            switch index {
+                case 0...2:
+                    tutorialPageViewController?.fowardPage()
+                case 3:
+                    dismiss(animated: true, completion: nil)
+                
+                default : break
+            }
+        }
+        updateUI()
+    }
+    
+    @IBAction func skipTutorial(sender: UIButton)
+    {
+        dismiss(animated: true, completion: nil)
     }
     
     func updateUI() {
         if let index = tutorialPageViewController?.currentIndex {
             switch index {
             case 0...2:
-                btnJogar.isHidden = true
-                
+                btnNext.setTitle("Próximo", for: .normal)
+                btnSkip.isHidden = false
             case 3:
-                btnJogar.isHidden = false
+                btnNext.setTitle("Jogar", for: .normal)
+                btnSkip.isHidden = true
                 
             default: break
             }
