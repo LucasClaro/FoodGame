@@ -28,5 +28,9 @@ class InitialMenuViewController: UIViewController {
     
     navigationController?.setNavigationBarHidden(false, animated: false)
   }
+  
+  @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+    
+  }
 }
 
