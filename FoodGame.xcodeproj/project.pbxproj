@@ -23,9 +23,6 @@
 		05D70B66243F9A9A006E6094 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05D70B65243F9A9A006E6094 /* img.jpg */; };
 		78C661112445FA52000AEC7B /* CardView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C661102445FA52000AEC7B /* CardView.storyboard */; };
 		78C661132445FB0E000AEC7B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661122445FB0E000AEC7B /* CardView.swift */; };
-		78C661172445FC49000AEC7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661162445FC49000AEC7B /* UIView.swift */; };
-		78C661192445FC94000AEC7B /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661182445FC94000AEC7B /* UILabel.swift */; };
-		78C6611B2445FCFB000AEC7B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6611A2445FCFB000AEC7B /* UIImageView.swift */; };
 		78C6611F2445FD98000AEC7B /* Alimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6611E2445FD98000AEC7B /* Alimento.swift */; };
 		78C661212445FDC0000AEC7B /* AlimentoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661202445FDC0000AEC7B /* AlimentoService.swift */; };
 		78C661262445FEA0000AEC7B /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661252445FEA0000AEC7B /* CombineCardView.swift */; };
@@ -40,6 +37,9 @@
 		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
 		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
 		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
+		B6DD84BA2448EB9800106F25 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84B92448EB9800106F25 /* UIImageView.swift */; };
+		B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84BB2448EBC300106F25 /* UILabel.swift */; };
+		B6DD84BE2448EBE900106F25 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84BD2448EBE900106F25 /* UIView.swift */; };
 		F23C0345244645D800BC921A /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C0344244645D800BC921A /* Game.storyboard */; };
 		F23C034824464C2E00BC921A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C034724464C2E00BC921A /* Game.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
@@ -87,9 +87,6 @@
 		05D70B65243F9A9A006E6094 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
 		78C661102445FA52000AEC7B /* CardView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardView.storyboard; sourceTree = "<group>"; };
 		78C661122445FB0E000AEC7B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		78C661162445FC49000AEC7B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		78C661182445FC94000AEC7B /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		78C6611A2445FCFB000AEC7B /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		78C6611E2445FD98000AEC7B /* Alimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alimento.swift; sourceTree = "<group>"; };
 		78C661202445FDC0000AEC7B /* AlimentoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlimentoService.swift; sourceTree = "<group>"; };
 		78C661252445FEA0000AEC7B /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
@@ -110,6 +107,9 @@
 		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
+		B6DD84B92448EB9800106F25 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		B6DD84BB2448EBC300106F25 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		B6DD84BD2448EBE900106F25 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F23C0344244645D800BC921A /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		F23C034724464C2E00BC921A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
@@ -186,49 +186,14 @@
 			path = Img;
 			sourceTree = "<group>";
 		};
-		78C661142445FC14000AEC7B /* CardViewFiles */ = {
-			isa = PBXGroup;
-			children = (
-				78C661242445FE6B000AEC7B /* View */,
-				78C6611D2445FD41000AEC7B /* Service */,
-				78C6611C2445FD36000AEC7B /* Model */,
-				78C661152445FC29000AEC7B /* Library */,
-			);
-			path = CardViewFiles;
-			sourceTree = "<group>";
-		};
-		78C661152445FC29000AEC7B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				78C661162445FC49000AEC7B /* UIView.swift */,
-				78C661182445FC94000AEC7B /* UILabel.swift */,
-				78C6611A2445FCFB000AEC7B /* UIImageView.swift */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		78C6611C2445FD36000AEC7B /* Model */ = {
+		78C661142445FC14000AEC7B /* CardView */ = {
 			isa = PBXGroup;
 			children = (
 				78C6611E2445FD98000AEC7B /* Alimento.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		78C6611D2445FD41000AEC7B /* Service */ = {
-			isa = PBXGroup;
-			children = (
 				78C661202445FDC0000AEC7B /* AlimentoService.swift */,
+				78C661122445FB0E000AEC7B /* CardView.swift */,
 			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		78C661242445FE6B000AEC7B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				78C661252445FEA0000AEC7B /* CombineCardView.swift */,
-			);
-			path = View;
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		B6948C4D242D45C600A2315C = {
@@ -300,6 +265,10 @@
 		B6DD84AE2444FB6000106F25 /* Controles */ = {
 			isa = PBXGroup;
 			children = (
+				78C661252445FEA0000AEC7B /* CombineCardView.swift */,
+				B6DD84B92448EB9800106F25 /* UIImageView.swift */,
+				B6DD84BB2448EBC300106F25 /* UILabel.swift */,
+				B6DD84BD2448EBE900106F25 /* UIView.swift */,
 				B6DD84AF2444FBD600106F25 /* CustonButton.swift */,
 			);
 			path = Controles;
@@ -333,7 +302,7 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				78C661142445FC14000AEC7B /* CardViewFiles */,
+				78C661142445FC14000AEC7B /* CardView */,
 				05BFA2A024465B41006E126A /* Configuracao */,
 				B6DD84AE2444FB6000106F25 /* Controles */,
 				F2E83C2F244635C60085BF25 /* Menus */,
@@ -359,7 +328,6 @@
 				F274045E243B90C800855269 /* ImagineTheGame.swift */,
 				F2740462243B936700855269 /* MealResult.swift */,
 				F2740464243B937E00855269 /* DayResult.swift */,
-				78C661122445FB0E000AEC7B /* CardView.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -513,7 +481,8 @@
 				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
 				F2740463243B936700855269 /* MealResult.swift in Sources */,
 				B6948C5E242D45C600A2315C /* ViewController.swift in Sources */,
-				78C661192445FC94000AEC7B /* UILabel.swift in Sources */,
+				B6DD84BA2448EB9800106F25 /* UIImageView.swift in Sources */,
+				B6DD84BE2448EBE900106F25 /* UIView.swift in Sources */,
 				B6948C5A242D45C600A2315C /* AppDelegate.swift in Sources */,
 				050ADBEB243BDA0900FF22DB /* CustomCollectionCell.swift in Sources */,
 				05D70B63243F99D1006E6094 /* TutorialPageViewController.swift in Sources */,
@@ -521,15 +490,14 @@
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
 				F23C034824464C2E00BC921A /* Game.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
+				B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,
-				78C6611B2445FCFB000AEC7B /* UIImageView.swift in Sources */,
 				050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */,
 				78C6611F2445FD98000AEC7B /* Alimento.swift in Sources */,
 				78C661212445FDC0000AEC7B /* AlimentoService.swift in Sources */,
 				78C661262445FEA0000AEC7B /* CombineCardView.swift in Sources */,
 				B6948C5C242D45C600A2315C /* SceneDelegate.swift in Sources */,
-				78C661172445FC49000AEC7B /* UIView.swift in Sources */,
 				050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */,
 				78C661132445FB0E000AEC7B /* CardView.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
