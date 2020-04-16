@@ -27,7 +27,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rC9-pL-ZDJ" kind="show" id="g9q-Xb-uq4"/>
+                                    <action selector="voltaTela" destination="bLP-Uv-z1T" eventType="touchUpInside" id="eV2-C5-mXR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcO-ci-c3S">

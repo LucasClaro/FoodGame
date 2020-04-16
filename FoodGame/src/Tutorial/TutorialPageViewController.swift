@@ -13,17 +13,18 @@ protocol TutorialPageViewControllerDelegate : class {
 }
 
 class TutorialPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    
+    // MARK: Valores tutorial
     let titleTu = ["O que é","Como funciona","Não sei","F"]
     let pageHeadings = ["Designed by FreepikPrimeira tela","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
     let pageSubHeadings = ["1111111111111111111111111","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
     
     let pageImages = ["img.jpg","img.jpg","img.jpg","img.jpg"]
+    //Falta adicionar o texto e im do Mid e Bot, atualmente usando tudo do Top
     
     weak var tutorialDelegate : TutorialPageViewControllerDelegate?
     
     var currentIndex = 0
-    
+    //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +36,7 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
         }
         
     }
-    
+    //MARK: DataSource e Delegate
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! TutorialContentViewController).index
 
@@ -89,7 +90,7 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
             }
         }
     }
-    
+    //MARK: Funcao para btnNext
     func fowardPage()
     {
         currentIndex += 1

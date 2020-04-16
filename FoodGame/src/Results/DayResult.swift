@@ -39,7 +39,6 @@ class DayViewController: UIViewController {
     
     navigationController?.setNavigationBarHidden(false, animated: false)
   }
-  
   // MARK: Layout Methods
   
   func adjustLayout() {
@@ -102,4 +101,9 @@ class DayViewController: UIViewController {
       break
     }
   }
+    
+    @IBAction func voltaTela()
+    {
+        navigationController?.popToRootViewController(animated: true) 
+    }
 }
