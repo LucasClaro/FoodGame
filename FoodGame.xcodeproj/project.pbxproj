@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02777BB9243BD74000521891 /* felipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02777BB8243BD74000521891 /* felipe.swift */; };
-		02777BBC243BD75200521891 /* felipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* felipe.storyboard */; };
+		02777BBC243BD75200521891 /* Personagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* Personagem.storyboard */; };
+		02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F02447739A00FC81F4 /* NameAndAge.swift */; };
+		02E361F32447744F00FC81F4 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F22447744F00FC81F4 /* Conditions.swift */; };
+		02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F42447751C00FC81F4 /* ConditionsResult.swift */; };
 		050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBE4243BD7D200FF22DB /* Config.storyboard */; };
 		050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE6243BD87500FF22DB /* ConfigViewController.swift */; };
 		050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */; };
@@ -71,8 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02777BB8243BD74000521891 /* felipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = felipe.swift; sourceTree = "<group>"; };
-		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/felipe.storyboard; sourceTree = "<group>"; };
+		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
+		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
+		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
+		02E361F42447751C00FC81F4 /* ConditionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsResult.swift; sourceTree = "<group>"; };
 		050ADBE4243BD7D200FF22DB /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		050ADBE6243BD87500FF22DB /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E361EF244772E700FC81F4 /* Personagem */ = {
+			isa = PBXGroup;
+			children = (
+				02E361F02447739A00FC81F4 /* NameAndAge.swift */,
+				02E361F22447744F00FC81F4 /* Conditions.swift */,
+				02E361F42447751C00FC81F4 /* ConditionsResult.swift */,
+			);
+			path = Personagem;
+			sourceTree = "<group>";
+		};
 		050ADBF5243BDD5100FF22DB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +279,6 @@
 				B6948C62242D45C800A2315C /* Assets.xcassets */,
 				B6948C64242D45C800A2315C /* LaunchScreen.storyboard */,
 				B6948C67242D45C800A2315C /* Info.plist */,
-				02777BB8243BD74000521891 /* felipe.swift */,
-				02777BBA243BD75200521891 /* felipe.storyboard */,
 			);
 			path = FoodGame;
 			sourceTree = "<group>";
@@ -326,6 +338,7 @@
 				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
 				78C661102445FA52000AEC7B /* CardView.storyboard */,
 				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
+				02777BBA243BD75200521891 /* Personagem.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 				B6DD84AE2444FB6000106F25 /* Controles */,
 				F2E83C2F244635C60085BF25 /* Menus */,
 				B6DD84AB2444F1DC00106F25 /* Pause */,
+				02E361EF244772E700FC81F4 /* Personagem */,
 				F2E83C30244635D50085BF25 /* Results */,
 				05D70B5D243F97D9006E6094 /* Tutorial */,
 			);
@@ -471,7 +485,7 @@
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
-				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
+				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				78C661112445FA52000AEC7B /* CardView.storyboard in Resources */,
 				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
@@ -507,7 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02777BB9243BD74000521891 /* felipe.swift in Sources */,
+				02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */,
 				F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
 				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
@@ -521,6 +535,7 @@
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
 				F23C034824464C2E00BC921A /* Game.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
+				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,
 				78C6611B2445FCFB000AEC7B /* UIImageView.swift in Sources */,
@@ -531,6 +546,7 @@
 				B6948C5C242D45C600A2315C /* SceneDelegate.swift in Sources */,
 				78C661172445FC49000AEC7B /* UIView.swift in Sources */,
 				050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */,
+				02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */,
 				78C661132445FB0E000AEC7B /* CardView.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
 				B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */,
@@ -569,12 +585,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02777BBA243BD75200521891 /* felipe.storyboard */ = {
+		02777BBA243BD75200521891 /* Personagem.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				02777BBB243BD75200521891 /* Base */,
 			);
-			name = felipe.storyboard;
+			name = Personagem.storyboard;
 			sourceTree = "<group>";
 		};
 		B6948C5F242D45C600A2315C /* Main.storyboard */ = {
