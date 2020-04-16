@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02777BBC243BD75200521891 /* felipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* felipe.storyboard */; };
+		02777BBC243BD75200521891 /* Personagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* Personagem.storyboard */; };
 		02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F02447739A00FC81F4 /* NameAndAge.swift */; };
 		02E361F32447744F00FC81F4 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F22447744F00FC81F4 /* Conditions.swift */; };
 		02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F42447751C00FC81F4 /* ConditionsResult.swift */; };
@@ -65,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/felipe.storyboard; sourceTree = "<group>"; };
+		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		02E361F42447751C00FC81F4 /* ConditionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsResult.swift; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 				F2740468243B93A300855269 /* DayResult.storyboard */,
 				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
 				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
-				02777BBA243BD75200521891 /* felipe.storyboard */,
+				02777BBA243BD75200521891 /* Personagem.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
-				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
+				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
 				F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */,
@@ -513,12 +513,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02777BBA243BD75200521891 /* felipe.storyboard */ = {
+		02777BBA243BD75200521891 /* Personagem.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				02777BBB243BD75200521891 /* Base */,
 			);
-			name = felipe.storyboard;
+			name = Personagem.storyboard;
 			sourceTree = "<group>";
 		};
 		B6948C5F242D45C600A2315C /* Main.storyboard */ = {

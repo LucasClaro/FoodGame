@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="-2098" y="-459"/>
         </scene>
-        <!--felipe-->
+        <!--Personagem-->
         <scene sceneID="5el-2r-5qA">
             <objects>
-                <viewControllerPlaceholder storyboardName="felipe" id="uLB-oY-Cpu" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Personagem" id="uLB-oY-Cpu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QVK-jv-2dM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sH-md-pQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

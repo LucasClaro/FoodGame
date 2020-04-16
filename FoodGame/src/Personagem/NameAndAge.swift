@@ -9,86 +9,48 @@
 import Foundation
 import UIKit
 
-class name: UIViewController {
+class name: UIViewController, UITextFieldDelegate{
     
-    var nome: String! = nil
-    @IBOutlet var telinha: UIView!
-    @IBOutlet var botao: UIButton!
+    @IBOutlet weak var verificaNome: UILabel!
     @IBOutlet var varBotaoJoga: UIButton!
+    @IBOutlet weak var nomeField: UITextField!
+    @IBOutlet weak var sobrenomeField: UITextField!
     
-    
-    
-    // MARK:- !*!*!*!*!*!*!*!*!*!*! BEGGINING OF ALERT CONTROLLER FOR NAME !*!*!*!*!*!*!*!*!*!*!
-    @IBAction func colocaNome(_ sender: UIButton) {
-        
-            // Setting up alert controller
-            let alertController = UIAlertController(title: "Nome", message: nil, preferredStyle: .alert)
-            
-            
-            // Set up the actions
-            let addAdction = UIAlertAction(title: "Adicionar", style: .default){ _ in
-            
-            // Grab text field text
-            guard let name = alertController.textFields?.first?.text else {return}
-            
-            // Create name
-            self.nome = name
-            self.botao.setTitle(name, for: .normal)
-            self.botao.isEnabled = false
-                self.varBotaoJoga.isHidden = false
-                
-            // Add name <!-- not used in here, it is used on table view, which is not our case --!>
-            
-            
-            // Reload name in table view <!-- not used in here --!>
-        }
-        
-            addAdction.isEnabled = false;
-            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
-            
-            
-            // Add the text field
-            alertController.addTextField{ textField in
-                
-                textField.placeholder = "Digite o nome..."
-                textField.addTarget(self, action: #selector(self.handleTextChanged), for: .editingChanged)
-                }
-        
-            // Add the actions
-            alertController.addAction(addAdction) // first added here here !*!
-            alertController.addAction(cancelAction)
-            
-            // Present
-            present(alertController, animated: true)
-        }
-    
-    @objc private func handleTextChanged(_ sender:UITextField){
-        
-        // Grab the alert controller and add action
-        guard let alertController = presentedViewController as? UIAlertController,
-            let addAction = alertController.actions.first, // first as in first added !*!
-            let text = sender.text
-            else {
-                return
-            }
-        
-        // Enable add action if text is empty or contain white spaces
-        addAction.isEnabled = !text.trimmingCharacters(in: .whitespaces).isEmpty
-        
-    }
-    // MARK:-!*!*!*!*!*!*!*!*!*!*!*! ENDING OF ALERT CONTROLLER FOR NAME !*!*!*!*!*!*!*!*!*!*!*!
-        
     // MARK:- ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        verificaNome.isHidden = true
+        nomeField.delegate = self
+        sobrenomeField.delegate = self
+        varBotaoJoga.backgroundColor = .systemBlue
+        varBotaoJoga.setTitleColor(.white, for: .normal)
+        varBotaoJoga.layer.cornerRadius = 30
         
     }
     // MARK:- Sends info from view 1 to view 2
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "identificador"{
             if let secondVC = segue.destination as? age{
-                secondVC.objetoInfo = nome
+                secondVC.objetoInfo = nomeField.text
             }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           self.view.endEditing(true)
+           verifica()
+           return false
+       }
+    
+    func verifica(){
+        varBotaoJoga.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        if nomeField.text == "" || varBotaoJoga.isEnabled == false{
+            verificaNome.isHidden = false
+            verificaNome.text = "Digite o seu nome"
+        } else {
+            verificaNome.isHidden = true
+            varBotaoJoga.isEnabled = true
         }
     }
     
@@ -105,14 +67,6 @@ class age: UIViewController, UITextFieldDelegate{
     // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-
-        view.addGestureRecognizer(tap)
-        
         
         caixaTexto.delegate = self
         
@@ -135,31 +89,30 @@ class age: UIViewController, UITextFieldDelegate{
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
     
-    // MARK:- "Ok" button for age
-       @IBAction func botaoIdade(_ sender: Any) {
+    func valida(){
         let idade = Int(caixaTexto.text!)
         
             
         if caixaTexto.text == nil || caixaTexto.text == ""{
-            idadeatual.text = "Insira um valor"
+            idadeatual.text = "Insira um ano"
                } else {
                 let conta = 2020 - idade!
             if(conta < 0 || conta > 110){
-                idadeatual.text = "Insira um valor válido"
+                idadeatual.text = "Insira um ano válido"
             } else {
-                idadeatual.text = "Legal! Então sua idade esse ano é \(conta)"
+                idadeatual.text = ""
                 self.bttTela3.isHidden = false
             }
             
             }
         
         idadeatual.isHidden = false
-           
-       }
+    }
     
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        valida()
+        return false
     }
     
 }
