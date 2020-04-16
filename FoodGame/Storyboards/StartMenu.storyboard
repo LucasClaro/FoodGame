@@ -49,6 +49,15 @@
                                     <segue destination="uLB-oY-Cpu" kind="show" id="acF-Qa-Eew"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-OD-y8Q">
+                                <rect key="frame" x="159" y="797" width="97" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="CardView"/>
+                                <connections>
+                                    <segue destination="Veg-Im-bVg" kind="show" id="maz-Eo-rxm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-Su-dka">
                                 <rect key="frame" x="298" y="641" width="63" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,6 +174,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOG-u2-u8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2628" y="-206"/>
+        </scene>
+        <!--CardView-->
+        <scene sceneID="VVE-Hv-Nvx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardView" id="Veg-Im-bVg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I8v-93-EmG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eR1-KN-q7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2020" y="-482"/>
         </scene>
     </scenes>
     <resources>
