@@ -173,7 +173,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOG-u2-u8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2628" y="-206"/>
+            <point key="canvasLocation" x="-2628" y="-202"/>
         </scene>
         <!--CardView-->
         <scene sceneID="VVE-Hv-Nvx">

@@ -32,7 +32,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="4Y0-cD-Jdb" kind="showDetail" id="KIO-Xu-JL2"/>
+                                                    <segue destination="2ii-FI-qTd" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="cCQ-QM-qgZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFH-OO-n8R" customClass="CustonButton" customModule="FoodGame" customModuleProvider="target">
@@ -43,6 +43,9 @@
                                                 <state key="normal" title="Reiniciar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="ScJ-AC-8kf" kind="show" id="BHG-ee-aiz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Jr-RiB" customClass="CustonButton" customModule="FoodGame" customModuleProvider="target">
                                                 <rect key="frame" x="39" y="360" width="294" height="48"/>
@@ -84,8 +87,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0A-oq-E8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2ii-FI-qTd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1181.1594202898552" y="-773.4375"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="4QE-bQ-R0E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="ScJ-AC-8kf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zPo-0X-2TT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-Rb-UEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="-824"/>
         </scene>
         <!--Config-->
         <scene sceneID="EvO-Jz-fEH">
@@ -95,15 +109,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfl-bt-oHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="-787"/>
-        </scene>
-        <!--StartMenu-->
-        <scene sceneID="OIp-M3-g84">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StartMenu" id="4Y0-cD-Jdb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U4x-kv-MHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-613" y="-715"/>
+            <point key="canvasLocation" x="-662" y="-735"/>
         </scene>
     </scenes>
 </document>

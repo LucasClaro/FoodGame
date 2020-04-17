@@ -27,19 +27,19 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rC9-pL-ZDJ" kind="show" id="g9q-Xb-uq4"/>
+                                    <segue destination="NtI-ya-AXh" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="6mB-Ad-aKa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcO-ci-c3S">
                                 <rect key="frame" x="20" y="713" width="374" height="66"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="3mo-51-ht8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Jogar Novamente">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="eP9-E0-pxw" kind="show" id="7fp-7o-tQF"/>
@@ -251,6 +251,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLi-an-xgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NtI-ya-AXh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3059.4202898550725" y="-837.05357142857144"/>
         </scene>
@@ -263,16 +264,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwc-l3-2Am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2463" y="-660"/>
-        </scene>
-        <!--StartMenu-->
-        <scene sceneID="Iax-Qi-nwi">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StartMenu" id="rC9-pL-ZDJ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0xd-Wg-iot"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R5c-dV-Ni9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2506" y="-597"/>
         </scene>
     </scenes>
     <resources>
