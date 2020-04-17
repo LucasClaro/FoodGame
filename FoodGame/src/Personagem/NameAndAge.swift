@@ -48,9 +48,10 @@ class name: UIViewController, UITextFieldDelegate{
         if nomeField.text == "" || varBotaoJoga.isEnabled == false{
             verificaNome.isHidden = false
             verificaNome.text = "Digite o seu nome"
+            varBotaoJoga.isHidden = true
         } else {
             verificaNome.isHidden = true
-            varBotaoJoga.isEnabled = true
+            varBotaoJoga.isHidden = false
         }
     }
     
@@ -63,16 +64,20 @@ class age: UIViewController, UITextFieldDelegate{
     @IBOutlet var caixaTexto: UITextField!
     @IBOutlet var label: UILabel!
     var objetoInfo:String?
-
+    let defaults = UserDefaults.standard
+    
     // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         caixaTexto.delegate = self
-        
         idadeatual.isHidden = true
-        
         label.numberOfLines = 10
+        defaults.set(objetoInfo, forKey: "Nome")
+        
+        bttTela3.backgroundColor = .systemBlue
+        bttTela3.setTitleColor(.white, for: .normal)
+        bttTela3.layer.cornerRadius = 30
+        
         
         if objetoInfo != nil{
             label.text = "Olá " + objetoInfo! + ", " + "\nSeja bem-vindo(a)"
@@ -102,6 +107,8 @@ class age: UIViewController, UITextFieldDelegate{
             } else {
                 idadeatual.text = ""
                 self.bttTela3.isHidden = false
+                defaults.set(conta, forKey: "Idade")
+                
             }
             
             }
@@ -113,6 +120,47 @@ class age: UIViewController, UITextFieldDelegate{
         self.view.endEditing(true)
         valida()
         return false
+    }
+    
+}
+
+class sexo: UIViewController {
+    @IBOutlet weak var checkFem: UIButton!
+    @IBOutlet weak var checkMasc: UIButton!
+    @IBOutlet weak var bttProx: UIButton!
+    let defaults = UserDefaults.standard
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bttProx.backgroundColor = .systemBlue
+        bttProx.setTitleColor(.white, for: .normal)
+        bttProx.layer.cornerRadius = 30
+    }
+    
+    @IBAction func bttFem(_ sender: UIButton) {
+        if(checkMasc.isSelected){
+            checkMasc.isSelected = false
+            checkFem.isSelected = true
+            defaults.set("F", forKey: "Sexo")
+            bttProx.isHidden = false
+        } else {
+            checkFem.isSelected = true
+            defaults.set("F", forKey: "Sexo")
+            bttProx.isHidden = false
+        }
+    }
+    
+    @IBAction func bttMasc(_ sender: UIButton) {
+        if(checkFem.isSelected){
+            checkFem.isSelected = false
+            checkMasc.isSelected = true
+            defaults.set("M", forKey: "Sexo")
+            bttProx.isHidden = false
+        } else {
+            checkMasc.isSelected = true
+            defaults.set("M", forKey: "Sexo")
+            bttProx.isHidden = false
+        }
     }
     
 }
