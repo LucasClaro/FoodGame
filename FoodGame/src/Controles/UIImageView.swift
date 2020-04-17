@@ -1,11 +1,18 @@
 //
 //  UIImageView.swift
+//  FoodGame
+//
+//  Created by Lucas Claro on 16/04/20.
+//  Copyright © 2020 Lucas Claro. All rights reserved.
+//
+
+//
+//  UIImageView.swift
 //  testStoryboard
 //
 //  Created by Glauber Moreira on 09/04/20.
 //  Copyright © 2020 Glauber Moreira. All rights reserved.
 //
-
 import UIKit
 
 extension UIImageView {

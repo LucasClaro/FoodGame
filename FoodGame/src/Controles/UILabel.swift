@@ -5,7 +5,6 @@
 //  Created by Glauber Moreira on 08/04/20.
 //  Copyright © 2020 Glauber Moreira. All rights reserved.
 //
-
 import UIKit
 
 extension UILabel {

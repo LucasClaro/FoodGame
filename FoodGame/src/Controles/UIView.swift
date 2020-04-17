@@ -5,7 +5,6 @@
 //  Created by Glauber Moreira on 14/04/20.
 //  Copyright © 2020 Glauber Moreira. All rights reserved.
 //
-
 import UIKit
 
 extension UIView {
