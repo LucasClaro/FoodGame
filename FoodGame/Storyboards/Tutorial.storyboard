@@ -19,42 +19,46 @@
         <scene sceneID="B9q-EI-Bnc">
             <objects>
                 <viewController storyboardIdentifier="TutorialContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vEU-0C-Co2" customClass="TutorialContentViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mFp-sZ-mwU">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="mFp-sZ-mwU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-XA-DxE">
-                                <rect key="frame" x="176.33333333333334" y="79" width="61.666666666666657" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-XA-DxE">
+                                <rect key="frame" x="172" y="99" width="70" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-Nr-wUH">
-                                <rect key="frame" x="70" y="153" width="274" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-Nr-wUH">
+                                <rect key="frame" x="70" y="169.66666666666663" width="239" height="295"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-R9-IKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="274" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="65"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-Gj-6gV">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="ahc-aR-9kA"/>
+                                                    <constraint firstAttribute="width" constant="65" id="ahc-aR-9kA"/>
                                                     <constraint firstAttribute="width" secondItem="C2t-Gj-6gV" secondAttribute="height" multiplier="1:1" id="nJ3-PW-EmU"/>
-                                                    <constraint firstAttribute="height" constant="100" id="yaR-7a-a5C"/>
+                                                    <constraint firstAttribute="height" constant="65" id="yaR-7a-a5C"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-lB-g1b">
-                                                <rect key="frame" x="110" y="22.666666666666654" width="164" height="54.666666666666657"/>
+                                                <rect key="frame" x="75" y="4.6666666666666856" width="164" height="56"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-ab-YWR">
-                                                        <rect key="frame" x="43.333333333333336" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-ab-YWR">
+                                                        <rect key="frame" x="41" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
-                                                        <rect key="frame" x="0.0" y="32.333333333333343" width="164" height="22.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
+                                                        <rect key="frame" x="0.0" y="33.666666666666657" width="164" height="22.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.329999999999998" id="8Uj-gz-6j0"/>
+                                                            <constraint firstAttribute="width" constant="164" id="i09-3q-LKm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -66,28 +70,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="omL-ir-12H">
-                                        <rect key="frame" x="0.0" y="130" width="274" height="100"/>
+                                        <rect key="frame" x="0.0" y="115.00000000000003" width="239" height="65"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FiK-9q-jQV">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="FES-JO-e3B"/>
-                                                    <constraint firstAttribute="height" constant="100" id="tCp-Yd-DXN"/>
+                                                    <constraint firstAttribute="width" constant="65" id="FES-JO-e3B"/>
+                                                    <constraint firstAttribute="height" constant="65" id="tCp-Yd-DXN"/>
                                                     <constraint firstAttribute="width" secondItem="FiK-9q-jQV" secondAttribute="height" multiplier="1:1" id="x18-l7-Z9a"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7bp-JN-CYF">
-                                                <rect key="frame" x="115" y="22.666666666666682" width="159" height="54.666666666666657"/>
+                                                <rect key="frame" x="80" y="6.6666666666666288" width="159" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-LR-DBi">
-                                                        <rect key="frame" x="40.999999999999993" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <rect key="frame" x="38.666666666666657" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-Ny-pS0">
-                                                        <rect key="frame" x="34.999999999999993" y="32.333333333333314" width="89.333333333333314" height="22.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <rect key="frame" x="42.666666666666664" y="33.666666666666686" width="73.666666666666686" height="18.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -96,28 +100,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-7S-XNq">
-                                        <rect key="frame" x="0.0" y="260" width="274" height="100"/>
+                                        <rect key="frame" x="0.0" y="230" width="239" height="65"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-GD-VBH">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="D2b-xK-7dL"/>
-                                                    <constraint firstAttribute="width" constant="100" id="gKE-10-qpb"/>
+                                                    <constraint firstAttribute="height" constant="65" id="D2b-xK-7dL"/>
+                                                    <constraint firstAttribute="width" constant="65" id="gKE-10-qpb"/>
                                                     <constraint firstAttribute="width" secondItem="RNb-GD-VBH" secondAttribute="height" multiplier="1:1" id="k2E-RU-40c"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FKV-XR-kGa">
-                                                <rect key="frame" x="115" y="22.666666666666682" width="159" height="54.666666666666657"/>
+                                                <rect key="frame" x="80" y="6.0000000000000036" width="159" height="53.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWA-st-K74">
-                                                        <rect key="frame" x="40.999999999999993" y="0.0" width="77.333333333333314" height="22.333333333333332"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <rect key="frame" x="38.666666666666657" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-6C-vRG">
-                                                        <rect key="frame" x="34.999999999999993" y="32.333333333333314" width="89.333333333333314" height="22.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <rect key="frame" x="40" y="33.666666666666629" width="79" height="19.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -130,11 +134,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Afg-Nr-wUH" firstAttribute="top" secondItem="Fdw-XA-DxE" secondAttribute="bottom" constant="38" id="7RZ-8H-37c"/>
+                            <constraint firstItem="Afg-Nr-wUH" firstAttribute="top" secondItem="Fdw-XA-DxE" secondAttribute="bottom" constant="30" id="7RZ-8H-37c"/>
                             <constraint firstItem="Afg-Nr-wUH" firstAttribute="centerX" secondItem="mFp-sZ-mwU" secondAttribute="centerX" id="I0g-6u-7QV"/>
                             <constraint firstItem="Afg-Nr-wUH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EcJ-r3-lFD" secondAttribute="leading" constant="70" id="Xy4-A5-LmL"/>
                             <constraint firstItem="Fdw-XA-DxE" firstAttribute="centerX" secondItem="mFp-sZ-mwU" secondAttribute="centerX" id="lFf-XV-ssH"/>
-                            <constraint firstItem="Fdw-XA-DxE" firstAttribute="top" secondItem="EcJ-r3-lFD" secondAttribute="top" constant="35" id="xzD-va-v4b"/>
+                            <constraint firstItem="Fdw-XA-DxE" firstAttribute="top" secondItem="EcJ-r3-lFD" secondAttribute="top" constant="55" id="xzD-va-v4b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EcJ-r3-lFD"/>
                     </view>

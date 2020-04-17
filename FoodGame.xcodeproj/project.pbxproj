@@ -19,6 +19,9 @@
 		050ADBEF243BDA9000FF22DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBEE243BDA9000FF22DB /* TableViewController.swift */; };
 		050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */; };
 		050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */; };
+		05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33C244A33600092E3AE /* IconsPersonagem.png */; };
+		05CDA340244A33600092E3AE /* IconsCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33D244A33600092E3AE /* IconsCard.png */; };
+		05CDA341244A33600092E3AE /* IconsPrato.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33E244A33600092E3AE /* IconsPrato.png */; };
 		05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70B5E243F99D1006E6094 /* TutorialContentViewController.swift */; };
 		05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70B5F243F99D1006E6094 /* TutorialViewController.swift */; };
 		05D70B63243F99D1006E6094 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D70B60243F99D1006E6094 /* TutorialPageViewController.swift */; };
@@ -85,6 +88,9 @@
 		050ADBEE243BDA9000FF22DB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soviet-anthem.mp3"; sourceTree = "<group>"; };
+		05CDA33C244A33600092E3AE /* IconsPersonagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPersonagem.png; sourceTree = "<group>"; };
+		05CDA33D244A33600092E3AE /* IconsCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsCard.png; sourceTree = "<group>"; };
+		05CDA33E244A33600092E3AE /* IconsPrato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPrato.png; sourceTree = "<group>"; };
 		05D70B5E243F99D1006E6094 /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
 		05D70B5F243F99D1006E6094 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		05D70B60243F99D1006E6094 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,9 @@
 		05D70B64243F9A80006E6094 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				05CDA33D244A33600092E3AE /* IconsCard.png */,
+				05CDA33C244A33600092E3AE /* IconsPersonagem.png */,
+				05CDA33E244A33600092E3AE /* IconsPrato.png */,
 				05D70B65243F9A9A006E6094 /* img.jpg */,
 			);
 			path = Img;
@@ -453,15 +462,19 @@
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
+				05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */,
+				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				78C661112445FA52000AEC7B /* CardView.storyboard in Resources */,
 				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
 				F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */,
+				05CDA341244A33600092E3AE /* IconsPrato.png in Resources */,
 				F2740469243B93A300855269 /* DayResult.storyboard in Resources */,
 				B6948C63242D45C800A2315C /* Assets.xcassets in Resources */,
 				050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */,
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
+				05CDA340244A33600092E3AE /* IconsCard.png in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
 				F2740467243B939500855269 /* MealResult.storyboard in Resources */,
 				B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */,
