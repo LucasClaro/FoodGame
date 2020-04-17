@@ -44,12 +44,17 @@ class InitialMenuViewController: UIViewController {
     
     navigationController?.setNavigationBarHidden(false, animated: false)
   }
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let configViewController = segue.destination as? ConfigViewController {
             configViewController.volumeChangedDelegate = self
         }
     }
+  
+  @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+    
+  }
+
 }
 
 extension InitialMenuViewController : VolumeChangedDelegate {
