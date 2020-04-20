@@ -9,18 +9,18 @@
 import UIKit
 
 class TutorialViewController: UIViewController, TutorialPageViewControllerDelegate {
-
+    //MARK: Outlets
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnSkip: UIButton!
     
     var tutorialPageViewController : TutorialPageViewController?
-    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+    //MARK:Funcoes
     @IBAction func nextButtonTapped()
     {
         if let index = tutorialPageViewController?.currentIndex {

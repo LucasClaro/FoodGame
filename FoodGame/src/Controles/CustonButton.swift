@@ -23,7 +23,7 @@ class CustonButton: UIButton {
     
     private func desenharBtn(){
         setTitleColor(.white, for: .normal)
-        backgroundColor = .blue
+        backgroundColor = .systemBlue
         
         layer.cornerRadius = 10
     }

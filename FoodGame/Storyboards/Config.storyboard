@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="fZd-jp-KJa" customClass="TableViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RFh-Zs-k74">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -102,51 +102,75 @@
             </objects>
             <point key="canvasLocation" x="972" y="-595"/>
         </scene>
-        <!--View Controller-->
+        <!--Créditos-->
         <scene sceneID="rjH-6U-osY">
             <objects>
                 <viewController id="yDt-ak-dQ7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vdq-30-wPv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quV-Mn-EkZ">
-                                <rect key="frame" x="52.5" y="119" width="309" height="604"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INm-Pc-5VC">
+                                <rect key="frame" x="20" y="143" width="374" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Créditos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTx-VH-RYa">
-                                        <rect key="frame" x="122" y="58" width="65" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogo desenvolvido por:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-Z2-umd">
+                                        <rect key="frame" x="81" y="30" width="213" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Felipe Ferreira" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-c6-apb">
+                                        <rect key="frame" x="128" y="172" width="118" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaaa" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFP-ud-QZf">
-                                        <rect key="frame" x="8" y="117" width="293" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glauber Santos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbt-zz-rSV">
+                                        <rect key="frame" x="128" y="227" width="118" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jader Gedeon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-Kj-eDa">
+                                        <rect key="frame" x="128" y="337" width="118" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Igor Kenzo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-IC-DHJ">
+                                        <rect key="frame" x="128" y="282" width="118" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lucas Claro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-EW-ogr">
+                                        <rect key="frame" x="128" y="392" width="118" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="São Paulo 2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-Pg-en9">
+                                        <rect key="frame" x="147" y="543" width="81" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="qFP-ud-QZf" firstAttribute="leading" secondItem="quV-Mn-EkZ" secondAttribute="leading" constant="8" id="GlB-jh-hbn"/>
-                                    <constraint firstItem="qFP-ud-QZf" firstAttribute="top" secondItem="VTx-VH-RYa" secondAttribute="bottom" constant="38" id="Oqd-Kq-gug"/>
-                                    <constraint firstItem="VTx-VH-RYa" firstAttribute="top" secondItem="quV-Mn-EkZ" secondAttribute="top" constant="58" id="clW-Vc-AE6"/>
-                                    <constraint firstItem="VTx-VH-RYa" firstAttribute="leading" secondItem="quV-Mn-EkZ" secondAttribute="leading" constant="122" id="gPt-gT-hda"/>
-                                    <constraint firstAttribute="trailing" secondItem="VTx-VH-RYa" secondAttribute="trailing" constant="122" id="twn-gH-Q6G"/>
-                                    <constraint firstAttribute="trailing" secondItem="qFP-ud-QZf" secondAttribute="trailing" constant="8" id="vVY-AJ-9Nz"/>
-                                </constraints>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="quV-Mn-EkZ" firstAttribute="centerY" secondItem="Vdq-30-wPv" secondAttribute="centerY" id="M00-fw-tmN"/>
-                            <constraint firstItem="quV-Mn-EkZ" firstAttribute="centerX" secondItem="Vdq-30-wPv" secondAttribute="centerX" id="Qni-9Y-1jg"/>
-                            <constraint firstItem="quV-Mn-EkZ" firstAttribute="top" secondItem="GNe-jW-K9g" secondAttribute="top" constant="119" id="W8t-7V-lko"/>
-                        </constraints>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="GNe-jW-K9g"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WKh-iY-gZ5"/>
+                    <navigationItem key="navigationItem" title="Créditos" id="WKh-iY-gZ5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UiH-x1-9b6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="807" y="516"/>
         </scene>
-        <!--Config View Controller-->
+        <!--Configurações-->
         <scene sceneID="ulK-MV-5Tz">
             <objects>
                 <tableViewController id="1My-1e-UDn" customClass="ConfigViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,7 +334,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="yDt-ak-dQ7" kind="presentation" modalTransitionStyle="crossDissolve" id="yee-DZ-Z6O"/>
+                                            <segue destination="yDt-ak-dQ7" kind="show" id="yee-DZ-Z6O"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -321,7 +345,8 @@
                             <outlet property="delegate" destination="1My-1e-UDn" id="yOJ-Rv-1Ly"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jCF-2z-069"/>
+                    <navigationItem key="navigationItem" title="Configurações" id="jCF-2z-069"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="musicVol" destination="zlZ-iB-9lM" id="jMd-M0-Oxh"/>
                         <outlet property="soundVol" destination="7Z4-P2-O06" id="7tc-pi-Xp8"/>

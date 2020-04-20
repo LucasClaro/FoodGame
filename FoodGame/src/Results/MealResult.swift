@@ -68,10 +68,10 @@ class MealViewController: UIViewController {
     
     switch currentMeal {
     case "Café":
-      view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
+      view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.7450980392, blue: 0.1725490196, alpha: 1)
       break
     case "Almoço":
-      view.backgroundColor = #colorLiteral(red: 0.8156862745, green: 0.8666666667, blue: 0.2392156863, alpha: 1)
+      view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
       break
     case "Janta":
       view.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2745098039, blue: 0.4431372549, alpha: 1)
