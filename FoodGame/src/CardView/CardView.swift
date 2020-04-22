@@ -19,7 +19,8 @@ enum Acao {
 class CardViewController: UIViewController {
     
     var alimentos : [Alimento] = []
-    
+    var alimentosAceitos : [Alimento] = []
+    var qtdCards : Int = 0
     @IBOutlet weak var card: UIView!
     
     
@@ -29,6 +30,7 @@ class CardViewController: UIViewController {
         //  card.CombineCardView()
             
         self.buscaAlimentos()
+        qtdCards = alimentos.count
     }
     
     func buscaAlimentos(){
@@ -168,9 +170,12 @@ extension CardViewController {
                         switch acao {
                         case .aceita:
                             center = CGPoint(x: card.center.x + self.view.bounds.width, y: card.center.y + 50)
-                            print(card.tag)
+                            //print(card.tag)
+                            alimentosAceitos.append(alimento)
+                            verificaQtdCards()
                         case .rejeita:
                             center = CGPoint(x: card.center.x - self.view.bounds.width, y: card.center.y + 50)
+                            verificaQtdCards()
                         }
                         
                         UIView.animate(withDuration: 0.4, animations: {
@@ -187,4 +192,17 @@ extension CardViewController {
             }
         }
     }
+    func verificaQtdCards()
+    {
+        qtdCards -= 1
+        if(qtdCards == 0)
+        {
+            calculaAlimentacao()
+        }
+    }
+    func calculaAlimentacao()
+    {
+        Calculo.aliPorTipo = Calculo.separarTipos(alimentos: alimentosAceitos)
+    }
+    
 }

@@ -21,15 +21,15 @@ class AlimentoService {
     ]
     
     let legs: [Alimento] = [
-        Alimento(id: 201, nome: "Feijão", porcao: 100, tipo: "Leguminisa", foto: "Pao"),
-        Alimento(id: 202, nome: "Soja", porcao: 100, tipo: "Leguminisa", foto: "Pao"),
-        Alimento(id: 203, nome: "Ervilha", porcao: 100, tipo: "Leguminisa", foto: "Pao"),
-        Alimento(id: 204, nome: "Lentilha", porcao: 100, tipo: "Leguminisa", foto: "Pao"),
-        Alimento(id: 205, nome: "Grão-de-Bico", porcao: 100, tipo: "Leguminisa", foto: "Pao"),
+        Alimento(id: 201, nome: "Feijão", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
+        Alimento(id: 202, nome: "Soja", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
+        Alimento(id: 203, nome: "Ervilha", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
+        Alimento(id: 204, nome: "Lentilha", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
+        Alimento(id: 205, nome: "Grão-de-Bico", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
     ]
     
     let prots: [Alimento] = [
-        Alimento(id: 301, nome: "Carne Bovina", porcao: 100, tipo: "Proteínas", foto: "Pao"),
+        Alimento(id: 301, nome: "Carne Bovina", porcao: 100, tipo: "Proteína", foto: "Pao"),
         Alimento(id: 302, nome: "Frango", porcao: 100, tipo: "Proteína", foto: "Pao"),
         Alimento(id: 303, nome: "Peixe", porcao: 100, tipo: "Proteína", foto: "Pao"),
         Alimento(id: 304, nome: "Ovos", porcao: 100, tipo: "Proteína", foto: "Pao"),
