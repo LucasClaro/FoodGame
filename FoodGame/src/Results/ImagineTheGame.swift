@@ -28,7 +28,7 @@ class GameViewController: UIViewController {
     super.viewWillAppear(animated)
     
     // Desligando as NavBar da NavController
-    navigationController?.setNavigationBarHidden(true, animated: animated)
+    navigationController?.setNavigationBarHidden(true, animated: false)
     
     stepperCarbohydrates.value = 0
     stepperProteins.value = 0
@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
     super.viewWillDisappear(animated)
     
     // Religando as NavBar da NavController
-    navigationController?.setNavigationBarHidden(false, animated: animated)
+    navigationController?.setNavigationBarHidden(false, animated: false)
   }
   
   // MARK: User Interaction

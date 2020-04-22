@@ -13,15 +13,32 @@ protocol TutorialPageViewControllerDelegate : class {
 }
 
 class TutorialPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    // MARK: Valores tutorial
     
-    let pageHeadings = ["Designed by FreepikPrimeira tela","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
-    let pageSubHeadings = ["1111111111111111111111111","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
-    let pageImages = ["img.jpg","img.jpg","img.jpg","img.jpg"]
+    //TOP
+    let titleTu = ["Como funciona?","Como funciona","Não sei","F"]
+    let pageHeadingsTop = ["Navegação intuitiva","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
+    let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arratando o card.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    
+    let pageImagesTop = ["IconsCard.png","img.jpg","img.jpg","img.jpg"]
+    
+    //MID
+    let pageHeadingsMid = ["Monte um prato","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
+    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    
+    let pageImagesMid = ["IconsPrato.png","img.jpg","img.jpg","img.jpg"]
+    
+    
+    //BOT
+    let pageHeadingsBot = ["Personagem","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
+    let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    
+    let pageImagesBot = ["IconsPersonagem.png","img.jpg","img.jpg","img.jpg"]
     
     weak var tutorialDelegate : TutorialPageViewControllerDelegate?
     
     var currentIndex = 0
-    
+    //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +50,7 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
         }
         
     }
-    
+    //MARK: DataSource e Delegate
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! TutorialContentViewController).index
 
@@ -53,14 +70,24 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     
     
     func contentViewController(at index : Int) -> TutorialContentViewController? {
-        if(index < 0 || index >= pageHeadings.count){
+        if(index < 0 || index >= titleTu.count){
             return nil
         }
         
         if let pageContentViewController = UIStoryboard.init(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: "TutorialContentViewController") as? TutorialContentViewController {
-            pageContentViewController.imageFile = pageImages[index]
-            pageContentViewController.heading = pageHeadings[index]
-            pageContentViewController.subHeading = pageSubHeadings[index]
+            pageContentViewController.titleText = titleTu[index]
+            
+            pageContentViewController.imageFileTop = pageImagesTop[index]
+            pageContentViewController.headingTop = pageHeadingsTop[index]
+            pageContentViewController.subHeadingTop = pageSubHeadingsTop[index]
+            
+            pageContentViewController.imageFileMid = pageImagesMid[index]
+            pageContentViewController.headingMid = pageHeadingsMid[index]
+            pageContentViewController.subHeadingMid = pageSubHeadingsMid[index]
+            
+            pageContentViewController.imageFileBot = pageImagesBot[index]
+            pageContentViewController.headingBot = pageHeadingsBot[index]
+            pageContentViewController.subHeadingBot = pageSubHeadingsBot[index]
             pageContentViewController.index = index
             
             return pageContentViewController
@@ -75,6 +102,14 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
                 
                 tutorialDelegate?.didUpdatePageIndex(currentIndex: currentIndex)
             }
+        }
+    }
+    //MARK: Funcao para btnNext
+    func fowardPage()
+    {
+        currentIndex += 1
+        if let nextViewControllers = contentViewController(at: currentIndex){
+            setViewControllers([nextViewControllers], direction: .forward, animated: true, completion: nil)
         }
     }
     
