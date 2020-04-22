@@ -10,38 +10,39 @@
 import UIKit
 import AVFoundation
 
+protocol VolumeChangedDelegate : class {
+    func changeVol(sender : UISlider, key : String)
+}
+
 class ConfigViewController: UITableViewController {
     
     @IBOutlet weak var musicVol: UISlider!
     @IBOutlet weak var soundVol: UISlider!
     
-    var mv = 0.0,sv = 0.0
-    var player = AVAudioPlayer()
+    var volumeChangedDelegate : VolumeChangedDelegate?
+    
+    let mv = UserDefaults.standard.float(forKey: "musicVol")
+    let sv = UserDefaults.standard.float(forKey: "soundVol")
+    //var player = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         musicVol.addTarget(self, action: #selector(musicVolChange), for: .valueChanged)
         soundVol.addTarget(self, action: #selector(soundVolChange), for: .valueChanged)
-        player = AVAudioPlayer()
-        do {
-            let path = Bundle.main.path(forResource: "soviet-anthem", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
-            player.play()
-        }
-        catch {
-            print(error)
-        }
+
+        musicVol.value = mv
+        soundVol.value = sv
         
     }
     
     @objc func musicVolChange()
     {
-        player.volume = musicVol.value
-
+        //player.volume = musicVol.value
+        volumeChangedDelegate?.changeVol(sender: musicVol, key: "musicVol")
     }
     @objc func soundVolChange()
     {
-        
+        volumeChangedDelegate?.changeVol(sender: soundVol, key: "soundVol")
     }
     /*
     // MARK: - Navigation

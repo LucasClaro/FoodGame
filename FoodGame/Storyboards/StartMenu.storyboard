@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--N vai ter essa nav aqui n-->
+        <!--Menu-->
         <scene sceneID="8OK-Yf-GA3">
             <objects>
-                <viewController id="pk8-01-NiG" customClass="InitialMenuViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pk8-01-NiG" userLabel="Menu" customClass="InitialMenuViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aj7-tM-SQM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,15 @@
                                 <state key="normal" title="Personagem"/>
                                 <connections>
                                     <segue destination="uLB-oY-Cpu" kind="show" id="acF-Qa-Eew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-OD-y8Q">
+                                <rect key="frame" x="159" y="797" width="97" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="CardView"/>
+                                <connections>
+                                    <segue destination="Veg-Im-bVg" kind="show" id="maz-Eo-rxm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-Su-dka">
@@ -97,7 +106,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="N vai ter essa nav aqui n" id="ZSS-By-edb"/>
                     <connections>
                         <outlet property="buttonConfiguration" destination="eQQ-1g-v3R" id="s4B-cR-bff"/>
                         <outlet property="buttonPlay" destination="Jb3-u2-KSp" id="sl1-F8-Ldn"/>
@@ -165,7 +173,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOG-u2-u8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2628" y="-206"/>
+            <point key="canvasLocation" x="-2628" y="-202"/>
+        </scene>
+        <!--CardView-->
+        <scene sceneID="VVE-Hv-Nvx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardView" id="Veg-Im-bVg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I8v-93-EmG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eR1-KN-q7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2020" y="-482"/>
         </scene>
     </scenes>
     <resources>

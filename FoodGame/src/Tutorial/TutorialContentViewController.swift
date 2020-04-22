@@ -9,6 +9,8 @@
 import UIKit
 
 class TutorialContentViewController: UIViewController {
+    
+    //MARK: Outlets
     @IBOutlet weak var titleTu: UILabel!
     
     @IBOutlet weak var headingLabelTop : UILabel!
@@ -20,9 +22,10 @@ class TutorialContentViewController: UIViewController {
     @IBOutlet weak var contentImageViewMid: UIImageView!
     
     @IBOutlet weak var headingLabelBot: UILabel!
-       @IBOutlet weak var subHeadingLabelBot: UILabel!
-       @IBOutlet weak var contentImageViewBot: UIImageView!
+    @IBOutlet weak var subHeadingLabelBot: UILabel!
+    @IBOutlet weak var contentImageViewBot: UIImageView!
     
+    //MARK: Valores Passados
     var index = 0
     var titleText = ""
     var headingTop = ""
@@ -35,8 +38,10 @@ class TutorialContentViewController: UIViewController {
     var imageFileMid = ""
     var imageFileBot = ""
 
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        //atribuir valores
         titleTu.text = titleText
         
         headingLabelTop.text = headingTop

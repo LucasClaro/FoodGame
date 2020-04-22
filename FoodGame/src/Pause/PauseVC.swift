@@ -16,7 +16,7 @@ class PauseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        popupView.layer.cornerRadius = 10
+        popupView.layer.cornerRadius = 30
     }
     
     @IBAction func resume(_ sender: Any) {
