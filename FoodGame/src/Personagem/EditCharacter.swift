@@ -43,7 +43,6 @@ class edit: UIViewController{
         // MARK: - Loading data
         loadData()
         
-        
     }
     
     func loadData(){
