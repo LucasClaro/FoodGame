@@ -16,6 +16,17 @@ class prato: UIViewController{
     @IBOutlet weak var varSim: UIButton!
     var confirma: Bool!
     var achou: Bool = false
+    let defaults = UserDefaults.standard
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let condicoes = defaults.object(forKey: "Condicoes") as? [String]
+        if(condicoes!.count > 1){
+        for i in 0...condicoes!.count - 1{
+            print(condicoes![i])
+        }
+        }
+    }
     
     @IBAction func botaoSim(_ sender: UIButton) {
         for i in 0..<vetor.count{

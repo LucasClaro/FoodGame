@@ -16,7 +16,8 @@ class conditions: UIViewController{
     @IBOutlet var isVege: UIButton!
     @IBOutlet var temGast: UIButton!
     @IBOutlet var isGlut: UIButton!
-    
+    let defaults = UserDefaults.standard
+    @IBOutlet weak var bttProx: UIButton!
     
     var vetor: [String] = []
     var i = 0
@@ -26,6 +27,13 @@ class conditions: UIViewController{
         super.viewDidLoad()
         let userDefaults = UserDefaults.standard
         userDefaults.set(vetor, forKey: "vetor")
+        print(defaults.string(forKey: "Nome")!)
+        print(defaults.integer(forKey: "Idade"))
+        print(defaults.string(forKey: "Sexo")!)
+        
+        bttProx.backgroundColor = .systemBlue
+        bttProx.setTitleColor(.white, for: .normal)
+        bttProx.layer.cornerRadius = 30
         
     }
     
@@ -122,6 +130,7 @@ class conditions: UIViewController{
              vetor.append("6")
              i+=1
              }
+        
     }
     
  
@@ -134,6 +143,7 @@ class conditions: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vetor"{
             if let prato = segue.destination as? prato{
+                defaults.set(vetor, forKey: "Condicoes")
                 prato.vetor = vetor
             }
         }
