@@ -11,6 +11,7 @@
 		02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F02447739A00FC81F4 /* NameAndAge.swift */; };
 		02E361F32447744F00FC81F4 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F22447744F00FC81F4 /* Conditions.swift */; };
 		02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F42447751C00FC81F4 /* ConditionsResult.swift */; };
+		02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F62450B35800FC81F4 /* EditCharacter.swift */; };
 		050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBE4243BD7D200FF22DB /* Config.storyboard */; };
 		050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE6243BD87500FF22DB /* ConfigViewController.swift */; };
 		050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */; };
@@ -69,6 +70,7 @@
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		02E361F42447751C00FC81F4 /* ConditionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsResult.swift; sourceTree = "<group>"; };
+		02E361F62450B35800FC81F4 /* EditCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacter.swift; sourceTree = "<group>"; };
 		050ADBE4243BD7D200FF22DB /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		050ADBE6243BD87500FF22DB /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				02E361F02447739A00FC81F4 /* NameAndAge.swift */,
 				02E361F22447744F00FC81F4 /* Conditions.swift */,
 				02E361F42447751C00FC81F4 /* ConditionsResult.swift */,
+				02E361F62450B35800FC81F4 /* EditCharacter.swift */,
 			);
 			path = Personagem;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
 				F23C034824464C2E00BC921A /* Game.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
+				02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */,
 				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,

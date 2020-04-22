@@ -31,10 +31,7 @@ class conditions: UIViewController{
         print(defaults.integer(forKey: "Idade"))
         print(defaults.string(forKey: "Sexo")!)
         
-        bttProx.backgroundColor = .systemBlue
-        bttProx.setTitleColor(.white, for: .normal)
-        bttProx.layer.cornerRadius = 30
-        
+        visualBotao(sender: bttProx)
     }
     
     @IBAction func checkDiabetes(_ sender: Any) {

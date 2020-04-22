@@ -19,14 +19,11 @@ class name: UIViewController, UITextFieldDelegate{
     // MARK:- ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         verificaNome.isHidden = true
         nomeField.delegate = self
         sobrenomeField.delegate = self
-        varBotaoJoga.backgroundColor = .systemBlue
-        varBotaoJoga.setTitleColor(.white, for: .normal)
-        varBotaoJoga.layer.cornerRadius = 30
-        
+        visualBotao(sender: varBotaoJoga)
+
     }
     // MARK:- Sends info from view 1 to view 2
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,15 +70,8 @@ class age: UIViewController, UITextFieldDelegate{
         idadeatual.isHidden = true
         label.numberOfLines = 10
         defaults.set(objetoInfo, forKey: "Nome")
-        
-        bttTela3.backgroundColor = .systemBlue
-        bttTela3.setTitleColor(.white, for: .normal)
-        bttTela3.layer.cornerRadius = 30
-        
-        
-        if objetoInfo != nil{
-            label.text = "Olá " + objetoInfo! + ", " + "\nSeja bem-vindo(a)"
-        }
+        print(defaults.integer(forKey: "Idade"))
+        visualBotao(sender: bttTela3)
         
     }
     
@@ -95,19 +85,21 @@ class age: UIViewController, UITextFieldDelegate{
     }
     
     func valida(){
-        let idade = Int(caixaTexto.text!)
+        let ano = Int(caixaTexto.text!)
+        let anoNasc = caixaTexto.text
         
             
         if caixaTexto.text == nil || caixaTexto.text == ""{
             idadeatual.text = "Insira um ano"
                } else {
-                let conta = 2020 - idade!
+                let conta = 2020 - ano!
             if(conta < 0 || conta > 110){
                 idadeatual.text = "Insira um ano válido"
             } else {
                 idadeatual.text = ""
                 self.bttTela3.isHidden = false
                 defaults.set(conta, forKey: "Idade")
+                defaults.set(anoNasc, forKey: "Ano")
                 
             }
             
@@ -132,9 +124,7 @@ class sexo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bttProx.backgroundColor = .systemBlue
-        bttProx.setTitleColor(.white, for: .normal)
-        bttProx.layer.cornerRadius = 30
+        visualBotao(sender: bttProx)
     }
     
     @IBAction func bttFem(_ sender: UIButton) {
@@ -165,3 +155,8 @@ class sexo: UIViewController {
     
 }
 
+func visualBotao(sender: UIButton){
+    sender.backgroundColor = .systemBlue
+    sender.setTitleColor(.white, for: .normal)
+    sender.layer.cornerRadius = 30
+}
