@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nyk-6q-tFw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,11 +32,22 @@
                     </view>
                     <connections>
                         <outlet property="Card" destination="fvn-wc-mlI" id="x1g-E7-kUS"/>
+                        <segue destination="hhW-Hx-lTc" kind="show" identifier="resultado" id="5OZ-TG-3li"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yao-Sj-HLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="69.565217391304358" y="91.741071428571431"/>
+        </scene>
+        <!--MealResult-->
+        <scene sceneID="Qhg-6P-Z8b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MealResult" id="hhW-Hx-lTc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d9p-cN-cIC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pm0-g6-6Co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-154"/>
         </scene>
     </scenes>
     <resources>
