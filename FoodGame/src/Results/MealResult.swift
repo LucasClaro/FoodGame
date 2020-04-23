@@ -41,11 +41,11 @@ class MealViewController: UIViewController {
     checkCurrentMeal()
     
     adjustLayout()
-    
-    labelQuantityOfCarbohydrates.text = "Carboidratos:\(mealDict["\(currentMeal)"]!.carbohydrates)/5"
-    labelQuantityOfProteins.text = "Proteinas:\(mealDict["\(currentMeal)"]!.proteins)/5"
-    labelQuantityOfVegetables.text = "Vegetais:\(mealDict["\(currentMeal)"]!.vegetables)/5"
-    
+   
+    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)/5"
+    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)/5"
+    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)/5"
+
     coloringStars()
   }
   

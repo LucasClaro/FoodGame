@@ -21,6 +21,13 @@ class CardViewController: UIViewController {
     var alimentos : [Alimento] = []
     var alimentosAceitos : [Alimento] = []
     var qtdCards : Int = 0
+    
+    var mealDict = ["Café": Meal(),
+                     "Almoço": Meal(),
+                     "Janta": Meal()]
+     
+     var currentMeal = "Café"
+    
     @IBOutlet weak var card: UIView!
     
     
@@ -192,17 +199,57 @@ extension CardViewController {
             }
         }
     }
+    
+    //Conta a quantidade de cards quando não tiver mais nenhum, avança para outra tela
     func verificaQtdCards()
     {
         qtdCards -= 1
         if(qtdCards == 0)
         {
             calculaAlimentacao()
+            performSegue(withIdentifier: "resultado", sender: nil)
         }
     }
+    
+    //Separa os alimentos por tipo e calcula os tipos
     func calculaAlimentacao()
     {
         Calculo.aliPorTipo = Calculo.separarTipos(alimentos: alimentosAceitos)
+        mealDict[currentMeal]?.carbohydrates = Calculo.calularCarbo()
+        mealDict[currentMeal]?.proteins = Calculo.calularProteina()
+        mealDict[currentMeal]?.vegetables = Calculo.calcularVegetais()
     }
     
+    
+    // Função que vê para qual ViewController está seguindo
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      // Caso seja a MealViewController:
+      guard let mealViewController = segue.destination as? MealViewController
+        else {
+          return
+      }
+      
+      // Leva o dicionário e a refeição atual dessa ViewController para a MealViewController.
+      mealViewController.mealDict = mealDict
+      mealViewController.currentMeal = currentMeal
+    }
+    
+    // Função que vê qual ViewController está acessando essa ViewController
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+      // Caso seja a MealViewController:
+      if segue.source is MealViewController {
+        
+        // Altera a refeição atual para a próxima refeição
+        switch currentMeal {
+        case "Café":
+          currentMeal = "Almoço"
+          break
+        default:
+          currentMeal = "Janta"
+        }
+         self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+    }
 }
