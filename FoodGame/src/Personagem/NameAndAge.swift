@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+
 class name: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var verificaNome: UILabel!
     @IBOutlet var varBotaoJoga: UIButton!
     @IBOutlet weak var nomeField: UITextField!
     @IBOutlet weak var sobrenomeField: UITextField!
+    var defaults = UserDefaults.standard
     
     // MARK:- ViewDidLoad
     override func viewDidLoad() {
@@ -25,31 +27,30 @@ class name: UIViewController, UITextFieldDelegate{
         visualBotao(sender: varBotaoJoga)
 
     }
-    // MARK:- Sends info from view 1 to view 2
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "identificador"{
-            if let secondVC = segue.destination as? age{
-                secondVC.objetoInfo = nomeField.text
-            }
-        }
+
+    @IBAction func bttProx(_ sender: UIButton) {
+        defaults.set(nomeField.text, forKey: "Nome")
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            self.view.endEditing(true)
-           verifica()
+           verifica(nomeField: nomeField, verificaNome: verificaNome, botao: varBotaoJoga)
            return false
        }
     
-    func verifica(){
-        varBotaoJoga.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
-        if nomeField.text == "" || varBotaoJoga.isEnabled == false{
+    func verifica(nomeField: UITextField, verificaNome: UILabel, botao: UIButton) -> Bool{
+        var verifica: Bool = false
+        botao.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        if nomeField.text == "" || botao.isEnabled == false{
             verificaNome.isHidden = false
             verificaNome.text = "Digite o seu nome"
-            varBotaoJoga.isHidden = true
+            botao.isHidden = true
         } else {
             verificaNome.isHidden = true
-            varBotaoJoga.isHidden = false
+            botao.isHidden = false
+            verifica = true
         }
+        return verifica
     }
     
 }
@@ -60,8 +61,9 @@ class age: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var idadeatual: UILabel!
     @IBOutlet var caixaTexto: UITextField!
     @IBOutlet var label: UILabel!
-    var objetoInfo:String?
     let defaults = UserDefaults.standard
+    var idade: Int = Int()
+    var anoN: String = String()
     
     // MARK:- viewDidLoad
     override func viewDidLoad() {
@@ -69,7 +71,6 @@ class age: UIViewController, UITextFieldDelegate{
         caixaTexto.delegate = self
         idadeatual.isHidden = true
         label.numberOfLines = 10
-        defaults.set(objetoInfo, forKey: "Nome")
         print(defaults.integer(forKey: "Idade"))
         visualBotao(sender: bttTela3)
         
@@ -83,36 +84,47 @@ class age: UIViewController, UITextFieldDelegate{
         let typedCharacterSet = CharacterSet(charactersIn: string)
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
-    
-    func valida(){
+    // MARK: - Validate user entry
+    func valida (caixaTexto: UITextField, avisoIdade: UILabel, botao: UIButton) -> Int{
         let ano = Int(caixaTexto.text!)
         let anoNasc = caixaTexto.text
-        
+        var conta: Int = 1
             
         if caixaTexto.text == nil || caixaTexto.text == ""{
-            idadeatual.text = "Insira um ano"
+            avisoIdade.text = "Insira um ano"
+            botao.isHidden = true
                } else {
-                let conta = 2020 - ano!
+                conta = 2020 - ano!
+            botao.isHidden = true
             if(conta < 0 || conta > 110){
-                idadeatual.text = "Insira um ano válido"
+                avisoIdade.text = "Insira um ano válido"
+                botao.isHidden = true
             } else {
-                idadeatual.text = ""
-                self.bttTela3.isHidden = false
-                defaults.set(conta, forKey: "Idade")
-                defaults.set(anoNasc, forKey: "Ano")
-                
+                avisoIdade.text = ""
+                botao.isHidden = false
+                idade = conta
+                anoN = anoNasc!
             }
             
             }
         
-        idadeatual.isHidden = false
+        avisoIdade.isHidden = false
+        return conta
     }
     
+      // MARK: - Keyboard goes off when return is clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        valida()
+        idade = valida(caixaTexto: caixaTexto, avisoIdade: idadeatual, botao: bttTela3)
         return false
     }
+    
+    @IBAction func proxBtt(_ sender: UIButton) {
+        defaults.set(idade, forKey: "Idade")
+        defaults.set(anoN, forKey: "Ano")
+        
+    }
+    
     
 }
 
