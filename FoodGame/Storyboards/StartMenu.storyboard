@@ -105,6 +105,15 @@
                                     <segue destination="Lhe-3z-Lbs" kind="show" id="m8b-jM-Yj2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-8V-8wv">
+                                <rect key="frame" x="305" y="744" width="55" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Prato"/>
+                                <connections>
+                                    <segue destination="E30-vb-JDP" kind="show" id="Nqg-dM-v82"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
@@ -189,6 +198,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCp-Wy-WUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2117" y="-352"/>
+        </scene>
+        <!--Prato-->
+        <scene sceneID="hr3-DW-Opb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Prato" id="E30-vb-JDP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G7Q-AF-Xg4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLb-Jd-9kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2183" y="-215"/>
         </scene>
         <!--Game-->
         <scene sceneID="tX8-EK-P5R">
