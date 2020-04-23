@@ -41,14 +41,15 @@ class MealViewController: UIViewController {
     checkCurrentMeal()
     
     adjustLayout()
-    
+   
     labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)/5"
     labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)/5"
     labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)/5"
-    
+
     coloringStars()
-    
   }
+  
+  // MARK: Layout Methods
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -61,8 +62,6 @@ class MealViewController: UIViewController {
     
     navigationController?.setNavigationBarHidden(false, animated: false)
   }
-  
-  // MARK: Layout Methods
   
   func adjustLayout() {
     
@@ -95,6 +94,7 @@ class MealViewController: UIViewController {
     }
   }
   
+  //Verifica se o Index é "Janta", e troca a segue do botão
   @IBAction func nextMeal(_ sender: UIButton) {
     if currentMeal != "Janta" {
       performSegue(withIdentifier: "GameVC", sender: nil)

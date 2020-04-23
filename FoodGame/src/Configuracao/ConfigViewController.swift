@@ -20,6 +20,7 @@ class ConfigViewController: UITableViewController {
     @IBOutlet weak var soundVol: UISlider!
     
     var volumeChangedDelegate : VolumeChangedDelegate?
+
     
     let mv = UserDefaults.standard.float(forKey: "musicVol")
     let sv = UserDefaults.standard.float(forKey: "soundVol")
@@ -32,13 +33,16 @@ class ConfigViewController: UITableViewController {
 
         musicVol.value = mv
         soundVol.value = sv
+      
         
     }
+
+  
     
     @objc func musicVolChange()
     {
-        //player.volume = musicVol.value
-        volumeChangedDelegate?.changeVol(sender: musicVol, key: "musicVol")
+      let volume = ["musicVolume": musicVol.value]
+      NotificationCenter.default.post(name: NSNotification.Name("musicVolumeChange"), object: nil, userInfo: volume)
     }
     @objc func soundVolChange()
     {
