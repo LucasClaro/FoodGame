@@ -271,18 +271,25 @@ extension CardViewController {
         mealDict[currentMeal]?.vegetables = Calculo.calcularVegetais()
     }
     
+    //MARK: SEGUES
     
     // Função que vê para qual ViewController está seguindo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       // Caso seja a MealViewController:
-      guard let mealViewController = segue.destination as? MealViewController
+      /*guard let mealViewController = segue.destination as? MealViewController
         else {
           return
-      }
+      }*/
+        if let mealViewController = segue.destination as? MealViewController{
+            // Leva o dicionário e a refeição atual dessa ViewController para a MealViewController.
+            mealViewController.mealDict = mealDict
+            mealViewController.currentMeal = currentMeal
+            mealViewController.alimentosAceitos = alimentosAceitos
+        }
+        else if let pratoTableVC = segue.destination as? PratoTableVC{
+            pratoTableVC.alimentos = alimentosAceitos
+        }
       
-      // Leva o dicionário e a refeição atual dessa ViewController para a MealViewController.
-      mealViewController.mealDict = mealDict
-      mealViewController.currentMeal = currentMeal
     }
     
     // Função que vê qual ViewController está acessando essa ViewController
