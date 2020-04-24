@@ -32,6 +32,8 @@ class MealViewController: UIViewController {
   var mealDict:[String:Meal] = [:]
   
   var currentMeal : String = ""
+    
+  var alimentosAceitos : [Alimento] = []
   
   // MARK: View Lifecycle
   
@@ -148,12 +150,18 @@ class MealViewController: UIViewController {
   // MARK: View Data Output
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard let dayViewController = segue.destination as? DayViewController
+    /*guard let dayViewController = segue.destination as? DayViewController
       else {
         return
+    }*/
+    if let dayViewController = segue.destination as? DayViewController {
+        dayViewController.mealDict = mealDict
+    }
+    else if let pratoTableVC = segue.destination as? PratoTableVC{
+        pratoTableVC.alimentos = alimentosAceitos
     }
     
-    dayViewController.mealDict = mealDict
+    
   }
 }
 

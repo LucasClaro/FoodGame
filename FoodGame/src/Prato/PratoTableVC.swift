@@ -11,11 +11,7 @@ import UIKit
 
 class PratoTableVC: UITableViewController {
     
-    let alimentos: [Alimento] = [
-       Alimento(id: 401, nome: "Lentilha", porcao: 100, tipo: "Proteína Vegetal", foto: "Pao"),
-       Alimento(id: 402, nome: "Tofu", porcao: 100, tipo: "Proteína Vegetal", foto: "Pao"),
-       Alimento(id: 403, nome: "Chia", porcao: 100, tipo: "Proteína Vegetal", foto: "Pao"),
-    ]
+    var alimentos: [Alimento] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +26,6 @@ class PratoTableVC: UITableViewController {
         
         customCell.textLabel?.text = alimentos[indexPath.row].nome
         customCell.detailTextLabel?.text = String(alimentos[indexPath.row].porcao) + " gramas de " + alimentos[indexPath.row].tipo
-        //customCell.lblDescricao.text = String(alimentos[indexPath.row].porcao) + " gramas de " + alimentos[indexPath.row].tipo
         customCell.imageView?.image = UIImage(named: alimentos[indexPath.row].foto)
         
         return customCell
