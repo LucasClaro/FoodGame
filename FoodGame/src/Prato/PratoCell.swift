@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 
 class PratoCell: UITableViewCell {
-    
-    @IBOutlet weak var alimentoImage: UIImageView!
-    @IBOutlet weak var lblAlimento: UILabel!
-    
-    
+
     
 }

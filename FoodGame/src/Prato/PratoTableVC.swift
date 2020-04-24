@@ -28,8 +28,10 @@ class PratoTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PratoCell
         
-        customCell.lblAlimento.text = alimentos[indexPath.row].nome + ", " + String(alimentos[indexPath.row].porcao) + "gramas de " + alimentos[indexPath.row].tipo
-        customCell.alimentoImage.image = UIImage(named: alimentos[indexPath.row].foto)
+        customCell.textLabel?.text = alimentos[indexPath.row].nome
+        customCell.detailTextLabel?.text = String(alimentos[indexPath.row].porcao) + " gramas de " + alimentos[indexPath.row].tipo
+        //customCell.lblDescricao.text = String(alimentos[indexPath.row].porcao) + " gramas de " + alimentos[indexPath.row].tipo
+        customCell.imageView?.image = UIImage(named: alimentos[indexPath.row].foto)
         
         return customCell
     }
