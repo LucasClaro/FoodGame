@@ -17,6 +17,7 @@ class name: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nomeField: UITextField!
     @IBOutlet weak var sobrenomeField: UITextField!
     var defaults = UserDefaults.standard
+    var nome: String = String()
     
     // MARK:- ViewDidLoad
     override func viewDidLoad() {
@@ -25,32 +26,34 @@ class name: UIViewController, UITextFieldDelegate{
         nomeField.delegate = self
         sobrenomeField.delegate = self
         visualBotao(sender: varBotaoJoga)
-
-    }
-
-    @IBAction func bttProx(_ sender: UIButton) {
-        defaults.set(nomeField.text, forKey: "Nome")
     }
     
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            self.view.endEditing(true)
            verifica(nomeField: nomeField, verificaNome: verificaNome, botao: varBotaoJoga)
            return false
        }
     
-    func verifica(nomeField: UITextField, verificaNome: UILabel, botao: UIButton) -> Bool{
-        var verifica: Bool = false
+    func verifica(nomeField: UITextField, verificaNome: UILabel, botao: UIButton){
         botao.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
         if nomeField.text == "" || botao.isEnabled == false{
             verificaNome.isHidden = false
             verificaNome.text = "Digite o seu nome"
             botao.isHidden = true
         } else {
+            defaults.set(nomeField.text, forKey: "Nome")
             verificaNome.isHidden = true
             botao.isHidden = false
-            verifica = true
         }
-        return verifica
+    }
+    
+    func setNome(nome: String){
+        self.nome = nome
+    }
+
+    func getNome() -> String{
+        return self.nome
     }
     
 }
@@ -85,7 +88,7 @@ class age: UIViewController, UITextFieldDelegate{
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
     // MARK: - Validate user entry
-    func valida (caixaTexto: UITextField, avisoIdade: UILabel, botao: UIButton) -> Int{
+    func valida (caixaTexto: UITextField, avisoIdade: UILabel, botao: UIButton){
         let ano = Int(caixaTexto.text!)
         let anoNasc = caixaTexto.text
         var conta: Int = 1
@@ -104,39 +107,48 @@ class age: UIViewController, UITextFieldDelegate{
                 botao.isHidden = false
                 idade = conta
                 anoN = anoNasc!
+                defaults.set(idade, forKey: "Idade")
+                defaults.set(anoN, forKey: "Ano")
             }
-            
-            }
+        }
         
         avisoIdade.isHidden = false
-        return conta
     }
+    
+    func getIdade() -> Int{
+        return idade
+    }
+    
+    func getAno() -> String{
+        return anoN
+    }
+    
     
       // MARK: - Keyboard goes off when return is clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        idade = valida(caixaTexto: caixaTexto, avisoIdade: idadeatual, botao: bttTela3)
+        valida(caixaTexto: caixaTexto, avisoIdade: idadeatual, botao: bttTela3)
         return false
     }
     
-    @IBAction func proxBtt(_ sender: UIButton) {
-        defaults.set(idade, forKey: "Idade")
-        defaults.set(anoN, forKey: "Ano")
-        
-    }
     
     
 }
 
-class sexo: UIViewController {
+class sex: UIViewController {
     @IBOutlet weak var checkFem: UIButton!
     @IBOutlet weak var checkMasc: UIButton!
     @IBOutlet weak var bttProx: UIButton!
     let defaults = UserDefaults.standard
+    var sexo: String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         visualBotao(sender: bttProx)
+    }
+    
+    func getSexo() -> String{
+        return sexo
     }
     
     @IBAction func bttFem(_ sender: UIButton) {
@@ -144,10 +156,12 @@ class sexo: UIViewController {
             checkMasc.isSelected = false
             checkFem.isSelected = true
             defaults.set("F", forKey: "Sexo")
+            self.sexo = "F"
             bttProx.isHidden = false
         } else {
             checkFem.isSelected = true
             defaults.set("F", forKey: "Sexo")
+            self.sexo = "F"
             bttProx.isHidden = false
         }
     }
@@ -157,10 +171,12 @@ class sexo: UIViewController {
             checkFem.isSelected = false
             checkMasc.isSelected = true
             defaults.set("M", forKey: "Sexo")
+            self.sexo = "M"
             bttProx.isHidden = false
         } else {
             checkMasc.isSelected = true
             defaults.set("M", forKey: "Sexo")
+            self.sexo = "M"
             bttProx.isHidden = false
         }
     }

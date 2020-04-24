@@ -24,16 +24,16 @@ class edit: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var bttGast: UIButton!
     @IBOutlet weak var bttGlut: UIButton!
     @IBOutlet weak var bttSalva: UIButton!
-    let objAge: age = age()
-    let objName: name = name()
     var idade: Int = Int()
     let defaults = UserDefaults.standard
     var vetorCondicoes: [String] = []
     var vetor: [String] = []
+    var dicionario: [String: Bool] = [:]
     
     override func viewDidLoad() {
         // MARK: - Set array to variable
-        vetorCondicoes = (defaults.array(forKey: "Condicoes") as? [String])!
+//        vetorCondicoes = (defaults.array(forKey: "Condicoes") as? [String])!
+        dicionario = ((defaults.dictionary(forKey: "Condicoes") as? [String: Bool])!)
         
         // MARK: - Load screen with user name and button design
         lblOla.text = "Olá \(defaults.string(forKey: "Nome") ?? "Usuário")." + "\nEdite seu personagem: "
@@ -69,38 +69,83 @@ class edit: UIViewController, UITextFieldDelegate{
             print("Nenhuma")
         }
         
-        for i in
-            0..<vetorCondicoes.count{
-            print(vetorCondicoes[i])
-                switch vetorCondicoes[i] {
-                case "1":
-                    bttDiab.isSelected = true
-                    vetor.append("1")
-                    break
-                case "2":
-                    bttHipe.isSelected = true
-                    vetor.append("2")
-                    break
-                case "3":
-                    bttLacto.isSelected = true
-                    vetor.append("3")
-                    break
-                case "4":
-                    bttVege.isSelected = true
-                    vetor.append("4")
-                    break
-                case "5":
-                    bttGast.isSelected = true
-                    vetor.append("5")
-                    break
-                case "6":
-                    bttGlut.isSelected = true
-                    vetor.append("6")
-                    break
-                default:
-                    print("Nenhuma")
-                }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
         }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
+        }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
+        }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
+        }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
+        }
+        if (dicionario["Diabetes"] == true){
+            bttDiab.isSelected = true
+        }
+        
+        for (key, value) in dicionario{
+            switch key{
+            case "Diabetes":
+                bttDiab.isSelected = value
+                break
+            case "Hipertensao":
+                bttHipe.isSelected = value
+                break
+            case "Lactose":
+                bttLacto.isSelected = value
+                break
+            case "Vegetariano":
+                bttVege.isSelected = value
+                break
+            case "Gastrite":
+                bttGast.isSelected = value
+                break
+            case "Gluten":
+                bttGlut.isSelected = value
+                break
+            default:
+                print("default")
+            }
+        }
+            
+        
+//        for i in
+//            0..<vetorCondicoes.count{
+//            print(vetorCondicoes[i])
+//                switch vetorCondicoes[i] {
+//                case "1":
+//                    bttDiab.isSelected = true
+//                    vetor.append("1")
+//                    break
+//                case "2":
+//                    bttHipe.isSelected = true
+//                    vetor.append("2")
+//                    break
+//                case "3":
+//                    bttLacto.isSelected = true
+//                    vetor.append("3")
+//                    break
+//                case "4":
+//                    bttVege.isSelected = true
+//                    vetor.append("4")
+//                    break
+//                case "5":
+//                    bttGast.isSelected = true
+//                    vetor.append("5")
+//                    break
+//                case "6":
+//                    bttGlut.isSelected = true
+//                    vetor.append("6")
+//                    break
+//                default:
+//                    print("Nenhuma")
+//                }
+//        }
     }
     
     
@@ -108,55 +153,47 @@ class edit: UIViewController, UITextFieldDelegate{
         if bttDiab.isSelected {
             bttDiab.isSelected = false
             print("off")
-            if let index = vetor.firstIndex(of: "1"){
-            vetor.remove(at: index)
-            }
+            dicionario.updateValue(false, forKey: "Diabetes")
         } else {
             bttDiab.isSelected = true
             print("on")
-            vetor.append("1")
+            dicionario.updateValue(true, forKey: "Diabetes")
         }
     }
     
     @IBAction func checkHiper(_ sender: UIButton) {
         if bttHipe.isSelected {
-        bttHipe.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "2"){
-         vetor.remove(at: index)
-                 }
+            bttHipe.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Hipertensao")
          } else {
              bttHipe.isSelected = true
              print("on")
-             vetor.append("2")
+             dicionario.updateValue(false, forKey: "Hipertensao")
              }
     }
     
     @IBAction func checkLacto(_ sender: Any) {
         if bttLacto.isSelected {
-        bttLacto.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "3"){
-         vetor.remove(at: index)
-                 }
-         } else {
+            bttLacto.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Lactose")
+        } else {
              bttLacto.isSelected = true
              print("on")
-             vetor.append("3")
+             dicionario.updateValue(true, forKey: "Lactose")
              }
     }
     
     @IBAction func checkVeggie(_ sender: UIButton) {
         if bttVege.isSelected {
-        bttVege.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "4"){
-         vetor.remove(at: index)
-                 }
+            bttVege.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Vegetariano")
          } else {
              bttVege.isSelected = true
              print("on")
-             vetor.append("4")
+             dicionario.updateValue(true, forKey: "Vegetariano")
              }
     }
     
@@ -164,29 +201,25 @@ class edit: UIViewController, UITextFieldDelegate{
     
     @IBAction func cbeckGast(_ sender: UIButton) {
         if bttGast.isSelected {
-        bttGast.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "5"){
-         vetor.remove(at: index)
-                 }
+            bttGast.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Gastrite")
          } else {
              bttGast.isSelected = true
              print("on")
-             vetor.append("5")
+             dicionario.updateValue(true, forKey: "Gastrite")
              }
     }
     
     @IBAction func checkGlut(_ sender: UIButton) {
         if bttGlut.isSelected {
-        bttGlut.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "6"){
-         vetor.remove(at: index)
-                 }
+            bttGlut.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Gluten")
          } else {
              bttGlut.isSelected = true
              print("on")
-             vetor.append("6")
+             dicionario.updateValue(true, forKey: "Gluten")
              }
     }
     @IBAction func bttFem(_ sender: UIButton) {
@@ -206,7 +239,7 @@ class edit: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func bttSalvar(_ sender: UIButton) {
-        defaults.set(vetor, forKey: "Condicoes")
+        defaults.set(dicionario, forKey: "Condicoes")
         defaults.set(fieldNome.text, forKey: "Nome")
         defaults.set(idade, forKey: "Idade")
         defaults.set(fieldAno.text, forKey: "Ano")
@@ -216,10 +249,48 @@ class edit: UIViewController, UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        objName.verifica(nomeField: fieldNome, verificaNome: avisoNome, botao: bttSalva)
-        idade = objAge.valida(caixaTexto: fieldAno, avisoIdade: avisoAno, botao: bttSalva)
+        if verificaEdicao() != 2 {
+            bttSalva.isHidden = true
+        } else {
+            bttSalva.isHidden = false
+        }
         return false
     }
+    
+    func verificaEdicao() -> Int{
+        let ano = Int(fieldAno.text!)
+        var conta: Int = Int()
+        var aux: Int = 0
+        
+        bttSalva.isEnabled = !fieldNome.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        if fieldNome.text == "" || bttSalva.isEnabled == false{
+            avisoNome.isHidden = false
+            avisoNome.text = "Digite o seu nome"
+        } else {
+            avisoNome.isHidden = true
+            lblOla.text = "Olá \(fieldNome.text ?? "Usuário")." + "\nEdite seu personagem: "
+            aux += 1
+        }
+        
+        
+        if ano == nil || fieldAno.text == ""{
+            avisoAno.isHidden = false
+            avisoAno.text = "Insira um ano"
+               } else {
+                conta = 2020 - ano!
+            if(conta < 0 || conta > 110){
+                avisoAno.text = "Insira um ano válido"
+            } else {
+                avisoAno.isHidden = true
+                idade = conta
+                aux += 1
+            }
+        }
+        return aux;
+    }
+    
+
+    
 
     
 }

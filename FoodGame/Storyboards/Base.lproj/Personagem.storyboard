@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ms-zT-RBF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sEi-Cy-hWV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -49,7 +49,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="bttProx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a9-SR-NW1"/>
                                     <segue destination="ikL-ns-CLe" kind="show" identifier="identificador" id="GO4-JE-tFz"/>
                                 </connections>
                             </button>
@@ -114,7 +113,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="proxBtt:" destination="ikL-ns-CLe" eventType="touchUpInside" id="A9Z-PM-hRg"/>
                                     <segue destination="9LJ-as-2GP" kind="show" id="30T-T0-C51"/>
                                 </connections>
                             </button>
@@ -173,16 +171,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP0-Yd-DN9">
-                                <rect key="frame" x="37" y="668" width="341" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Próximo"/>
-                                <connections>
-                                    <action selector="imprime:" destination="Xss-a5-b9W" eventType="touchUpInside" id="9tr-15-RZN"/>
-                                    <segue destination="LXY-bd-6nX" kind="show" identifier="vetor" id="KMH-U6-xIE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iem-15-cuO">
                                 <rect key="frame" x="50" y="315" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,13 +260,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j83-lh-0ga">
+                                <rect key="frame" x="37" y="688" width="341" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="bttSalvar:" destination="Xss-a5-b9W" eventType="touchUpInside" id="DDB-fX-WcV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xOB-f3-QEM"/>
                     </view>
                     <navigationItem key="navigationItem" id="DgM-7B-9sq"/>
                     <connections>
-                        <outlet property="bttProx" destination="dP0-Yd-DN9" id="h56-gX-44N"/>
+                        <outlet property="bttSalva" destination="j83-lh-0ga" id="eYz-XC-5aq"/>
                         <outlet property="isGlut" destination="Uhm-ed-jSB" id="sqI-Zg-0QD"/>
                         <outlet property="isVege" destination="u1f-uB-nul" id="LKx-rD-54D"/>
                         <outlet property="temDiab" destination="iem-15-cuO" id="Y0A-vb-n9f"/>
@@ -291,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="3328.985507246377" y="-38.169642857142854"/>
         </scene>
-        <!--Sexo-->
+        <!--Sex-->
         <scene sceneID="x6j-ka-5HX">
             <objects>
-                <viewController id="9LJ-as-2GP" customClass="sexo" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9LJ-as-2GP" customClass="sex" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxB-m2-HUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,7 +621,7 @@
             <objects>
                 <viewController id="LXY-bd-6nX" customClass="prato" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" id="iIX-yc-pEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GcC-IH-aBH">
@@ -676,7 +673,7 @@
             <objects>
                 <viewController id="f59-xt-1g5" customClass="telaResult" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qjV-pn-9FC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX1-dC-soo">
