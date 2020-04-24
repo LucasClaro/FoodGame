@@ -17,7 +17,17 @@ enum Acao {
 
 
 class CardViewController: UIViewController {
+  
+    // MARK: Variables
     
+    // ViewController objects
+    @IBOutlet weak var buttonPause: UIButton!
+    @IBOutlet weak var buttonCharacter: UIButton!
+    @IBOutlet weak var buttonDish: UIButton!
+  
+    @IBOutlet weak var labelCurrentMeal: UILabel!
+    // Logic variables
+  
     var alimentos : [Alimento] = []
     var alimentosAceitos : [Alimento] = []
     var qtdCards : Int = 0
@@ -38,7 +48,48 @@ class CardViewController: UIViewController {
             
         self.buscaAlimentos()
         qtdCards = alimentos.count
+      
+        adjustLayout()
     }
+  
+    //Função para desaparecer com a NavBar
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //Função para aparecer com a NavBar
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      
+      navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+  
+    //Função que ajusta a parte visual do layout
+    func adjustLayout() {
+      buttonDish.layer.cornerRadius = 30
+      buttonPause.layer.cornerRadius = 30
+      buttonCharacter.layer.cornerRadius = 30
+      
+      labelCurrentMeal.text = currentMeal
+    }
+  
+  // Altera a refeição atual para a próxima refeição
+  func changeMeal(){
+    switch currentMeal {
+    case "Café":
+      currentMeal = "Almoço"
+      view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
+      break
+    default:
+      currentMeal = "Janta"
+      view.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2745098039, blue: 0.4431372549, alpha: 1)
+      labelCurrentMeal.textColor = .white
+    }
+    
+    labelCurrentMeal.text = currentMeal
+  }
     
     func buscaAlimentos(){
         
@@ -239,15 +290,9 @@ extension CardViewController {
       // Caso seja a MealViewController:
       if segue.source is MealViewController {
         
-        // Altera a refeição atual para a próxima refeição
-        switch currentMeal {
-        case "Café":
-          currentMeal = "Almoço"
-          break
-        default:
-          currentMeal = "Janta"
-        }
-         self.buscaAlimentos()
+        changeMeal()
+        
+        self.buscaAlimentos()
         qtdCards = alimentos.count
         alimentosAceitos.removeAll()
       }
