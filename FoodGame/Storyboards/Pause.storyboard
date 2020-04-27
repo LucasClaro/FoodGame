@@ -44,7 +44,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ScJ-AC-8kf" kind="show" id="BHG-ee-aiz"/>
+                                                    <segue destination="2ii-FI-qTd" kind="unwind" unwindAction="unwindWithSegue:" id="X3y-VP-yR2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Jr-RiB" customClass="CustonButton" customModule="FoodGame" customModuleProvider="target">
