@@ -29,8 +29,8 @@ class CombineCardView: UIView {
 
     let fotoImageView: UIImageView = .fotoImageView()
 
-    let fraseLabelp:UILabel = .textLabelBold(32, textColor: .white, numberOfLines: 2)
-    let fraseLabels:UILabel = .textLabel(24, textColor: .white, textAlignment: .center ,numberOfLines: 3)
+    let fraseLabelp:UILabel = .textLabelBold(32, textColor: .black, numberOfLines: 2)
+    let fraseLabels:UILabel = .textLabel(24, textColor: .black, textAlignment: .center ,numberOfLines: 3)
     
     
   
