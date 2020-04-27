@@ -10,7 +10,6 @@
 		02777BBC243BD75200521891 /* Personagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* Personagem.storyboard */; };
 		02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F02447739A00FC81F4 /* NameAndAge.swift */; };
 		02E361F32447744F00FC81F4 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F22447744F00FC81F4 /* Conditions.swift */; };
-		02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F42447751C00FC81F4 /* ConditionsResult.swift */; };
 		02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F62450B35800FC81F4 /* EditCharacter.swift */; };
 		050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBE4243BD7D200FF22DB /* Config.storyboard */; };
 		050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE6243BD87500FF22DB /* ConfigViewController.swift */; };
@@ -80,7 +79,6 @@
 		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
-		02E361F42447751C00FC81F4 /* ConditionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsResult.swift; sourceTree = "<group>"; };
 		02E361F62450B35800FC81F4 /* EditCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacter.swift; sourceTree = "<group>"; };
 		050ADBE4243BD7D200FF22DB /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		050ADBE6243BD87500FF22DB /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			children = (
 				02E361F02447739A00FC81F4 /* NameAndAge.swift */,
 				02E361F22447744F00FC81F4 /* Conditions.swift */,
-				02E361F42447751C00FC81F4 /* ConditionsResult.swift */,
 				02E361F62450B35800FC81F4 /* EditCharacter.swift */,
 			);
 			path = Personagem;
@@ -466,7 +463,7 @@
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
 				05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */,
-				02777BBC243BD75200521891 /* felipe.storyboard in Resources */,
+				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				78C661112445FA52000AEC7B /* CardView.storyboard in Resources */,
@@ -505,7 +502,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */,
 				F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
 				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,

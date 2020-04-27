@@ -27,9 +27,6 @@ class conditions: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(defaults.string(forKey: "Nome")!)
-        print(defaults.integer(forKey: "Idade"))
-        print(defaults.string(forKey: "Sexo")!)
         visualBotao(sender: bttSalva)
     }
     
@@ -108,6 +105,12 @@ class conditions: UIViewController{
     
  
     @IBAction func bttSalvar(_ sender: UIButton) {
+        
+        print(defaults.string(forKey: "Nome")!)
+        print(defaults.integer(forKey: "Idade"))
+        print(defaults.string(forKey: "Sexo")!)
+        defaults.set(dicionario, forKey: "Condicoes")
+        
         print(dicionario["Diabetes"]!)
         print(dicionario["Hipertensao"]!)
         print(dicionario["Lactose"]!)

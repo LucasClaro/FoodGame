@@ -15,7 +15,6 @@ class name: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var verificaNome: UILabel!
     @IBOutlet var varBotaoJoga: UIButton!
     @IBOutlet weak var nomeField: UITextField!
-    @IBOutlet weak var sobrenomeField: UITextField!
     var defaults = UserDefaults.standard
     var nome: String = String()
     
@@ -24,7 +23,6 @@ class name: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         verificaNome.isHidden = true
         nomeField.delegate = self
-        sobrenomeField.delegate = self
         visualBotao(sender: varBotaoJoga)
     }
     
@@ -60,6 +58,7 @@ class name: UIViewController, UITextFieldDelegate{
     
 class age: UIViewController, UITextFieldDelegate{
     
+    var datePicker: UIDatePicker?
     @IBOutlet var bttTela3: UIButton!
     @IBOutlet weak var idadeatual: UILabel!
     @IBOutlet var caixaTexto: UITextField!
@@ -76,7 +75,6 @@ class age: UIViewController, UITextFieldDelegate{
         label.numberOfLines = 10
         print(defaults.integer(forKey: "Idade"))
         visualBotao(sender: bttTela3)
-        
     }
     
     // MARK: - Allowing text field to only get numbers
@@ -92,12 +90,15 @@ class age: UIViewController, UITextFieldDelegate{
         let ano = Int(caixaTexto.text!)
         let anoNasc = caixaTexto.text
         var conta: Int = 1
-            
+        let data = Date()
+        let calendario = Calendar.current
+        
+        
         if caixaTexto.text == nil || caixaTexto.text == ""{
             avisoIdade.text = "Insira um ano"
             botao.isHidden = true
                } else {
-                conta = 2020 - ano!
+            conta = calendario.component(.year, from: data) - ano!
             botao.isHidden = true
             if(conta < 0 || conta > 110){
                 avisoIdade.text = "Insira um ano válido"

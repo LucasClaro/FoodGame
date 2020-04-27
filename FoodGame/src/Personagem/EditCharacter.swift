@@ -50,6 +50,12 @@ class edit: UIViewController, UITextFieldDelegate{
         fieldNome.delegate = self
         fieldAno.delegate = self
         
+        print(dicionario["Diabetes"]!)
+        print(dicionario["Hipertensao"]!)
+        print(dicionario["Lactose"]!)
+        print(dicionario["Vegetariano"]!)
+        print(dicionario["Gastrite"]!)
+        print(dicionario["Gluten"]!)
     }
     
     func loadData(){
@@ -69,45 +75,21 @@ class edit: UIViewController, UITextFieldDelegate{
             print("Nenhuma")
         }
         
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
-        if (dicionario["Diabetes"] == true){
-            bttDiab.isSelected = true
-        }
         
         for (key, value) in dicionario{
             switch key{
             case "Diabetes":
                 bttDiab.isSelected = value
-                break
             case "Hipertensao":
                 bttHipe.isSelected = value
-                break
             case "Lactose":
                 bttLacto.isSelected = value
-                break
             case "Vegetariano":
                 bttVege.isSelected = value
-                break
             case "Gastrite":
                 bttGast.isSelected = value
-                break
             case "Gluten":
                 bttGlut.isSelected = value
-                break
             default:
                 print("default")
             }
@@ -169,7 +151,7 @@ class edit: UIViewController, UITextFieldDelegate{
          } else {
              bttHipe.isSelected = true
              print("on")
-             dicionario.updateValue(false, forKey: "Hipertensao")
+             dicionario.updateValue(true, forKey: "Hipertensao")
              }
     }
     
@@ -261,6 +243,8 @@ class edit: UIViewController, UITextFieldDelegate{
         let ano = Int(fieldAno.text!)
         var conta: Int = Int()
         var aux: Int = 0
+        let data = Date()
+        let calendario = Calendar.current
         
         bttSalva.isEnabled = !fieldNome.text!.trimmingCharacters(in: .whitespaces).isEmpty
         if fieldNome.text == "" || bttSalva.isEnabled == false{
@@ -277,7 +261,7 @@ class edit: UIViewController, UITextFieldDelegate{
             avisoAno.isHidden = false
             avisoAno.text = "Insira um ano"
                } else {
-                conta = 2020 - ano!
+            conta = calendario.component(.year, from: data) - ano!
             if(conta < 0 || conta > 110){
                 avisoAno.text = "Insira um ano válido"
             } else {
