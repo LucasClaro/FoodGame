@@ -36,7 +36,10 @@ class CardViewController: UIViewController {
                      "Almoço": Meal(),
                      "Janta": Meal()]
      
-     var currentMeal = "Café"
+    var currentMeal = "Café"
+  
+    // Modificação
+    var vetorDeCards : [CombineCardView] = []
     
     @IBOutlet weak var card: UIView!
     
@@ -133,6 +136,8 @@ class CardViewController: UIViewController {
 
 extension CardViewController {
     func adicionarCards(){
+      // Modificação
+      vetorDeCards.removeAll()
             
         for alimento in alimentos {
             
@@ -148,10 +153,19 @@ extension CardViewController {
             let gesture = UIPanGestureRecognizer()
             gesture.addTarget(self, action: #selector(handlerCard))
             cards.addGestureRecognizer(gesture)
-                   
+            
+            // Modificação
+            cards.isHidden = true
                 
             card = cards
             view.insertSubview(card, at: 1)
+          
+            // Modificação adicionada pelo Jader para ordenar as cards num vetor
+            vetorDeCards.append(cards)
+        }
+        //Modificação
+        for index in 0...1 {
+          vetorDeCards[index].isHidden = false
         }
     }
 }
@@ -254,6 +268,13 @@ extension CardViewController {
     //Conta a quantidade de cards quando não tiver mais nenhum, avança para outra tela
     func verificaQtdCards()
     {
+        // Modificação
+        if !(qtdCards <= 2) {
+          let indexVetorCards = (qtdCards - vetorDeCards.count - 2) * (-1)
+          vetorDeCards[indexVetorCards].isHidden = false
+        }
+      
+      
         qtdCards -= 1
         if(qtdCards == 0)
         {
