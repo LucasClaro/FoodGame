@@ -15,7 +15,7 @@ class PauseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.isHidden = true
         popupView.layer.cornerRadius = 30
     }
     

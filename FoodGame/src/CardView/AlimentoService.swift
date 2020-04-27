@@ -21,9 +21,9 @@ class AlimentoService {
     ]
     
     let legs: [Alimento] = [
-        Alimento(id: 201, nome: "Feijão", porcao: 100, tipo: "Leguminosa", foto: "Feijão"),
-        Alimento(id: 202, nome: "Soja", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
-        Alimento(id: 203, nome: "Ervilha", porcao: 100, tipo: "Leguminosa", foto: "Pao"),
+        Alimento(id: 201, nome: "Feijão", porcao: 100, tipo: "Leguminosa", foto: "Feijao"),
+        Alimento(id: 202, nome: "Soja", porcao: 100, tipo: "Leguminosa", foto: "Soja"),
+        Alimento(id: 203, nome: "Ervilha", porcao: 100, tipo: "Leguminosa", foto: "Ervilha"),
         Alimento(id: 204, nome: "Lentilha", porcao: 100, tipo: "Leguminosa", foto: "Lentilha"),
         Alimento(id: 205, nome: "Grão-de-Bico", porcao: 100, tipo: "Leguminosa", foto: "Grao de bico"),
     ]
@@ -42,19 +42,19 @@ class AlimentoService {
     let protsV: [Alimento] = [
         Alimento(id: 401, nome: "Lentilha", porcao: 100, tipo: "Proteína Vegetal", foto: "Lentilha"),
         Alimento(id: 402, nome: "Tofu", porcao: 100, tipo: "Proteína Vegetal", foto: "Tofu"),
-        Alimento(id: 403, nome: "Chia", porcao: 100, tipo: "Proteína Vegetal", foto: "Pao"),
+        Alimento(id: 403, nome: "Chia", porcao: 100, tipo: "Proteína Vegetal", foto: "Chia"),
      ]
     
     let hort: [Alimento] = [
         Alimento(id: 501, nome: "Alface", porcao: 100, tipo: "Hortaliça", foto: "Alface"),
-        Alimento(id: 502, nome: "Espinafre", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
+        Alimento(id: 502, nome: "Espinafre", porcao: 100, tipo: "Hortaliça", foto: "Espinafre"),
         Alimento(id: 503, nome: "Brócolis", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
-        Alimento(id: 504, nome: "Cenoura", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
+        Alimento(id: 504, nome: "Cenoura", porcao: 100, tipo: "Hortaliça", foto: "Cenoura"),
         Alimento(id: 505, nome: "Chuchu", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
         Alimento(id: 506, nome: "Abóbora", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
         Alimento(id: 507, nome: "Vagem", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
         Alimento(id: 508, nome: "Berinjela", porcao: 100, tipo: "Hortaliça", foto: "Berinjela"),
-        Alimento(id: 509, nome: "Beterraba", porcao: 100, tipo: "Hortaliça", foto: "Pao"),
+        Alimento(id: 509, nome: "Beterraba", porcao: 100, tipo: "Hortaliça", foto: "Beterraba"),
         Alimento(id: 510, nome: "Couve", porcao: 100, tipo: "Hortaliça", foto: "Couve"),
     ]
     
