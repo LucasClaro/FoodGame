@@ -36,7 +36,10 @@ class ConfigViewController: UITableViewController {
       
         
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
   
     
     @objc func musicVolChange()
@@ -47,6 +50,12 @@ class ConfigViewController: UITableViewController {
     @objc func soundVolChange()
     {
         volumeChangedDelegate?.changeVol(sender: soundVol, key: "soundVol")
+    }
+    
+    @IBAction func voltaTelaAnterior()
+    {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

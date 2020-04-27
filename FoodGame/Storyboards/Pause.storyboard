@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NJm-1h-qtp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +57,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="uYf-4T-FWz" kind="show" id="jxz-yP-fMm"/>
+                                                    <segue destination="bIG-Nz-IpX" kind="presentation" modalPresentationStyle="fullScreen" id="ly7-LY-OMW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYx-CH-WG0" customClass="CustonButton" customModule="FoodGame" customModuleProvider="target">
@@ -101,6 +101,34 @@
             </objects>
             <point key="canvasLocation" x="-666" y="-824"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KCm-zw-706">
+            <objects>
+                <navigationController id="bIG-Nz-IpX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RLu-J5-edj">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" id="Qzu-fm-oQD"/>
+                            <barButtonItem style="plain" id="hln-z9-uNh">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cLd-t8-6wZ">
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="98Z-8S-tGa"/>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="25e-X5-2zv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uYf-4T-FWz" kind="relationship" relationship="rootViewController" id="M74-3G-TKv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEH-Tn-tV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="-824"/>
+        </scene>
         <!--Config-->
         <scene sceneID="EvO-Jz-fEH">
             <objects>
@@ -109,7 +137,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfl-bt-oHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="-735"/>
+            <point key="canvasLocation" x="-664" y="-573"/>
         </scene>
     </scenes>
 </document>
