@@ -39,11 +39,15 @@ class name: UIViewController, UITextFieldDelegate{
             verificaNome.isHidden = false
             verificaNome.text = "Digite o seu nome"
             botao.isHidden = true
-        } else {
-            defaults.set(nomeField.text, forKey: "Nome")
-            verificaNome.isHidden = true
-            botao.isHidden = false
-        }
+            } else if nomeField.text!.count > 15{
+                verificaNome.isHidden = false
+                verificaNome.text = "Digite um nome menor"
+                botao.isHidden = true
+            } else {
+                defaults.set(nomeField.text, forKey: "Nome")
+                verificaNome.isHidden = true
+                botao.isHidden = false
+            }
     }
     
     func setNome(nome: String){
