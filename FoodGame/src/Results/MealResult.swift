@@ -44,9 +44,9 @@ class MealViewController: UIViewController {
     
     adjustLayout()
    
-    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)/5"
-    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)/5"
-    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)/5"
+    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)\(Calculo.maxValue.gCarbo)"
+    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)\(Calculo.maxValue.gProt)"
+    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)\(Calculo.maxValue.gVeg)"
 
     coloringStars()
   }
@@ -110,8 +110,9 @@ class MealViewController: UIViewController {
   
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {
-    let sumOfNutrients = (mealDict["\(currentMeal)"]!.carbohydrates + mealDict["\(currentMeal)"]!.proteins + mealDict["\(currentMeal)"]!.vegetables)/3
-    
+    let sumOfNutrients = (mealDict["\(currentMeal)"]!.carbohydrates / Int(Calculo.maxValue.gCarbo) + mealDict["\(currentMeal)"]!.proteins / Int(Calculo.maxValue.gProt) + mealDict["\(currentMeal)"]!.vegetables) /
+        Int(Calculo.maxValue.gVeg)
+    print(sumOfNutrients)
     givingTips(sumOfNutrients: sumOfNutrients)
     
     for star in arrayOfStars {

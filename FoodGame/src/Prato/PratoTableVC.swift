@@ -15,6 +15,10 @@ class PratoTableVC: UITableViewController {
     var textos: [[String]] = []
     var legendas: [String] = []
     
+    var mealDict : [String:Meal] = [:]
+     
+    var currentMeal = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,7 +81,10 @@ class PratoTableVC: UITableViewController {
     }
     
     func preencherTextos(){
-        var infos = ["Informação 1: info", "Informação 2: info", "Informação 3: info"]
+        let infos = ["Refeição: " + currentMeal,
+                     "Carboidrato: \(mealDict[currentMeal]!.carbohydrates)g/\(Calculo.maxValue.gCarbo)",
+                     "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)",
+                     "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)"]
         var nomes: [String] = []
         
         textos.append(infos)
