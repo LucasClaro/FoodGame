@@ -105,7 +105,7 @@
         <!--Créditos-->
         <scene sceneID="rjH-6U-osY">
             <objects>
-                <viewController id="yDt-ak-dQ7" sceneMemberID="viewController">
+                <viewController id="yDt-ak-dQ7" customClass="CreditosViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vdq-30-wPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +171,9 @@
                         <viewLayoutGuide key="safeArea" id="GNe-jW-K9g"/>
                     </view>
                     <navigationItem key="navigationItem" title="Créditos" id="WKh-iY-gZ5"/>
+                    <connections>
+                        <outlet property="mainView" destination="INm-Pc-5VC" id="XKd-cL-9oz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UiH-x1-9b6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
