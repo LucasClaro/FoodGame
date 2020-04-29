@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 struct Meal {
   var carbohydrates = 0
@@ -44,9 +45,9 @@ class MealViewController: UIViewController {
     
     adjustLayout()
    
-    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)\(Calculo.maxValue.gCarbo)"
-    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)\(Calculo.maxValue.gProt)"
-    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)\(Calculo.maxValue.gVeg)"
+    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
+    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
+    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
 
     coloringStars()
   }
@@ -110,8 +111,7 @@ class MealViewController: UIViewController {
   
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {
-    let sumOfNutrients = (mealDict["\(currentMeal)"]!.carbohydrates / Int(Calculo.maxValue.gCarbo) + mealDict["\(currentMeal)"]!.proteins / Int(Calculo.maxValue.gProt) + mealDict["\(currentMeal)"]!.vegetables) /
-        Int(Calculo.maxValue.gVeg)
+    let sumOfNutrients = calcPerNutrient()
     print(sumOfNutrients)
     givingTips(sumOfNutrients: sumOfNutrients)
     
@@ -147,6 +147,14 @@ class MealViewController: UIViewController {
     }
   }
   
+    func calcPerNutrient() -> Int {
+        
+        let carb = Float32(mealDict["\(currentMeal)"]!.carbohydrates) / Calculo.maxValue.gCarbo
+        let prot = Float32(mealDict["\(currentMeal)"]!.proteins) / Calculo.maxValue.gProt
+        let veg = Float32(mealDict["\(currentMeal)"]!.vegetables) / Calculo.maxValue.gVeg
+        
+        return Int((carb * 1.5 + prot * 1.5 + veg * 2.0) - abs(carb - 1) - abs(prot - 1) - abs(veg - 1))
+    }
   
   // MARK: View Data Output
   
@@ -159,6 +167,8 @@ class MealViewController: UIViewController {
         dayViewController.mealDict = mealDict
     }
     else if let pratoTableVC = segue.destination as? PratoTableVC{
+        pratoTableVC.mealDict = mealDict
+        pratoTableVC.currentMeal = currentMeal
         pratoTableVC.alimentos = alimentosAceitos
     }
     
