@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pk8-01-NiG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,11 +70,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-u2-KSp">
                                 <rect key="frame" x="54" y="356" width="307" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Jogar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="play:" destination="pk8-01-NiG" eventType="touchUpInside" id="NGa-ga-VIB"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-6V-V6q">
                                 <rect key="frame" x="143" y="107" width="128" height="128"/>
@@ -102,6 +105,15 @@
                                     <segue destination="Lhe-3z-Lbs" kind="show" id="m8b-jM-Yj2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-8V-8wv">
+                                <rect key="frame" x="305" y="744" width="55" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Prato"/>
+                                <connections>
+                                    <segue destination="E30-vb-JDP" kind="show" id="Nqg-dM-v82"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
@@ -109,11 +121,33 @@
                     <connections>
                         <outlet property="buttonConfiguration" destination="eQQ-1g-v3R" id="s4B-cR-bff"/>
                         <outlet property="buttonPlay" destination="Jb3-u2-KSp" id="sl1-F8-Ldn"/>
+                        <segue destination="I3n-IG-76n" kind="show" identifier="Game" id="ac3-yu-pGG"/>
+                        <segue destination="2Gg-LQ-LXp" kind="show" identifier="PersonagemVC" id="mf3-31-yn7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwd-Ub-PPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2628.985507246377" y="-628.125"/>
+        </scene>
+        <!--CardView-->
+        <scene sceneID="XOB-Tq-WQh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardView" id="I3n-IG-76n" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JhX-1p-r8A"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ruu-M2-gX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2021" y="-905"/>
+        </scene>
+        <!--Personagem-->
+        <scene sceneID="IDl-ti-VhL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Personagem" id="2Gg-LQ-LXp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vxi-cV-tuy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMi-im-FqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2022" y="-819"/>
         </scene>
         <!--Config-->
         <scene sceneID="ncO-gS-c2b">
@@ -164,6 +198,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCp-Wy-WUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2117" y="-352"/>
+        </scene>
+        <!--Prato-->
+        <scene sceneID="hr3-DW-Opb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Prato" id="E30-vb-JDP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G7Q-AF-Xg4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLb-Jd-9kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2183" y="-215"/>
         </scene>
         <!--Game-->
         <scene sceneID="tX8-EK-P5R">

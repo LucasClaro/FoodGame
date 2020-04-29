@@ -15,6 +15,8 @@ class InitialMenuViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    NotificationCenter.default.addObserver(self, selector: #selector(musicChange(_:)), name: NSNotification.Name("musicVolumeChange"), object: nil)
+    
     buttonPlay.layer.cornerRadius = 10
     buttonConfiguration.layer.cornerRadius = 10
     let mv = UserDefaults.standard.float(forKey: "musicVol")
@@ -54,6 +56,24 @@ class InitialMenuViewController: UIViewController {
   @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
     
   }
+  
+  @IBAction func play(_ sender: UIButton) {
+    //UserDefaults.standard.set(false, forKey: "fezTutorial")
+    if !UserDefaults.standard.bool(forKey: "fezTutorial") {
+      performSegue(withIdentifier: "Game", sender: nil)
+    } else {
+      performSegue(withIdentifier: "PersonagemVC", sender: nil)
+    }
+  }
+  
+  @objc func musicChange(_ notification: Notification){
+    let volume:Float = (notification.userInfo?["musicVolume"] ?? 0) as! Float
+    
+    player.volume = volume
+    UserDefaults.standard.set(volume, forKey: "musicVol")
+    
+  }
+  
 
 }
 
