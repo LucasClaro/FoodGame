@@ -23,19 +23,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6W-Tx-u0R">
-                                <rect key="frame" x="23" y="312" width="341" height="34"/>
+                                <rect key="frame" x="23" y="317" width="341" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VU-lH-KYg">
-                                <rect key="frame" x="23" y="354" width="341" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGI-7a-Qmi">
-                                <rect key="frame" x="26" y="394" width="332" height="21"/>
+                                <rect key="frame" x="26" y="359" width="332" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,7 +54,6 @@
                     <navigationItem key="navigationItem" title="Personagem" id="gT0-Me-q9m"/>
                     <connections>
                         <outlet property="nomeField" destination="c6W-Tx-u0R" id="zXc-c5-nd1"/>
-                        <outlet property="sobrenomeField" destination="1VU-lH-KYg" id="JJm-L8-bld"/>
                         <outlet property="varBotaoJoga" destination="Mos-Oj-7je" id="yaa-Oh-t0t"/>
                         <outlet property="verificaNome" destination="KGI-7a-Qmi" id="QbA-q5-nSb"/>
                     </connections>
@@ -88,7 +81,7 @@
                                 <rect key="frame" x="23" y="303" width="327" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx8-Fl-v9i">
                                 <rect key="frame" x="19" y="19" width="375" height="81"/>
@@ -161,16 +154,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP0-Yd-DN9">
-                                <rect key="frame" x="37" y="668" width="341" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Próximo"/>
-                                <connections>
-                                    <action selector="imprime:" destination="Xss-a5-b9W" eventType="touchUpInside" id="9tr-15-RZN"/>
-                                    <segue destination="LXY-bd-6nX" kind="show" identifier="vetor" id="KMH-U6-xIE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iem-15-cuO">
                                 <rect key="frame" x="50" y="315" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,13 +243,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j83-lh-0ga">
+                                <rect key="frame" x="37" y="688" width="341" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="bttSalvar:" destination="Xss-a5-b9W" eventType="touchUpInside" id="DDB-fX-WcV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xOB-f3-QEM"/>
                     </view>
                     <navigationItem key="navigationItem" id="DgM-7B-9sq"/>
                     <connections>
-                        <outlet property="bttProx" destination="dP0-Yd-DN9" id="h56-gX-44N"/>
+                        <outlet property="bttSalva" destination="j83-lh-0ga" id="eYz-XC-5aq"/>
                         <outlet property="isGlut" destination="Uhm-ed-jSB" id="sqI-Zg-0QD"/>
                         <outlet property="isVege" destination="u1f-uB-nul" id="LKx-rD-54D"/>
                         <outlet property="temDiab" destination="iem-15-cuO" id="Y0A-vb-n9f"/>
@@ -279,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="3328.985507246377" y="-38.169642857142854"/>
         </scene>
-        <!--Sexo-->
+        <!--Sex-->
         <scene sceneID="x6j-ka-5HX">
             <objects>
-                <viewController id="9LJ-as-2GP" customClass="sexo" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9LJ-as-2GP" customClass="sex" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxB-m2-HUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,94 +365,8 @@
             </objects>
             <point key="canvasLocation" x="138" y="-38"/>
         </scene>
-        <!--Prato-->
-        <scene sceneID="0Ms-JT-Zig">
-            <objects>
-                <viewController id="LXY-bd-6nX" customClass="prato" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" id="iIX-yc-pEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GcC-IH-aBH">
-                                <rect key="frame" x="54" y="152" width="307" height="196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comida 01 é um carboidrato, deseja colocar no seu prato?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-yz-1JA">
-                                <rect key="frame" x="44" y="376" width="326" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U28-jq-nio">
-                                <rect key="frame" x="278" y="568" width="60" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="arrow.right.square.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="botaoSim:" destination="LXY-bd-6nX" eventType="touchUpInside" id="rpv-9W-prd"/>
-                                    <segue destination="f59-xt-1g5" kind="show" identifier="sim" id="45D-yV-8dp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-rq-5mx">
-                                <rect key="frame" x="87" y="568" width="60" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="arrow.left.square.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="botaoNao:" destination="LXY-bd-6nX" eventType="touchUpInside" id="Mcb-0H-qja"/>
-                                    <segue destination="f59-xt-1g5" kind="show" identifier="nao" id="MY9-Ab-qKJ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <gestureRecognizers/>
-                        <viewLayoutGuide key="safeArea" id="BaS-JG-f2j"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="s9n-4k-YHS"/>
-                    <connections>
-                        <outlet property="varNao" destination="wvD-rq-5mx" id="bft-S4-t4H"/>
-                        <outlet property="varSim" destination="U28-jq-nio" id="Qnk-Gn-90V"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sl7-Ay-yAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4110" y="-38"/>
-        </scene>
-        <!--Tela Result-->
-        <scene sceneID="0k1-Dq-Paa">
-            <objects>
-                <viewController id="f59-xt-1g5" customClass="telaResult" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qjV-pn-9FC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX1-dC-soo">
-                                <rect key="frame" x="35" y="78" width="344" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6M0-iI-8rI"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xhQ-tT-F7t"/>
-                    <connections>
-                        <outlet property="resultado" destination="rX1-dC-soo" id="vIB-Ej-0hO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fFG-sm-Mze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4925" y="-38"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="45D-yV-8dp"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <image name="01.square.fill" catalog="system" width="128" height="114"/>
-        <image name="arrow.left.square.fill" catalog="system" width="128" height="114"/>
-        <image name="arrow.right.square.fill" catalog="system" width="128" height="114"/>
         <image name="checkbox" width="96" height="96"/>
         <image name="radioff" width="512" height="512"/>
         <image name="radion" width="512" height="512"/>

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class conditions: UIViewController{
+    
     @IBOutlet var temDiab: UIButton!
     @IBOutlet var temHipe: UIButton!
     @IBOutlet var temInto: UIButton!
@@ -17,54 +18,39 @@ class conditions: UIViewController{
     @IBOutlet var temGast: UIButton!
     @IBOutlet var isGlut: UIButton!
     let defaults = UserDefaults.standard
-    @IBOutlet weak var bttProx: UIButton!
-    
-    var vetor: [String] = []
-    var i = 0
-    
+    @IBOutlet weak var bttSalva: UIButton!
+    var nome: name = name()
+    var idade: age = age()
+    var sexo: sex = sex()
+    var dicionario: [String: Bool] = ["Diabetes": false, "Hipertensao": false, "Lactose": false, "Vegetariano": false, "Gastrite": false, "Gluten": false]
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(vetor, forKey: "vetor")
-        print(defaults.string(forKey: "Nome")!)
-        print(defaults.integer(forKey: "Idade"))
-        print(defaults.string(forKey: "Sexo")!)
-        
-        bttProx.backgroundColor = .systemBlue
-        bttProx.setTitleColor(.white, for: .normal)
-        bttProx.layer.cornerRadius = 30
-        
+        visualBotao(sender: bttSalva)
     }
     
     @IBAction func checkDiabetes(_ sender: Any) {
         if temDiab.isSelected {
             temDiab.isSelected = false
             print("off")
-            if let index = vetor.firstIndex(of: "1"){
-            vetor.remove(at: index)
-            print("Removido")
-            }
+            dicionario.updateValue(false, forKey: "Diabetes")
         } else {
             temDiab.isSelected = true
             print("on")
-            vetor.append("1")
-            i += 1
+            dicionario.updateValue(true, forKey: "Diabetes")
         }
     }
+    
     @IBAction func checkHiper(_ sender: UIButton) {
         if temHipe.isSelected {
            temHipe.isSelected = false
             print("off")
-            if let index = vetor.firstIndex(of: "2"){
-            vetor.remove(at: index)
-            print("Removido")
-                    }
+            dicionario.updateValue(false, forKey: "Hipertensao")
             } else {
                 temHipe.isSelected = true
                 print("on")
-                vetor.append("2")
-                i+=1
+                dicionario.updateValue(true, forKey: "Hipertensao")
                 }
     }
     
@@ -72,80 +58,65 @@ class conditions: UIViewController{
         if temInto.isSelected {
         temInto.isSelected = false
          print("off")
-         if let index = vetor.firstIndex(of: "3"){
-         vetor.remove(at: index)
-         print("Removido")
-                 }
+         dicionario.updateValue(false, forKey: "Lactose")
          } else {
              temInto.isSelected = true
              print("on")
-             vetor.append("3")
-             i+=1
+            dicionario.updateValue(true, forKey: "Lactose")
              }
     }
     
     @IBAction func checkVeggie(_ sender: UIButton) {
         if isVege.isSelected {
-        isVege.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "4"){
-         vetor.remove(at: index)
-         print("Removido")
-                 }
+            isVege.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Vegetariano")
          } else {
              isVege.isSelected = true
              print("on")
-             vetor.append("4")
-             i+=1
+             dicionario.updateValue(true, forKey: "Vegetariano")
              }
     }
     
     @IBAction func checkGastrite(_ sender: UIButton) {
         if temGast.isSelected {
-        temGast.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "5"){
-         vetor.remove(at: index)
-         print("Removido")
-                 }
+            temGast.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Gastrite")
          } else {
              temGast.isSelected = true
              print("on")
-             vetor.append("5")
-             i+=1
+             dicionario.updateValue(true, forKey: "Gastrite")
              }
     }
     
     @IBAction func checkGluten(_ sender: UIButton) {
         if isGlut.isSelected {
-        isGlut.isSelected = false
-         print("off")
-         if let index = vetor.firstIndex(of: "6"){
-         vetor.remove(at: index)
-         print("Removido")
-                 }
+            isGlut.isSelected = false
+            print("off")
+            dicionario.updateValue(false, forKey: "Gluten")
          } else {
              isGlut.isSelected = true
              print("on")
-             vetor.append("6")
-             i+=1
+             dicionario.updateValue(true, forKey: "Gluten")
              }
         
     }
     
  
-    @IBAction func imprime(_ sender: UIButton) {
-        for i in 0..<vetor.count{
-            print("vetor", vetor[i])
-       }
+    @IBAction func bttSalvar(_ sender: UIButton) {
+        
+        print(defaults.string(forKey: "Nome")!)
+        print(defaults.integer(forKey: "Idade"))
+        print(defaults.string(forKey: "Sexo")!)
+        defaults.set(dicionario, forKey: "Condicoes")
+        
+        print(dicionario["Diabetes"]!)
+        print(dicionario["Hipertensao"]!)
+        print(dicionario["Lactose"]!)
+        print(dicionario["Vegetariano"]!)
+        print(dicionario["Gastrite"]!)
+        print(dicionario["Gluten"]!)
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "vetor"{
-            if let prato = segue.destination as? prato{
-                defaults.set(vetor, forKey: "Condicoes")
-                prato.vetor = vetor
-            }
-        }
-   }
+    
 }
