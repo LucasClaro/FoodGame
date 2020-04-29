@@ -1,0 +1,13 @@
+/* 
+  Languages.strings
+  FoodGame
+
+  Created by Felipe Ferreira on 29/04/20.
+  Copyright © 2020 Lucas Claro. All rights reserved.
+*/
+"avisoNomeVazio" = "Please enter a name.";
+"avisoNomeGrande" = "Please enter a shorter name.";
+"anoEmBranco" = "Please enter a year.";
+"anoInvalido" = "Please enter a valid year.";
+"labelNomeEdicao" = "Hello user\nEdit your character: ";
+//"Hello \(defaults.string(forKey: "Nome") ?? "User")." + "\nType your character's name: ";

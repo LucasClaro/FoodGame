@@ -36,7 +36,8 @@ class edit: UIViewController, UITextFieldDelegate{
         dicionario = ((defaults.dictionary(forKey: "Condicoes") as? [String: Bool])!)
         
         // MARK: - Load screen with user name and button design
-        lblOla.text = "Olá \(defaults.string(forKey: "Nome") ?? "Usuário")." + "\nEdite seu personagem: "
+        lblOla.text = NSLocalizedString("labelNomeEdicao", comment: "Label que leva nome do usuario")
+            //"Olá \(defaults.string(forKey: "Nome") ?? "Usuário")." + "\nEdite seu personagem: "
         visualBotao(sender: bttSalva)
         
         // MARK: - Make the warning labels hidden by default
@@ -94,40 +95,7 @@ class edit: UIViewController, UITextFieldDelegate{
                 print("default")
             }
         }
-            
         
-//        for i in
-//            0..<vetorCondicoes.count{
-//            print(vetorCondicoes[i])
-//                switch vetorCondicoes[i] {
-//                case "1":
-//                    bttDiab.isSelected = true
-//                    vetor.append("1")
-//                    break
-//                case "2":
-//                    bttHipe.isSelected = true
-//                    vetor.append("2")
-//                    break
-//                case "3":
-//                    bttLacto.isSelected = true
-//                    vetor.append("3")
-//                    break
-//                case "4":
-//                    bttVege.isSelected = true
-//                    vetor.append("4")
-//                    break
-//                case "5":
-//                    bttGast.isSelected = true
-//                    vetor.append("5")
-//                    break
-//                case "6":
-//                    bttGlut.isSelected = true
-//                    vetor.append("6")
-//                    break
-//                default:
-//                    print("Nenhuma")
-//                }
-//        }
     }
     
     
@@ -249,21 +217,29 @@ class edit: UIViewController, UITextFieldDelegate{
         bttSalva.isEnabled = !fieldNome.text!.trimmingCharacters(in: .whitespaces).isEmpty
         if fieldNome.text == "" || bttSalva.isEnabled == false{
             avisoNome.isHidden = false
-            avisoNome.text = "Digite o seu nome"
-        } else {
+            avisoNome.text = NSLocalizedString("avisoNomeVazio", comment: "Aviso caso nome seja inválido")
+            //"Digite o seu nome"
+        }  else if fieldNome.text!.count > 15{
+            avisoNome.isHidden = false
+            avisoNome.text = NSLocalizedString("avisoNomeGrande", comment: "Aviso caso nome seja grande")
+            //"Digite um nome menor"
+        }
+        else {
             avisoNome.isHidden = true
-            lblOla.text = "Olá \(fieldNome.text ?? "Usuário")." + "\nEdite seu personagem: "
+//            lblOla.text = "Olá \(fieldNome.text ?? "Usuário")." + "\nEdite seu personagem: "
             aux += 1
         }
         
         
         if ano == nil || fieldAno.text == ""{
             avisoAno.isHidden = false
-            avisoAno.text = "Insira um ano"
+            avisoAno.text = NSLocalizedString("anoEmBranco", comment: "Aviso para caso ano esteja em branco")
+            //"Insira um ano"
                } else {
             conta = calendario.component(.year, from: data) - ano!
             if(conta < 0 || conta > 110){
-                avisoAno.text = "Insira um ano válido"
+                avisoAno.text = NSLocalizedString("anoInvalido", comment: "Aviso para caso ano seja inválido")
+                //"Insira um ano válido"
             } else {
                 avisoAno.isHidden = true
                 idade = conta

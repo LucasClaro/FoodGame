@@ -24,6 +24,7 @@ class name: UIViewController, UITextFieldDelegate{
         verificaNome.isHidden = true
         nomeField.delegate = self
         visualBotao(sender: varBotaoJoga)
+        
     }
     
 
@@ -37,11 +38,13 @@ class name: UIViewController, UITextFieldDelegate{
         botao.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
         if nomeField.text == "" || botao.isEnabled == false{
             verificaNome.isHidden = false
-            verificaNome.text = "Digite o seu nome"
+            verificaNome.text = NSLocalizedString("avisoNomeVazio", comment: "Aviso caso nome seja inválido")
+            //"Digite o seu nome"
             botao.isHidden = true
             } else if nomeField.text!.count > 15{
                 verificaNome.isHidden = false
-                verificaNome.text = "Digite um nome menor"
+                verificaNome.text = NSLocalizedString("avisoNomeGrande", comment: "Aviso caso nome seja grande")
+                //"Digite um nome menor"
                 botao.isHidden = true
             } else {
                 defaults.set(nomeField.text, forKey: "Nome")
@@ -99,13 +102,15 @@ class age: UIViewController, UITextFieldDelegate{
         
         
         if caixaTexto.text == nil || caixaTexto.text == ""{
-            avisoIdade.text = "Insira um ano"
+            avisoIdade.text = NSLocalizedString("anoEmBranco", comment: "Aviso para caso ano esteja em branco")
+            //"Insira um ano"
             botao.isHidden = true
                } else {
             conta = calendario.component(.year, from: data) - ano!
             botao.isHidden = true
             if(conta < 0 || conta > 110){
-                avisoIdade.text = "Insira um ano válido"
+                avisoIdade.text = NSLocalizedString("anoInvalido", comment: "Aviso para caso ano seja inválido")
+                //"Insira um ano válido"
                 botao.isHidden = true
             } else {
                 avisoIdade.text = ""
