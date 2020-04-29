@@ -148,12 +148,35 @@ class MealViewController: UIViewController {
   }
   
     func calcPerNutrient() -> Int {
+      
+        let totalNutrientes = (Calculo.maxValue.gCarbo + Calculo.maxValue.gProt + Calculo.maxValue.gVeg)
         
-        let carb = Float32(mealDict["\(currentMeal)"]!.carbohydrates) / Calculo.maxValue.gCarbo
-        let prot = Float32(mealDict["\(currentMeal)"]!.proteins) / Calculo.maxValue.gProt
-        let veg = Float32(mealDict["\(currentMeal)"]!.vegetables) / Calculo.maxValue.gVeg
+        let carb = abs(Float32(mealDict["\(currentMeal)"]!.carbohydrates) - Calculo.maxValue.gCarbo)
+        let prot = abs(Float32(mealDict["\(currentMeal)"]!.proteins) - Calculo.maxValue.gProt)
+        let veg = abs(Float32(mealDict["\(currentMeal)"]!.vegetables) - Calculo.maxValue.gVeg)
         
-        return Int((carb * 1.5 + prot * 1.5 + veg * 2.0) - abs(carb - 1) - abs(prot - 1) - abs(veg - 1))
+        let somaNutrientes = carb+prot+veg
+      
+        switch somaNutrientes {
+        case ..<(totalNutrientes*0.05):
+          //5%
+          return 5
+        case ..<(totalNutrientes*0.10):
+          //10%
+          return 4
+        case ..<(totalNutrientes*0.25):
+          //25%
+          return 3
+        case ..<(totalNutrientes*0.50):
+          //50%
+          return 2
+        case ..<(totalNutrientes*0.75):
+          //75%
+          return 1
+        default:
+          //0 Estrelas
+          return 0
+        }
     }
   
   // MARK: View Data Output
