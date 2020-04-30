@@ -16,24 +16,24 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     // MARK: Valores tutorial
     
     //TOP
-    let titleTu = ["Como funciona?","Como funciona","Não sei","F"]
-    let pageHeadingsTop = ["Navegação intuitiva","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
-    let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arratando o card.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    let titleTu = ["Como funciona?","F"]
+    let pageHeadingsTop = ["Navegação intuitiva","Verso"]
+    let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arratando o card.","Bacon"]
     
-    let pageImagesTop = ["IconsCard.png","img.jpg","img.jpg","img.jpg"]
+    let pageImagesTop = ["IconsCard.png","IconsCard.png"]
     
     //MID
-    let pageHeadingsMid = ["Monte um prato","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
-    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    let pageHeadingsMid = ["Monte um prato","Chocolate"]
+    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Meio amargo"]
     
-    let pageImagesMid = ["IconsPrato.png","img.jpg","img.jpg","img.jpg"]
+    let pageImagesMid = ["IconsPrato.png","IconsPrato.png"]
     
     
     //BOT
-    let pageHeadingsBot = ["Personagem","Designed by Freepik2 tela","Designed by Freepikweeeee","Designed by Freepikaaaaaaaaa"]
-    let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","Bacon","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"]
+    let pageHeadingsBot = ["Personagem","Cake"]
+    let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","is a lie"]
     
-    let pageImagesBot = ["IconsPersonagem.png","img.jpg","img.jpg","img.jpg"]
+    let pageImagesBot = ["IconsPersonagem.png","IconsPersonagem.png"]
     
     weak var tutorialDelegate : TutorialPageViewControllerDelegate?
     

@@ -25,9 +25,9 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
     {
         if let index = tutorialPageViewController?.currentIndex {
             switch index {
-                case 0...2:
+                case 0:
                     tutorialPageViewController?.fowardPage()
-                case 3:
+                case 1:
                     dismiss(animated: true, completion: nil)
                 
                 default : break
@@ -44,11 +44,12 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
     func updateUI() {
         if let index = tutorialPageViewController?.currentIndex {
             switch index {
-            case 0...2:
+            case 0:
                 btnNext.setTitle("Próximo", for: .normal)
                 btnSkip.isHidden = false
-            case 3:
+            case 1:
                 btnNext.setTitle("Jogar", for: .normal)
+                btnNext.addTarget(self, action: #selector(irParaPersonagem), for: UIControl.Event.touchUpInside)
                 btnSkip.isHidden = true
                 
             default: break
@@ -76,6 +77,9 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
             tutorialPageViewController?.tutorialDelegate = self
         }
     }
+  @objc func irParaPersonagem() {
+    performSegue(withIdentifier: "PersonagemVC", sender: nil)
+  }
     
 
 }

@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 struct Meal {
   var carbohydrates = 0
@@ -44,9 +45,9 @@ class MealViewController: UIViewController {
     
     adjustLayout()
    
-    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates)/5"
-    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins)/5"
-    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables)/5"
+    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
+    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
+    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
 
     coloringStars()
   }
@@ -110,8 +111,8 @@ class MealViewController: UIViewController {
   
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {
-    let sumOfNutrients = (mealDict["\(currentMeal)"]!.carbohydrates + mealDict["\(currentMeal)"]!.proteins + mealDict["\(currentMeal)"]!.vegetables)/3
-    
+    let sumOfNutrients = calcPerNutrient()
+    print(sumOfNutrients)
     givingTips(sumOfNutrients: sumOfNutrients)
     
     for star in arrayOfStars {
@@ -146,6 +147,37 @@ class MealViewController: UIViewController {
     }
   }
   
+    func calcPerNutrient() -> Int {
+      
+        let totalNutrientes = (Calculo.maxValue.gCarbo + Calculo.maxValue.gProt + Calculo.maxValue.gVeg)
+        
+        let carb = abs(Float32(mealDict["\(currentMeal)"]!.carbohydrates) - Calculo.maxValue.gCarbo)
+        let prot = abs(Float32(mealDict["\(currentMeal)"]!.proteins) - Calculo.maxValue.gProt)
+        let veg = abs(Float32(mealDict["\(currentMeal)"]!.vegetables) - Calculo.maxValue.gVeg)
+        
+        let somaNutrientes = carb+prot+veg
+      
+        switch somaNutrientes {
+        case ..<(totalNutrientes*0.05):
+          //5%
+          return 5
+        case ..<(totalNutrientes*0.10):
+          //10%
+          return 4
+        case ..<(totalNutrientes*0.25):
+          //25%
+          return 3
+        case ..<(totalNutrientes*0.50):
+          //50%
+          return 2
+        case ..<(totalNutrientes*0.75):
+          //75%
+          return 1
+        default:
+          //0 Estrelas
+          return 0
+        }
+    }
   
   // MARK: View Data Output
   
@@ -158,6 +190,8 @@ class MealViewController: UIViewController {
         dayViewController.mealDict = mealDict
     }
     else if let pratoTableVC = segue.destination as? PratoTableVC{
+        pratoTableVC.mealDict = mealDict
+        pratoTableVC.currentMeal = currentMeal
         pratoTableVC.alimentos = alimentosAceitos
     }
     

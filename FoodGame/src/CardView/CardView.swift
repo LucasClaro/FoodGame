@@ -51,7 +51,7 @@ class CardViewController: UIViewController {
             
         self.buscaAlimentos()
         qtdCards = alimentos.count
-      
+        Calculo.definirValoresMax()
         adjustLayout()
     }
   
@@ -85,10 +85,15 @@ class CardViewController: UIViewController {
       currentMeal = "Almoço"
       view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
       break
-    default:
+    case "Almoço":
       currentMeal = "Janta"
       view.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2745098039, blue: 0.4431372549, alpha: 1)
       labelCurrentMeal.textColor = .white
+      break
+    default:
+      currentMeal = "Café"
+      view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.7450980392, blue: 0.1725490196, alpha: 1)
+      labelCurrentMeal.textColor = .black
     }
     
     labelCurrentMeal.text = currentMeal
@@ -308,6 +313,9 @@ extension CardViewController {
             mealViewController.alimentosAceitos = alimentosAceitos
         }
         else if let pratoTableVC = segue.destination as? PratoTableVC{
+            calculaAlimentacao()
+            pratoTableVC.mealDict = mealDict
+            pratoTableVC.currentMeal = currentMeal
             pratoTableVC.alimentos = alimentosAceitos
         }
       
@@ -319,6 +327,29 @@ extension CardViewController {
       if segue.source is MealViewController {
         
         changeMeal()
+        
+        self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+      
+      if segue.source is DayViewController {
+        
+        changeMeal()
+        
+        self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+      
+      if segue.source is PauseVC {
+        
+        for card in vetorDeCards{
+           self.removerCard(card: card)
+        }
+        
+        vetorDeCards.removeAll()
+        
         
         self.buscaAlimentos()
         qtdCards = alimentos.count
