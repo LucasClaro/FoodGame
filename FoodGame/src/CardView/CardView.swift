@@ -99,9 +99,12 @@ class CardViewController: UIViewController {
     labelCurrentMeal.text = currentMeal
   }
     
+    //MARK: Sortear comidas
+    
     func buscaAlimentos(){
         
         var lista : [Alimento] = []
+        let user = UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String: Bool]
         
         lista = AlimentoService.shared.buscaCarboidratos()
         lista.shuffle()
@@ -117,9 +120,17 @@ class CardViewController: UIViewController {
         
         lista = AlimentoService.shared.buscaProteinas()
         lista.shuffle()
-        for index in 0...3{
-            alimentos.append(lista[index])
+        if !(user["Vegetariano"]!){
+            for index in 0...3{
+                alimentos.append(lista[index])
+            }
         }
+        else{
+            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos"))
+            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos"))
+            alimentos.append(Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo"))
+        }
+        
         
         lista = AlimentoService.shared.buscaProteinasVegetais()
         lista.shuffle()
