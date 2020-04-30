@@ -9,62 +9,70 @@
 import Foundation
 import UIKit
 
+
 class name: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var verificaNome: UILabel!
     @IBOutlet var varBotaoJoga: UIButton!
     @IBOutlet weak var nomeField: UITextField!
-    @IBOutlet weak var sobrenomeField: UITextField!
+    var defaults = UserDefaults.standard
+    var nome: String = String()
     
     // MARK:- ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         verificaNome.isHidden = true
         nomeField.delegate = self
-        sobrenomeField.delegate = self
-        varBotaoJoga.backgroundColor = .systemBlue
-        varBotaoJoga.setTitleColor(.white, for: .normal)
-        varBotaoJoga.layer.cornerRadius = 30
+        visualBotao(sender: varBotaoJoga)
         
     }
-    // MARK:- Sends info from view 1 to view 2
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "identificador"{
-            if let secondVC = segue.destination as? age{
-                secondVC.objetoInfo = nomeField.text
-            }
-        }
-    }
     
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            self.view.endEditing(true)
-           verifica()
+           verifica(nomeField: nomeField, verificaNome: verificaNome, botao: varBotaoJoga)
            return false
        }
     
-    func verifica(){
-        varBotaoJoga.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
-        if nomeField.text == "" || varBotaoJoga.isEnabled == false{
+    func verifica(nomeField: UITextField, verificaNome: UILabel, botao: UIButton){
+        botao.isEnabled = !nomeField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        if nomeField.text == "" || botao.isEnabled == false{
             verificaNome.isHidden = false
-            verificaNome.text = "Digite o seu nome"
-            varBotaoJoga.isHidden = true
-        } else {
-            verificaNome.isHidden = true
-            varBotaoJoga.isHidden = false
-        }
+            verificaNome.text = NSLocalizedString("avisoNomeVazio", comment: "Aviso caso nome seja inválido")
+            //"Digite o seu nome"
+            botao.isHidden = true
+            } else if nomeField.text!.count > 15{
+                verificaNome.isHidden = false
+                verificaNome.text = NSLocalizedString("avisoNomeGrande", comment: "Aviso caso nome seja grande")
+                //"Digite um nome menor"
+                botao.isHidden = true
+            } else {
+                defaults.set(nomeField.text, forKey: "Nome")
+                verificaNome.isHidden = true
+                botao.isHidden = false
+            }
+    }
+    
+    func setNome(nome: String){
+        self.nome = nome
+    }
+
+    func getNome() -> String{
+        return self.nome
     }
     
 }
     
 class age: UIViewController, UITextFieldDelegate{
     
+    var datePicker: UIDatePicker?
     @IBOutlet var bttTela3: UIButton!
     @IBOutlet weak var idadeatual: UILabel!
     @IBOutlet var caixaTexto: UITextField!
     @IBOutlet var label: UILabel!
-    var objetoInfo:String?
     let defaults = UserDefaults.standard
+    var idade: Int = Int()
+    var anoN: String = String()
     
     // MARK:- viewDidLoad
     override func viewDidLoad() {
@@ -72,17 +80,8 @@ class age: UIViewController, UITextFieldDelegate{
         caixaTexto.delegate = self
         idadeatual.isHidden = true
         label.numberOfLines = 10
-        defaults.set(objetoInfo, forKey: "Nome")
-        
-        bttTela3.backgroundColor = .systemBlue
-        bttTela3.setTitleColor(.white, for: .normal)
-        bttTela3.layer.cornerRadius = 30
-        
-        
-        if objetoInfo != nil{
-            label.text = "Olá " + objetoInfo! + ", " + "\nSeja bem-vindo(a)"
-        }
-        
+        print(defaults.integer(forKey: "Idade"))
+        visualBotao(sender: bttTela3)
     }
     
     // MARK: - Allowing text field to only get numbers
@@ -93,48 +92,73 @@ class age: UIViewController, UITextFieldDelegate{
         let typedCharacterSet = CharacterSet(charactersIn: string)
         return allowedCharacterSet.isSuperset(of: typedCharacterSet)
     }
-    
-    func valida(){
-        let idade = Int(caixaTexto.text!)
+    // MARK: - Validate user entry
+    func valida (caixaTexto: UITextField, avisoIdade: UILabel, botao: UIButton){
+        let ano = Int(caixaTexto.text!)
+        let anoNasc = caixaTexto.text
+        var conta: Int = 1
+        let data = Date()
+        let calendario = Calendar.current
         
-            
+        
         if caixaTexto.text == nil || caixaTexto.text == ""{
-            idadeatual.text = "Insira um ano"
+            avisoIdade.text = NSLocalizedString("anoEmBranco", comment: "Aviso para caso ano esteja em branco")
+            //"Insira um ano"
+            botao.isHidden = true
                } else {
-                let conta = 2020 - idade!
+            conta = calendario.component(.year, from: data) - ano!
+            botao.isHidden = true
             if(conta < 0 || conta > 110){
-                idadeatual.text = "Insira um ano válido"
+                avisoIdade.text = NSLocalizedString("anoInvalido", comment: "Aviso para caso ano seja inválido")
+                //"Insira um ano válido"
+                botao.isHidden = true
             } else {
-                idadeatual.text = ""
-                self.bttTela3.isHidden = false
-                defaults.set(conta, forKey: "Idade")
-                
+                avisoIdade.text = ""
+                botao.isHidden = false
+                idade = conta
+                anoN = anoNasc!
+                defaults.set(idade, forKey: "Idade")
+                defaults.set(anoN, forKey: "Ano")
             }
-            
-            }
+        }
         
-        idadeatual.isHidden = false
+        avisoIdade.isHidden = false
     }
     
+    func getIdade() -> Int{
+        return idade
+    }
+    
+    func getAno() -> String{
+        return anoN
+    }
+    
+    
+      // MARK: - Keyboard goes off when return is clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        valida()
+        valida(caixaTexto: caixaTexto, avisoIdade: idadeatual, botao: bttTela3)
         return false
     }
     
+    
+    
 }
 
-class sexo: UIViewController {
+class sex: UIViewController {
     @IBOutlet weak var checkFem: UIButton!
     @IBOutlet weak var checkMasc: UIButton!
     @IBOutlet weak var bttProx: UIButton!
     let defaults = UserDefaults.standard
+    var sexo: String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bttProx.backgroundColor = .systemBlue
-        bttProx.setTitleColor(.white, for: .normal)
-        bttProx.layer.cornerRadius = 30
+        visualBotao(sender: bttProx)
+    }
+    
+    func getSexo() -> String{
+        return sexo
     }
     
     @IBAction func bttFem(_ sender: UIButton) {
@@ -142,10 +166,12 @@ class sexo: UIViewController {
             checkMasc.isSelected = false
             checkFem.isSelected = true
             defaults.set("F", forKey: "Sexo")
+            self.sexo = "F"
             bttProx.isHidden = false
         } else {
             checkFem.isSelected = true
             defaults.set("F", forKey: "Sexo")
+            self.sexo = "F"
             bttProx.isHidden = false
         }
     }
@@ -155,13 +181,20 @@ class sexo: UIViewController {
             checkFem.isSelected = false
             checkMasc.isSelected = true
             defaults.set("M", forKey: "Sexo")
+            self.sexo = "M"
             bttProx.isHidden = false
         } else {
             checkMasc.isSelected = true
             defaults.set("M", forKey: "Sexo")
+            self.sexo = "M"
             bttProx.isHidden = false
         }
     }
     
 }
 
+func visualBotao(sender: UIButton){
+    sender.backgroundColor = .systemBlue
+    sender.setTitleColor(.white, for: .normal)
+    sender.layer.cornerRadius = 30
+}

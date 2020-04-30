@@ -28,6 +28,8 @@ class DayViewController: UIViewController {
     coloringStars()
   }
   
+  // MARK: Layout Methods
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
@@ -39,7 +41,6 @@ class DayViewController: UIViewController {
     
     navigationController?.setNavigationBarHidden(false, animated: false)
   }
-  // MARK: Layout Methods
   
   func adjustLayout() {
     

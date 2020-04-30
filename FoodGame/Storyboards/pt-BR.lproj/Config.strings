@@ -1,0 +1,120 @@
+
+/* Class = "UILabel"; text = "Idioma"; ObjectID = "0hy-hn-hap"; */
+"0hy-hn-hap.text" = "Idioma";
+
+/* Class = "UILabel"; text = "Português"; ObjectID = "1WA-G2-X9A"; */
+"1WA-G2-X9A.text" = "Português";
+
+/* Class = "UILabel"; text = "Jader Gedeon"; ObjectID = "2LA-Kj-eDa"; */
+"2LA-Kj-eDa.text" = "Jader Gedeon";
+
+/* Class = "UILabel"; text = "Lucas Claro"; ObjectID = "5Rm-EW-ogr"; */
+"5Rm-EW-ogr.text" = "Lucas Claro";
+
+/* Class = "UITableViewSection"; footerTitle = "Ajuste o volume da música do aplicativo"; ObjectID = "7j3-3O-FPc"; */
+"7j3-3O-FPc.footerTitle" = "Ajuste o volume da música do aplicativo";
+
+/* Class = "UITableViewSection"; headerTitle = "Música"; ObjectID = "7j3-3O-FPc"; */
+"7j3-3O-FPc.headerTitle" = "Música";
+
+/* Class = "UIBarButtonItem"; title = "VOLTA"; ObjectID = "A3P-VQ-L0q"; */
+"A3P-VQ-L0q.title" = "VOLTA";
+
+/* Class = "UILabel"; text = "Igor Kenzo"; ObjectID = "CcX-IC-DHJ"; */
+"CcX-IC-DHJ.text" = "Igor Kenzo";
+
+/* Class = "UILabel"; text = "Masculino"; ObjectID = "CrV-Lt-QII"; */
+"CrV-Lt-QII.text" = "Masculino";
+
+/* Class = "UILabel"; text = "Felipe Ferreira"; ObjectID = "GIO-c6-apb"; */
+"GIO-c6-apb.text" = "Felipe Ferreira";
+
+/* Class = "UILabel"; text = "Digite seu ano de nascimento:"; ObjectID = "Hgi-tu-chh"; */
+"Hgi-tu-chh.text" = "Digite seu ano de nascimento:";
+
+/* Class = "UILabel"; text = "Gastrite"; ObjectID = "J2e-kD-HOU"; */
+"J2e-kD-HOU.text" = "Gastrite";
+
+/* Class = "UILabel"; text = "São Paulo 2020"; ObjectID = "KnZ-Pg-en9"; */
+"KnZ-Pg-en9.text" = "São Paulo 2020";
+
+/* Class = "UILabel"; text = "Personagem"; ObjectID = "MPG-XF-R1o"; */
+"MPG-XF-R1o.text" = "Personagem";
+
+/* Class = "UITableViewSection"; footerTitle = "Customize seu personagem da forma que preferir"; ObjectID = "NE4-4v-pfM"; */
+"NE4-4v-pfM.footerTitle" = "Customize seu personagem da forma que preferir";
+
+/* Class = "UILabel"; text = "Feminino"; ObjectID = "Nc3-Zk-j9M"; */
+"Nc3-Zk-j9M.text" = "Feminino";
+
+/* Class = "UILabel"; text = "Créditos"; ObjectID = "Qle-JS-5sp"; */
+"Qle-JS-5sp.text" = "Créditos";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "REs-cj-UDG"; */
+"REs-cj-UDG.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Ano de nascimento"; ObjectID = "UlP-RB-bMr"; */
+"UlP-RB-bMr.placeholder" = "Ano de nascimento";
+
+/* Class = "UINavigationItem"; title = "Créditos"; ObjectID = "WKh-iY-gZ5"; */
+"WKh-iY-gZ5.title" = "Créditos";
+
+/* Class = "UIButton"; normalTitle = "Salvar"; ObjectID = "Y4s-r7-6WO"; */
+"Y4s-r7-6WO.normalTitle" = "Salvar";
+
+/* Class = "UITableViewSection"; footerTitle = "Ajuste o volume dos sons de interação do aplicativo"; ObjectID = "bef-uL-hcf"; */
+"bef-uL-hcf.footerTitle" = "Ajuste o volume dos sons de interação do aplicativo";
+
+/* Class = "UITableViewSection"; headerTitle = "Som"; ObjectID = "bef-uL-hcf"; */
+"bef-uL-hcf.headerTitle" = "Som";
+
+/* Class = "UILabel"; text = "Jogo desenvolvido por:"; ObjectID = "dhs-Z2-umd"; */
+"dhs-Z2-umd.text" = "Jogo desenvolvido por:";
+
+/* Class = "UILabel"; text = "Digite seu nome:"; ObjectID = "ef3-we-aRa"; */
+"ef3-we-aRa.text" = "Digite seu nome:";
+
+/* Class = "UILabel"; text = "Intolerância à glúten"; ObjectID = "gET-lT-OHE"; */
+"gET-lT-OHE.text" = "Intolerância à glúten";
+
+/* Class = "UILabel"; text = "Vegetariano"; ObjectID = "icw-ab-kOq"; */
+"icw-ab-kOq.text" = "Vegetariano";
+
+/* Class = "UILabel"; text = "Hipertensão"; ObjectID = "ie9-bm-ZpC"; */
+"ie9-bm-ZpC.text" = "Hipertensão";
+
+/* Class = "UINavigationItem"; title = "Configurações"; ObjectID = "jCF-2z-069"; */
+"jCF-2z-069.title" = "Configurações";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "k5v-JR-AN4"; */
+"k5v-JR-AN4.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lNV-U4-jaD"; */
+"lNV-U4-jaD.text" = "Label";
+
+/* Class = "UILabel"; text = "Intolerância à lactose"; ObjectID = "lc3-qE-2n7"; */
+"lc3-qE-2n7.text" = "Intolerância à lactose";
+
+/* Class = "UILabel"; text = "Glauber Santos"; ObjectID = "mbt-zz-rSV"; */
+"mbt-zz-rSV.text" = "Glauber Santos";
+
+/* Class = "UILabel"; text = "Escolha seu sexo:"; ObjectID = "nH7-YK-ME6"; */
+"nH7-YK-ME6.text" = "Escolha seu sexo:";
+
+/* Class = "UIButton"; normalTitle = "Voltar"; ObjectID = "ofC-Fn-NsC"; */
+"ofC-Fn-NsC.normalTitle" = "Voltar";
+
+/* Class = "UILabel"; text = "label label label label  label label label label"; ObjectID = "uKn-Ri-wBJ"; */
+"uKn-Ri-wBJ.text" = "label label label label  label label label label";
+
+/* Class = "UILabel"; text = "Marque suas condições:"; ObjectID = "wEf-8N-U0z"; */
+"wEf-8N-U0z.text" = "Marque suas condições/habitos alimentares:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xIX-ZU-f3l"; */
+"xIX-ZU-f3l.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "xYe-xS-Hmq"; */
+"xYe-xS-Hmq.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "Diabetes"; ObjectID = "xur-sA-Sas"; */
+"xur-sA-Sas.text" = "Diabetes";

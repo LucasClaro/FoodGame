@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		02777BBC243BD75200521891 /* Personagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* Personagem.storyboard */; };
+		029BABD5245A03F800E02336 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029BABD7245A03F800E02336 /* Localizable.strings */; };
+		029BABE3245A192B00E02336 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029BABE5245A192B00E02336 /* Config.storyboard */; };
 		02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F02447739A00FC81F4 /* NameAndAge.swift */; };
 		02E361F32447744F00FC81F4 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F22447744F00FC81F4 /* Conditions.swift */; };
-		02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F42447751C00FC81F4 /* ConditionsResult.swift */; };
-		050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBE4243BD7D200FF22DB /* Config.storyboard */; };
+		02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E361F62450B35800FC81F4 /* EditCharacter.swift */; };
 		050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE6243BD87500FF22DB /* ConfigViewController.swift */; };
 		050ADBE9243BD9C100FF22DB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */; };
 		050ADBEB243BDA0900FF22DB /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */; };
@@ -32,6 +33,9 @@
 		78C6611F2445FD98000AEC7B /* Alimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6611E2445FD98000AEC7B /* Alimento.swift */; };
 		78C661212445FDC0000AEC7B /* AlimentoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661202445FDC0000AEC7B /* AlimentoService.swift */; };
 		78C661262445FEA0000AEC7B /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C661252445FEA0000AEC7B /* CombineCardView.swift */; };
+		B669F7C1245228BD002464FC /* PratoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669F7C0245228BD002464FC /* PratoTableVC.swift */; };
+		B669F7C324522900002464FC /* Prato.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B669F7C224522900002464FC /* Prato.storyboard */; };
+		B669F7C52452292E002464FC /* PratoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669F7C42452292E002464FC /* PratoCell.swift */; };
 		B6948C5A242D45C600A2315C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C59242D45C600A2315C /* AppDelegate.swift */; };
 		B6948C5C242D45C600A2315C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C5B242D45C600A2315C /* SceneDelegate.swift */; };
 		B6948C5E242D45C600A2315C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C5D242D45C600A2315C /* ViewController.swift */; };
@@ -77,11 +81,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0266BA74245B448B00CFFB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Config.strings; sourceTree = "<group>"; };
 		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
+		029BABD6245A03F800E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		029BABDA245A053200E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		029BABDC245A05CF00E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		029BABDD245A05D000E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		029BABDE245A05D000E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		029BABDF245A05D000E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-BR"; path = "pt-BR.lproj/Info.plist"; sourceTree = "<group>"; };
+		029BABE1245A08DF00E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Personagem.strings; sourceTree = "<group>"; };
+		029BABE2245A0ABC00E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Personagem.strings"; sourceTree = "<group>"; };
+		029BABE7245A193400E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
+		029BABE8245A193600E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Config.storyboard; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
-		02E361F42447751C00FC81F4 /* ConditionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsResult.swift; sourceTree = "<group>"; };
-		050ADBE4243BD7D200FF22DB /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
+		02E361F62450B35800FC81F4 /* EditCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacter.swift; sourceTree = "<group>"; };
 		050ADBE6243BD87500FF22DB /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
@@ -102,6 +116,9 @@
 		78C6611E2445FD98000AEC7B /* Alimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alimento.swift; sourceTree = "<group>"; };
 		78C661202445FDC0000AEC7B /* AlimentoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlimentoService.swift; sourceTree = "<group>"; };
 		78C661252445FEA0000AEC7B /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
+		B669F7C0245228BD002464FC /* PratoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PratoTableVC.swift; sourceTree = "<group>"; };
+		B669F7C224522900002464FC /* Prato.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prato.storyboard; sourceTree = "<group>"; };
+		B669F7C42452292E002464FC /* PratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PratoCell.swift; sourceTree = "<group>"; };
 		B6948C56242D45C600A2315C /* FoodGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C59242D45C600A2315C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6948C5B242D45C600A2315C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +132,6 @@
 		B6948C72242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
-		B6948C7D242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
@@ -160,12 +176,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029BABD22459FD9100E02336 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				029BABD7245A03F800E02336 /* Localizable.strings */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
 		02E361EF244772E700FC81F4 /* Personagem */ = {
 			isa = PBXGroup;
 			children = (
 				02E361F02447739A00FC81F4 /* NameAndAge.swift */,
 				02E361F22447744F00FC81F4 /* Conditions.swift */,
-				02E361F42447751C00FC81F4 /* ConditionsResult.swift */,
+				02E361F62450B35800FC81F4 /* EditCharacter.swift */,
 			);
 			path = Personagem;
 			sourceTree = "<group>";
@@ -222,6 +246,15 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		B669F7BF2452287C002464FC /* Prato */ = {
+			isa = PBXGroup;
+			children = (
+				B669F7C0245228BD002464FC /* PratoTableVC.swift */,
+				B669F7C42452292E002464FC /* PratoCell.swift */,
+			);
+			path = Prato;
+			sourceTree = "<group>";
+		};
 		B6948C4D242D45C600A2315C = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +278,7 @@
 		B6948C58242D45C600A2315C /* FoodGame */ = {
 			isa = PBXGroup;
 			children = (
+				029BABD22459FD9100E02336 /* Languages */,
 				05D70B64243F9A80006E6094 /* Img */,
 				050ADBF5243BDD5100FF22DB /* Sounds */,
 				F274045D243B908300855269 /* src */,
@@ -273,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				B6948C7B242D45C800A2315C /* FoodGameUITests.swift */,
-				B6948C7D242D45C800A2315C /* Info.plist */,
+				029BABD9245A052F00E02336 /* Info.plist */,
 			);
 			path = FoodGameUITests;
 			sourceTree = "<group>";
@@ -311,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				F23C0346244645EA00BC921A /* Jogo */,
-				050ADBE4243BD7D200FF22DB /* Config.storyboard */,
+				029BABE5245A192B00E02336 /* Config.storyboard */,
 				050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */,
 				F2740460243B90E800855269 /* ImagineTheGame.storyboard */,
 				F2740466243B939500855269 /* MealResult.storyboard */,
@@ -320,6 +354,7 @@
 				78C661102445FA52000AEC7B /* CardView.storyboard */,
 				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
 				02777BBA243BD75200521891 /* Personagem.storyboard */,
+				B669F7C224522900002464FC /* Prato.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -327,6 +362,7 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B669F7BF2452287C002464FC /* Prato */,
 				78C661142445FC14000AEC7B /* CardView */,
 				05BFA2A024465B41006E126A /* Configuracao */,
 				B6DD84AE2444FB6000106F25 /* Controles */,
@@ -444,6 +480,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = B6948C4D242D45C600A2315C;
 			productRefGroup = B6948C57242D45C600A2315C /* Products */;
@@ -467,6 +504,7 @@
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
 				05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
+				B669F7C324522900002464FC /* Prato.storyboard in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
 				05D70B66243F9A9A006E6094 /* img.jpg in Resources */,
 				78C661112445FA52000AEC7B /* CardView.storyboard in Resources */,
@@ -475,7 +513,8 @@
 				05CDA341244A33600092E3AE /* IconsPrato.png in Resources */,
 				F2740469243B93A300855269 /* DayResult.storyboard in Resources */,
 				B6948C63242D45C800A2315C /* Assets.xcassets in Resources */,
-				050ADBE5243BD7D200FF22DB /* Config.storyboard in Resources */,
+				029BABE3245A192B00E02336 /* Config.storyboard in Resources */,
+				029BABD5245A03F800E02336 /* Localizable.strings in Resources */,
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
 				05CDA340244A33600092E3AE /* IconsCard.png in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
@@ -505,9 +544,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E361F52447751C00FC81F4 /* ConditionsResult.swift in Sources */,
 				F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
+				B669F7C1245228BD002464FC /* PratoTableVC.swift in Sources */,
 				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
 				F2740463243B936700855269 /* MealResult.swift in Sources */,
 				B6948C5E242D45C600A2315C /* ViewController.swift in Sources */,
@@ -520,7 +559,9 @@
 				050ADBEF243BDA9000FF22DB /* TableViewController.swift in Sources */,
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
 				F23C034824464C2E00BC921A /* Game.swift in Sources */,
+				B669F7C52452292E002464FC /* PratoCell.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
+				02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */,
 				B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */,
 				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
@@ -574,14 +615,45 @@
 			isa = PBXVariantGroup;
 			children = (
 				02777BBB243BD75200521891 /* Base */,
+				029BABE1245A08DF00E02336 /* en */,
+				029BABE2245A0ABC00E02336 /* pt-BR */,
 			);
 			name = Personagem.storyboard;
+			sourceTree = "<group>";
+		};
+		029BABD7245A03F800E02336 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				029BABD6245A03F800E02336 /* en */,
+				029BABDE245A05D000E02336 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		029BABD9245A052F00E02336 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				029BABDA245A053200E02336 /* Base */,
+				029BABDF245A05D000E02336 /* pt-BR */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		029BABE5245A192B00E02336 /* Config.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				029BABE7245A193400E02336 /* pt-BR */,
+				029BABE8245A193600E02336 /* Base */,
+				0266BA74245B448B00CFFB77 /* en */,
+			);
+			name = Config.storyboard;
 			sourceTree = "<group>";
 		};
 		B6948C5F242D45C600A2315C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B6948C60242D45C600A2315C /* Base */,
+				029BABDC245A05CF00E02336 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -590,6 +662,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B6948C65242D45C800A2315C /* Base */,
+				029BABDD245A05D000E02336 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -601,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -661,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

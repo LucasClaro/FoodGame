@@ -17,10 +17,30 @@ enum Acao {
 
 
 class CardViewController: UIViewController {
+  
+    // MARK: Variables
     
+    // ViewController objects
+    @IBOutlet weak var buttonPause: UIButton!
+    @IBOutlet weak var buttonCharacter: UIButton!
+    @IBOutlet weak var buttonDish: UIButton!
+  
+    @IBOutlet weak var labelCurrentMeal: UILabel!
+    // Logic variables
+  
     var alimentos : [Alimento] = []
     var alimentosAceitos : [Alimento] = []
     var qtdCards : Int = 0
+    
+    var mealDict = ["Café": Meal(),
+                     "Almoço": Meal(),
+                     "Janta": Meal()]
+     
+    var currentMeal = "Café"
+  
+    // Modificação
+    var vetorDeCards : [CombineCardView] = []
+    
     @IBOutlet weak var card: UIView!
     
     
@@ -31,7 +51,53 @@ class CardViewController: UIViewController {
             
         self.buscaAlimentos()
         qtdCards = alimentos.count
+        Calculo.definirValoresMax()
+        adjustLayout()
     }
+  
+    //Função para desaparecer com a NavBar
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //Função para aparecer com a NavBar
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      
+      navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+  
+    //Função que ajusta a parte visual do layout
+    func adjustLayout() {
+      buttonDish.layer.cornerRadius = 30
+      buttonPause.layer.cornerRadius = 30
+      buttonCharacter.layer.cornerRadius = 30
+      
+      labelCurrentMeal.text = currentMeal
+    }
+  
+  // Altera a refeição atual para a próxima refeição
+  func changeMeal(){
+    switch currentMeal {
+    case "Café":
+      currentMeal = "Almoço"
+      view.backgroundColor = #colorLiteral(red: 0.5764705882, green: 0.6588235294, blue: 1, alpha: 1)
+      break
+    case "Almoço":
+      currentMeal = "Janta"
+      view.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2745098039, blue: 0.4431372549, alpha: 1)
+      labelCurrentMeal.textColor = .white
+      break
+    default:
+      currentMeal = "Café"
+      view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.7450980392, blue: 0.1725490196, alpha: 1)
+      labelCurrentMeal.textColor = .black
+    }
+    
+    labelCurrentMeal.text = currentMeal
+  }
     
     func buscaAlimentos(){
         
@@ -75,6 +141,8 @@ class CardViewController: UIViewController {
 
 extension CardViewController {
     func adicionarCards(){
+      // Modificação
+      vetorDeCards.removeAll()
             
         for alimento in alimentos {
             
@@ -90,10 +158,19 @@ extension CardViewController {
             let gesture = UIPanGestureRecognizer()
             gesture.addTarget(self, action: #selector(handlerCard))
             cards.addGestureRecognizer(gesture)
-                   
+            
+            // Modificação
+            cards.isHidden = true
                 
             card = cards
             view.insertSubview(card, at: 1)
+          
+            // Modificação adicionada pelo Jader para ordenar as cards num vetor
+            vetorDeCards.append(cards)
+        }
+        //Modificação
+        for index in 0...1 {
+          vetorDeCards[index].isHidden = false
         }
     }
 }
@@ -192,17 +269,91 @@ extension CardViewController {
             }
         }
     }
+    
+    //Conta a quantidade de cards quando não tiver mais nenhum, avança para outra tela
     func verificaQtdCards()
     {
+        // Modificação
+        if !(qtdCards <= 2) {
+          let indexVetorCards = (qtdCards - vetorDeCards.count - 2) * (-1)
+          vetorDeCards[indexVetorCards].isHidden = false
+        }
+      
+      
         qtdCards -= 1
         if(qtdCards == 0)
         {
             calculaAlimentacao()
+            performSegue(withIdentifier: "resultado", sender: nil)
         }
     }
+    
+    //Separa os alimentos por tipo e calcula os tipos
     func calculaAlimentacao()
     {
         Calculo.aliPorTipo = Calculo.separarTipos(alimentos: alimentosAceitos)
+        mealDict[currentMeal]?.carbohydrates = Calculo.calularCarbo()
+        mealDict[currentMeal]?.proteins = Calculo.calularProteina()
+        mealDict[currentMeal]?.vegetables = Calculo.calcularVegetais()
     }
     
+    //MARK: SEGUES
+    
+    // Função que vê para qual ViewController está seguindo
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      // Caso seja a MealViewController:
+      /*guard let mealViewController = segue.destination as? MealViewController
+        else {
+          return
+      }*/
+        if let mealViewController = segue.destination as? MealViewController{
+            // Leva o dicionário e a refeição atual dessa ViewController para a MealViewController.
+            mealViewController.mealDict = mealDict
+            mealViewController.currentMeal = currentMeal
+            mealViewController.alimentosAceitos = alimentosAceitos
+        }
+        else if let pratoTableVC = segue.destination as? PratoTableVC{
+            calculaAlimentacao()
+            pratoTableVC.mealDict = mealDict
+            pratoTableVC.currentMeal = currentMeal
+            pratoTableVC.alimentos = alimentosAceitos
+        }
+      
+    }
+    
+    // Função que vê qual ViewController está acessando essa ViewController
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+      // Caso seja a MealViewController:
+      if segue.source is MealViewController {
+        
+        changeMeal()
+        
+        self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+      
+      if segue.source is DayViewController {
+        
+        changeMeal()
+        
+        self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+      
+      if segue.source is PauseVC {
+        
+        for card in vetorDeCards{
+           self.removerCard(card: card)
+        }
+        
+        vetorDeCards.removeAll()
+        
+        
+        self.buscaAlimentos()
+        qtdCards = alimentos.count
+        alimentosAceitos.removeAll()
+      }
+    }
 }
