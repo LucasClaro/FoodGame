@@ -1,0 +1,70 @@
+
+/* Class = "UILabel"; text = "Intolerância à glúten"; ObjectID = "1ZN-L5-AIA"; */
+"1ZN-L5-AIA.text" = "Gluten intolerance";
+
+/* Class = "UILabel"; text = "Feminino"; ObjectID = "29U-xI-vqZ"; */
+"29U-xI-vqZ.text" = "Feminine";
+
+/* Class = "UILabel"; text = "Diga também o seu  sexo."; ObjectID = "98f-3c-0H2"; */
+"98f-3c-0H2.text" = "Also, please tell us your sex";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Jx8-Fl-v9i"; */
+"Jx8-Fl-v9i.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KGI-7a-Qmi"; */
+"KGI-7a-Qmi.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Próximo"; ObjectID = "Kyo-v3-FTy"; */
+"Kyo-v3-FTy.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Próximo"; ObjectID = "Mos-Oj-7je"; */
+"Mos-Oj-7je.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Nos conte seu  nome."; ObjectID = "NQP-Iq-d5J"; */
+"NQP-Iq-d5J.text" = "Tell us your  name.";
+
+/* Class = "UILabel"; text = "Diabetes"; ObjectID = "Ny4-gZ-9GC"; */
+"Ny4-gZ-9GC.text" = "Diabetes";
+
+/* Class = "UILabel"; text = "Agora diga quando  você nasceu."; ObjectID = "Pd5-da-ys9"; */
+"Pd5-da-ys9.text" = "Now tell us when  you were born.";
+
+/* Class = "UILabel"; text = "Caso não haja nenhuma, apenas  clique em próximo."; ObjectID = "Rcf-0o-VfC"; */
+"Rcf-0o-VfC.text" = "In case there aren't any  just click save.";
+
+/* Class = "UILabel"; text = "Gastrite"; ObjectID = "SVI-pC-5L2"; */
+"SVI-pC-5L2.text" = "Gastritis";
+
+/* Class = "UILabel"; text = "Intolerância à lactose"; ObjectID = "TBe-We-hXt"; */
+"TBe-We-hXt.text" = "Lactose intolerance";
+
+/* Class = "UILabel"; text = "Vegetariano"; ObjectID = "TF3-8H-ryL"; */
+"TF3-8H-ryL.text" = "Vegetarian";
+
+/* Class = "UILabel"; text = "Ótimo, agora nos  aponte suas  condições de saúde ou hábitos alimentares."; ObjectID = "UH9-OB-rQn"; */
+"UH9-OB-rQn.text" = "Great, now please  tell us your health  conditions or eating
+habits.";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "c6W-Tx-u0R"; */
+"c6W-Tx-u0R.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "Hipertensão"; ObjectID = "dFl-CZ-kNC"; */
+"dFl-CZ-kNC.text" = "Hypertension";
+
+/* Class = "UILabel"; text = "Masculino"; ObjectID = "evO-hA-U8y"; */
+"evO-hA-U8y.text" = "Masculine";
+
+/* Class = "UINavigationItem"; title = "Personagem"; ObjectID = "gT0-Me-q9m"; */
+"gT0-Me-q9m.title" = "Character";
+
+/* Class = "UIButton"; normalTitle = "Salvar"; ObjectID = "j83-lh-0ga"; */
+"j83-lh-0ga.normalTitle" = "Save";
+
+/* Class = "UITextField"; placeholder = "Ano de nascimento"; ObjectID = "koo-XC-jld"; */
+"koo-XC-jld.placeholder" = "Birth year";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u5I-UT-YqW"; */
+"u5I-UT-YqW.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Próximo"; ObjectID = "wQv-Ib-oh4"; */
+"wQv-Ib-oh4.normalTitle" = "Next";
