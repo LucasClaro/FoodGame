@@ -58,8 +58,7 @@ class InitialMenuViewController: UIViewController {
   }
   
   @IBAction func play(_ sender: UIButton) {
-    //UserDefaults.standard.set(false, forKey: "fezTutorial")
-    if !UserDefaults.standard.bool(forKey: "fezTutorial") {
+    if UserDefaults.standard.bool(forKey: "fezTutorial") {
       performSegue(withIdentifier: "Game", sender: nil)
     } else {
       performSegue(withIdentifier: "PersonagemVC", sender: nil)
@@ -74,7 +73,10 @@ class InitialMenuViewController: UIViewController {
     
   }
   
-
+  @IBAction func ResetarFezTutorial(_ sender: Any) {
+      UserDefaults.standard.set(false, forKey: "fezTutorial")
+  }
+  
 }
 
 extension InitialMenuViewController : VolumeChangedDelegate {

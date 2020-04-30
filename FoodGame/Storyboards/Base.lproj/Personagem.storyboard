@@ -265,11 +265,22 @@
                         <outlet property="temGast" destination="3tL-EM-ZF9" id="2x9-VL-Lfe"/>
                         <outlet property="temHipe" destination="Idq-B0-HkR" id="Kyf-jI-ooC"/>
                         <outlet property="temInto" destination="3F4-NB-ADs" id="zMs-rw-kbN"/>
+                        <segue destination="gJO-Gm-rr7" kind="show" identifier="Game" id="f37-aH-yni"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWs-Qv-MGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3328.985507246377" y="-38.169642857142854"/>
+        </scene>
+        <!--CardView-->
+        <scene sceneID="o7y-vE-Kj7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardView" id="gJO-Gm-rr7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OaF-Kh-bkR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rw-s6-hro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4040" y="-38"/>
         </scene>
         <!--Sex-->
         <scene sceneID="x6j-ka-5HX">

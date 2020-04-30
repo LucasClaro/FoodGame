@@ -49,6 +49,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="RESETAR"/>
+                                <connections>
+                                    <action selector="ResetarFezTutorial:" destination="pk8-01-NiG" eventType="touchUpInside" id="pPZ-3g-huz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botões de Debug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-lv-254">
                                 <rect key="frame" x="141" y="723" width="133" height="21"/>

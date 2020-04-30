@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Personagem-->
+        <scene sceneID="qIl-Rr-mvx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Personagem" id="I2m-9w-kmc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lyj-Cq-gI9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wr-SR-zUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="330"/>
+        </scene>
         <!--Tutorial Page View Controller-->
         <scene sceneID="cZY-Kg-Nat">
             <objects>
@@ -19,11 +29,11 @@
         <scene sceneID="B9q-EI-Bnc">
             <objects>
                 <viewController storyboardIdentifier="TutorialContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vEU-0C-Co2" customClass="TutorialContentViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="mFp-sZ-mwU">
+                    <view key="view" contentMode="scaleToFill" id="mFp-sZ-mwU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-XA-DxE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-XA-DxE">
                                 <rect key="frame" x="172" y="99" width="70" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -244,6 +254,7 @@
                         <outlet property="btnNext" destination="Zay-L5-C7C" id="hJT-a7-LqM"/>
                         <outlet property="btnSkip" destination="enz-HB-qK5" id="YTD-qA-9EQ"/>
                         <outlet property="pageController" destination="AXd-hC-mFC" id="f70-NB-jwe"/>
+                        <segue destination="I2m-9w-kmc" kind="show" identifier="PersonagemVC" id="J5b-Ym-9Hc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKq-D0-M59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

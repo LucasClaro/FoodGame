@@ -49,6 +49,7 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
                 btnSkip.isHidden = false
             case 1:
                 btnNext.setTitle("Jogar", for: .normal)
+                btnNext.addTarget(self, action: #selector(irParaPersonagem), for: UIControl.Event.touchUpInside)
                 btnSkip.isHidden = true
                 
             default: break
@@ -76,6 +77,9 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
             tutorialPageViewController?.tutorialDelegate = self
         }
     }
+  @objc func irParaPersonagem() {
+    performSegue(withIdentifier: "PersonagemVC", sender: nil)
+  }
     
 
 }

@@ -117,6 +117,8 @@ class conditions: UIViewController{
         print(dicionario["Vegetariano"]!)
         print(dicionario["Gastrite"]!)
         print(dicionario["Gluten"]!)
+      
+        performSegue(withIdentifier: "Game", sender: nil)
     }
     
 }
