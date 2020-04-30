@@ -15,60 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botões de Debug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-lv-254">
-                                <rect key="frame" x="141" y="497" width="133" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-O3-XBE">
-                                <rect key="frame" x="54" y="551" width="116" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Resultados"/>
-                                <connections>
-                                    <segue destination="41l-PB-PM7" kind="show" id="IM9-OP-NTq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-d8-5LV">
-                                <rect key="frame" x="285" y="551" width="76" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Tutorial"/>
-                                <connections>
-                                    <segue destination="XmL-9z-xXS" kind="show" id="7aE-5g-oIf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-RB-YVp">
-                                <rect key="frame" x="54" y="641" width="130" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Personagem"/>
-                                <connections>
-                                    <segue destination="uLB-oY-Cpu" kind="show" id="acF-Qa-Eew"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-OD-y8Q">
-                                <rect key="frame" x="159" y="797" width="97" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="CardView"/>
-                                <connections>
-                                    <segue destination="Veg-Im-bVg" kind="show" id="maz-Eo-rxm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-Su-dka">
-                                <rect key="frame" x="298" y="641" width="63" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Pause"/>
-                                <connections>
-                                    <segue destination="TjX-Pt-Lot" kind="show" id="8Iu-rK-hol"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-u2-KSp">
-                                <rect key="frame" x="54" y="356" width="307" height="52"/>
+                                <rect key="frame" x="54" y="422" width="307" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -85,7 +33,7 @@
                                 <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQQ-1g-v3R">
-                                <rect key="frame" x="54" y="422" width="307" height="52"/>
+                                <rect key="frame" x="54" y="503" width="307" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -96,24 +44,19 @@
                                     <segue destination="M4M-kR-hEF" kind="show" id="QWP-Py-cI2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJq-JS-edg">
-                                <rect key="frame" x="54" y="741" width="62" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-pz-Tha">
+                                <rect key="frame" x="90" y="738" width="234" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Game"/>
-                                <connections>
-                                    <segue destination="Lhe-3z-Lbs" kind="show" id="m8b-jM-Yj2"/>
-                                </connections>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="RESETAR"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-8V-8wv">
-                                <rect key="frame" x="305" y="744" width="55" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botões de Debug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-lv-254">
+                                <rect key="frame" x="141" y="723" width="133" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Prato"/>
-                                <connections>
-                                    <segue destination="E30-vb-JDP" kind="show" id="Nqg-dM-v82"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wh0-MR-BFa"/>
@@ -137,17 +80,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ruu-M2-gX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2021" y="-905"/>
+            <point key="canvasLocation" x="-2099" y="-752"/>
         </scene>
-        <!--Personagem-->
+        <!--Tutorial-->
         <scene sceneID="IDl-ti-VhL">
             <objects>
-                <viewControllerPlaceholder storyboardName="Personagem" id="2Gg-LQ-LXp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Tutorial" id="2Gg-LQ-LXp" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Vxi-cV-tuy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMi-im-FqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2022" y="-819"/>
+            <point key="canvasLocation" x="-1823" y="-665"/>
         </scene>
         <!--Config-->
         <scene sceneID="ncO-gS-c2b">
@@ -157,77 +100,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-D9-nmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2064" y="-670"/>
-        </scene>
-        <!--ImagineTheGame-->
-        <scene sceneID="M9e-Ok-1pg">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ImagineTheGame" id="41l-PB-PM7" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ezp-jh-93s"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPV-w1-MWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2063" y="-502"/>
-        </scene>
-        <!--Tutorial-->
-        <scene sceneID="Mk5-7L-55R">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Tutorial" id="XmL-9z-xXS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ppo-r4-VMC"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h5z-z4-rTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2098" y="-459"/>
-        </scene>
-        <!--Personagem-->
-        <scene sceneID="5el-2r-5qA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Personagem" id="uLB-oY-Cpu" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QVK-jv-2dM"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5sH-md-pQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2114" y="-415"/>
-        </scene>
-        <!--Pause-->
-        <scene sceneID="W5N-dj-Fqn">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Pause" id="TjX-Pt-Lot" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="okm-SC-k13"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YCp-Wy-WUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2117" y="-352"/>
-        </scene>
-        <!--Prato-->
-        <scene sceneID="hr3-DW-Opb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Prato" id="E30-vb-JDP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="G7Q-AF-Xg4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zLb-Jd-9kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2183" y="-215"/>
-        </scene>
-        <!--Game-->
-        <scene sceneID="tX8-EK-P5R">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="Lhe-3z-Lbs" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hda-Ns-YQw"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hOG-u2-u8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2628" y="-202"/>
-        </scene>
-        <!--CardView-->
-        <scene sceneID="VVE-Hv-Nvx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CardView" id="Veg-Im-bVg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="I8v-93-EmG"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eR1-KN-q7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2020" y="-482"/>
+            <point key="canvasLocation" x="-2100" y="-619"/>
         </scene>
     </scenes>
     <resources>

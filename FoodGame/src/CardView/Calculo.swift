@@ -13,10 +13,8 @@ import Foundation
 struct MaxValues
 {
     let gCarbo : Float32
-    let glegs : Float32
-    let prots : Float32
-    let protsV : Float32
-    let hort : Float32
+    let gProt : Float32
+    let gVeg : Float32
 }
 
 //Separa os alimentos aceitos nos cards por tipo para realizar o calculo
@@ -51,7 +49,7 @@ class Calculo {
         
         //300g no prato infantil
         //PlaceHolders
-        Calculo.maxValue = MaxValues(gCarbo: 300/4, glegs: 300/2, prots: 300/4, protsV: 300/4, hort: 300/4)
+        Calculo.maxValue = MaxValues(gCarbo: 300/4, gProt: 300/4, gVeg: 300/2)
     }
     
     //Recebe lista de alimentos, separa por tipo e Retorna uma struct de Alimentos por tipo

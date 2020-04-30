@@ -23,11 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvn-wc-mlI">
-                                <rect key="frame" x="20" y="180" width="374" height="449"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-Bi-tVZ">
                                 <rect key="frame" x="20" y="44" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,7 +83,6 @@
                         <viewLayoutGuide key="safeArea" id="bC6-P3-RTx"/>
                     </view>
                     <connections>
-                        <outlet property="Card" destination="fvn-wc-mlI" id="x1g-E7-kUS"/>
                         <outlet property="buttonCharacter" destination="LYu-4s-Y2j" id="mLs-29-aQy"/>
                         <outlet property="buttonDish" destination="0s9-dP-KFu" id="8MF-th-Qis"/>
                         <outlet property="buttonPause" destination="2Ti-Bi-tVZ" id="3m0-zj-wUd"/>

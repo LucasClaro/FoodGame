@@ -51,7 +51,7 @@ class CardViewController: UIViewController {
             
         self.buscaAlimentos()
         qtdCards = alimentos.count
-      
+        Calculo.definirValoresMax()
         adjustLayout()
     }
   
@@ -313,6 +313,9 @@ extension CardViewController {
             mealViewController.alimentosAceitos = alimentosAceitos
         }
         else if let pratoTableVC = segue.destination as? PratoTableVC{
+            calculaAlimentacao()
+            pratoTableVC.mealDict = mealDict
+            pratoTableVC.currentMeal = currentMeal
             pratoTableVC.alimentos = alimentosAceitos
         }
       
