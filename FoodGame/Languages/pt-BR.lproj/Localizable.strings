@@ -9,6 +9,5 @@
 "avisoNomeVazio" = "Por favor digite um nome.";
 "anoEmBranco" = "Por favor insira um ano.";
 "anoInvalido" = "Por favor insira um ano váido.";
-"labelNomeEdicao" = "Olá usuário\nEdite seu personagem: ";
-//"Olá \(defaults.string(forKey: "Nome") ?? "Usuário")." + "\nEdite seu personagem: ";
-
+"labelEditaPersonagem" = "Edite seu personagem: ";
+"OlaNomeUser" = "Olá";

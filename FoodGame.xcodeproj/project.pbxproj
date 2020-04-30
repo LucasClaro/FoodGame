@@ -81,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0266BA74245B448B00CFFB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Config.strings; sourceTree = "<group>"; };
 		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
 		029BABD6245A03F800E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		029BABDA245A053200E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		029BABE2245A0ABC00E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Personagem.strings"; sourceTree = "<group>"; };
 		029BABE7245A193400E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
 		029BABE8245A193600E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Config.storyboard; sourceTree = "<group>"; };
-		029BABEB245A1B3400E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Config.strings; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		02E361F62450B35800FC81F4 /* EditCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCharacter.swift; sourceTree = "<group>"; };
@@ -644,7 +644,7 @@
 			children = (
 				029BABE7245A193400E02336 /* pt-BR */,
 				029BABE8245A193600E02336 /* Base */,
-				029BABEB245A1B3400E02336 /* en */,
+				0266BA74245B448B00CFFB77 /* en */,
 			);
 			name = Config.storyboard;
 			sourceTree = "<group>";

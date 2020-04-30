@@ -24,6 +24,8 @@ class edit: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var bttGast: UIButton!
     @IBOutlet weak var bttGlut: UIButton!
     @IBOutlet weak var bttSalva: UIButton!
+    @IBOutlet weak var labelNome: UILabel!
+    @IBOutlet weak var labelEditaPersonagem: UILabel!
     var idade: Int = Int()
     let defaults = UserDefaults.standard
     var vetorCondicoes: [String] = []
@@ -32,12 +34,13 @@ class edit: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         // MARK: - Set array to variable
-//        vetorCondicoes = (defaults.array(forKey: "Condicoes") as? [String])!
+
         dicionario = ((defaults.dictionary(forKey: "Condicoes") as? [String: Bool])!)
         
         // MARK: - Load screen with user name and button design
-        lblOla.text = NSLocalizedString("labelNomeEdicao", comment: "Label que leva nome do usuario")
-            //"Olá \(defaults.string(forKey: "Nome") ?? "Usuário")." + "\nEdite seu personagem: "
+        labelEditaPersonagem.text = NSLocalizedString("labelEditaPersonagem", comment: "label onde aparece texto")
+        lblOla.text = NSLocalizedString("OlaNomeUser", comment: "Label para receber o usuário com o nome dele carregado") + " " +
+            defaults.string(forKey: "Nome")!
         visualBotao(sender: bttSalva)
         
         // MARK: - Make the warning labels hidden by default
@@ -226,7 +229,8 @@ class edit: UIViewController, UITextFieldDelegate{
         }
         else {
             avisoNome.isHidden = true
-//            lblOla.text = "Olá \(fieldNome.text ?? "Usuário")." + "\nEdite seu personagem: "
+            lblOla.text = NSLocalizedString("OlaNomeUser", comment: "Label para receber o usuário com o nome dele carregado") + " " +
+                fieldNome.text!
             aux += 1
         }
         

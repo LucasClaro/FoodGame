@@ -9,5 +9,6 @@
 "avisoNomeGrande" = "Please enter a shorter name.";
 "anoEmBranco" = "Please enter a year.";
 "anoInvalido" = "Please enter a valid year.";
-"labelNomeEdicao" = "Hello user\nEdit your character: ";
+"labelEditaPersonagem" = "Edit your character: ";
+"OlaNomeUser" = "Hello";
 //"Hello \(defaults.string(forKey: "Nome") ?? "User")." + "\nType your character's name: ";
