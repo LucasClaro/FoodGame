@@ -197,5 +197,72 @@ class MealViewController: UIViewController {
     
     
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @IBAction func goMenu(_ sender: Any) {
+      let alert = UIAlertController(title: "Deseja mesmo voltar ao menu?", message: "Saindo você perderá todo o progresso atual", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindToMenu", sender: nil)}))
+    alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+      
+      self.present(alert, animated: true)
+  }
 }
 

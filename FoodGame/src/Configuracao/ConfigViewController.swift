@@ -57,6 +57,10 @@ class ConfigViewController: UITableViewController {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
+  
+    @IBAction func unwindToConfig(segue: UIStoryboardSegue) {
+      
+    }
     /*
     // MARK: - Navigation
 

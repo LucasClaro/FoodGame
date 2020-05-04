@@ -147,7 +147,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Ft-80-sVy" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="xv3-yG-EvB"/>
+                                    <action selector="goMenu:" destination="A8r-2P-kYP" eventType="touchUpInside" id="5NJ-eo-UWe"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dCG-ZG-f5T">
@@ -197,6 +197,7 @@
                         <outletCollection property="arrayOfStars" destination="Zkp-Pj-Osj" collectionClass="NSMutableArray" id="sjy-DD-Ixv"/>
                         <segue destination="1O9-3r-L1M" kind="show" identifier="DayResultVC" id="Uzz-0p-Rjf"/>
                         <segue destination="0Ft-80-sVy" kind="unwind" identifier="GameVC" unwindAction="unwindWithSegue:" id="tjq-7F-qsA"/>
+                        <segue destination="0Ft-80-sVy" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="bqd-J9-foi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOx-Oe-Fbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
