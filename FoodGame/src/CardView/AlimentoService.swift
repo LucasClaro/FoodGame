@@ -15,9 +15,10 @@ class AlimentoService {
     let carbs: [Alimento] = [
         Alimento(id: 101, nome: "Arroz", porcao: 75, tipo: "Carboidrato", foto: "Arroz", restricoes: [""]),
         Alimento(id: 102, nome: "Pão", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
-        Alimento(id: 103, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata", restricoes: [""]),
-        Alimento(id: 104, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
-        Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: [""]),
+        Alimento(id: 103, nome: "Pão Integral", porcao: 12, tipo: "Carboidrato", foto: "pao integral", restricoes: ["Gluten"]),
+        Alimento(id: 104, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata", restricoes: [""]),
+        Alimento(id: 105, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Macarrao", restricoes: ["Diabetes","Gluten"]),
+        //Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: [""]),
     ]
     
     let legs: [Alimento] = [
@@ -29,14 +30,15 @@ class AlimentoService {
     ]
     
     let prots: [Alimento] = [
-        Alimento(id: 301, nome: "Carne Bovina", porcao: 75, tipo: "Proteína", foto: "Carne Bovina", restricoes: [""]),
-        Alimento(id: 302, nome: "Frango", porcao: 75, tipo: "Proteína", foto: "Frango", restricoes: [""]),
+        Alimento(id: 301, nome: "Lombo", porcao: 75, tipo: "Proteína", foto: "lombo", restricoes: [""]),
+        Alimento(id: 302, nome: "Coxa de frango", porcao: 75, tipo: "Proteína", foto: "coxa de frango", restricoes: [""]),
         Alimento(id: 303, nome: "Peixe", porcao: 75, tipo: "Proteína", foto: "Peixe", restricoes: [""]),
-        Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]),
-        Alimento(id: 305, nome: "Carne Suína", porcao: 75, tipo: "Proteína", foto: "Carne Suina", restricoes: [""]),
-        Alimento(id: 306, nome: "Fígado", porcao: 75, tipo: "Proteína", foto: "Pao", restricoes: [""]),
-        Alimento(id: 307, nome: "Manteiga", porcao: 75, tipo: "Proteína", foto: "Pao", restricoes: ["Lactose","Gastrite"]),
-        Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: ["Lactose","Gastrite","Gluten"]),
+        Alimento(id: 304, nome: "Ovo cozido", porcao: 75, tipo: "Proteína", foto: "Ovo cozido", restricoes: [""]),
+        Alimento(id: 305, nome: "Ovo frito", porcao: 75, tipo: "Proteína", foto: "Ovo frito", restricoes: ["Diabetes","Hipertensao"]),
+        Alimento(id: 306, nome: "Bife", porcao: 75, tipo: "Proteína", foto: "bife", restricoes: [""]),
+        Alimento(id: 307, nome: "Bacon", porcao: 75, tipo: "Proteína", foto: "bacon", restricoes: ["Diabetes","Hipertensao","Gastrite"]),
+        Alimento(id: 308, nome: "File de frango", porcao: 75, tipo: "Proteína", foto: "file de frango", restricoes: [""]),
+        Alimento(id: 309, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: ["Lactose","Gastrite","Gluten"]),
     ]
     
     let protsV: [Alimento] = [
@@ -48,7 +50,7 @@ class AlimentoService {
     let hort: [Alimento] = [
         Alimento(id: 501, nome: "Alface", porcao: 7, tipo: "Hortaliça", foto: "Alface", restricoes: [""]),
         Alimento(id: 502, nome: "Espinafre", porcao: 10, tipo: "Hortaliça", foto: "Espinafre", restricoes: [""]),
-        Alimento(id: 503, nome: "Brócolis", porcao: 25, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        Alimento(id: 503, nome: "Brócolis", porcao: 25, tipo: "Hortaliça", foto: "Brocolis", restricoes: [""]),
         Alimento(id: 504, nome: "Cenoura", porcao: 15, tipo: "Hortaliça", foto: "Cenoura", restricoes: [""]),
         Alimento(id: 505, nome: "Chuchu", porcao: 5, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
         Alimento(id: 506, nome: "Abóbora", porcao: 15, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
@@ -56,8 +58,23 @@ class AlimentoService {
         Alimento(id: 508, nome: "Berinjela", porcao: 26, tipo: "Hortaliça", foto: "Berinjela", restricoes: [""]),
         Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba", restricoes: [""]),
         Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve", restricoes: [""]),
+        Alimento(id: 511, nome: "Pepino", porcao:9, tipo: "Hortaliça", foto: "pepino", restricoes: [""]),
+        Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "Tomate", restricoes: [""]),
     ]
     
+    let frutas : [Alimento] = [
+        Alimento(id: 601, nome: "Banana", porcao:9, tipo: "Fruta", foto: "Banana", restricoes: [""]),
+        Alimento(id: 602, nome: "Laranja", porcao:9, tipo: "Fruta", foto: "Laranja", restricoes: [""]),
+        Alimento(id: 603, nome: "Maçã", porcao:9, tipo: "Fruta", foto: "Maca", restricoes: [""]),
+        Alimento(id: 604, nome: "Melancia", porcao:9, tipo: "Fruta", foto: "Melancia", restricoes: [""]),
+    ]
+    
+    let bebs : [Alimento] = [
+        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Fruta", foto: "Cafe", restricoes: [""]),
+        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Fruta", foto: "Refrigerante", restricoes: [""]),
+        Alimento(id: 703, nome: "Suco de laranja", porcao:2, tipo: "Fruta", foto: "Suco de laranja", restricoes: [""]),
+        Alimento(id: 704, nome: "Suco de melancia", porcao:2, tipo: "Fruta", foto: "Suco de melancia", restricoes: [""]),
+    ]
     func buscaCarboidratos () -> [Alimento] {
         return self.carbs
     }
