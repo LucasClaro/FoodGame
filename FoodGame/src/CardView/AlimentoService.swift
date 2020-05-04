@@ -11,51 +11,51 @@ import Foundation
 class AlimentoService {
     
     static let shared = AlimentoService()
-    
+    ///["Diabetes", "Hipertensao", "Lactose", "Vegetariano", "Gastrite", "Gluten"]  -> restricoes
     let carbs: [Alimento] = [
-        Alimento(id: 101, nome: "Arroz", porcao: 75, tipo: "Carboidrato", foto: "Arroz"),
-        Alimento(id: 102, nome: "Pão", porcao: 75, tipo: "Carboidrato", foto: "Pao"),
-        Alimento(id: 103, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata"),
-        Alimento(id: 104, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Pao"),
-        Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao"),
+        Alimento(id: 101, nome: "Arroz", porcao: 75, tipo: "Carboidrato", foto: "Arroz", restricoes: [""]),
+        Alimento(id: 102, nome: "Pão", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 103, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata", restricoes: [""]),
+        Alimento(id: 104, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: [""]),
     ]
     
     let legs: [Alimento] = [
-        Alimento(id: 201, nome: "Feijão", porcao: 150, tipo: "Leguminosa", foto: "Feijao"),
-        Alimento(id: 202, nome: "Soja", porcao: 150, tipo: "Leguminosa", foto: "Soja"),
-        Alimento(id: 203, nome: "Ervilha", porcao: 150, tipo: "Leguminosa", foto: "Ervilha"),
-        Alimento(id: 204, nome: "Lentilha", porcao: 150, tipo: "Leguminosa", foto: "Lentilha"),
-        Alimento(id: 205, nome: "Grão-de-Bico", porcao: 150, tipo: "Leguminosa", foto: "Grao de bico"),
+        Alimento(id: 201, nome: "Feijão", porcao: 150, tipo: "Leguminosa", foto: "Feijao", restricoes: [""]),
+        Alimento(id: 202, nome: "Soja", porcao: 150, tipo: "Leguminosa", foto: "Soja", restricoes: [""]),
+        Alimento(id: 203, nome: "Ervilha", porcao: 150, tipo: "Leguminosa", foto: "Ervilha", restricoes: [""]),
+        Alimento(id: 204, nome: "Lentilha", porcao: 150, tipo: "Leguminosa", foto: "Lentilha", restricoes: [""]),
+        Alimento(id: 205, nome: "Grão-de-Bico", porcao: 150, tipo: "Leguminosa", foto: "Grao de bico", restricoes: [""]),
     ]
     
     let prots: [Alimento] = [
-        Alimento(id: 301, nome: "Carne Bovina", porcao: 75, tipo: "Proteína", foto: "Carne Bovina"),
-        Alimento(id: 302, nome: "Frango", porcao: 75, tipo: "Proteína", foto: "Frango"),
-        Alimento(id: 303, nome: "Peixe", porcao: 75, tipo: "Proteína", foto: "Peixe"),
-        Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos"),
-        Alimento(id: 305, nome: "Carne Suína", porcao: 75, tipo: "Proteína", foto: "Carne Suina"),
-        Alimento(id: 306, nome: "Fígado", porcao: 75, tipo: "Proteína", foto: "Pao"),
-        Alimento(id: 307, nome: "Manteiga", porcao: 75, tipo: "Proteína", foto: "Pao"),
-        Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo"),
+        Alimento(id: 301, nome: "Carne Bovina", porcao: 75, tipo: "Proteína", foto: "Carne Bovina", restricoes: [""]),
+        Alimento(id: 302, nome: "Frango", porcao: 75, tipo: "Proteína", foto: "Frango", restricoes: [""]),
+        Alimento(id: 303, nome: "Peixe", porcao: 75, tipo: "Proteína", foto: "Peixe", restricoes: [""]),
+        Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]),
+        Alimento(id: 305, nome: "Carne Suína", porcao: 75, tipo: "Proteína", foto: "Carne Suina", restricoes: [""]),
+        Alimento(id: 306, nome: "Fígado", porcao: 75, tipo: "Proteína", foto: "Pao", restricoes: [""]),
+        Alimento(id: 307, nome: "Manteiga", porcao: 75, tipo: "Proteína", foto: "Pao", restricoes: ["Lactose","Gastrite"]),
+        Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: ["Lactose","Gastrite","Gluten"]),
     ]
     
     let protsV: [Alimento] = [
-        Alimento(id: 401, nome: "Lentilha", porcao: 35, tipo: "Proteína Vegetal", foto: "Lentilha"),
-        Alimento(id: 402, nome: "Tofu", porcao: 10, tipo: "Proteína Vegetal", foto: "Tofu"),
-        Alimento(id: 403, nome: "Chia", porcao: 5, tipo: "Proteína Vegetal", foto: "Chia"),
+        Alimento(id: 401, nome: "Lentilha", porcao: 35, tipo: "Proteína Vegetal", foto: "Lentilha", restricoes: [""]),
+        Alimento(id: 402, nome: "Tofu", porcao: 10, tipo: "Proteína Vegetal", foto: "Tofu", restricoes: [""]),
+        Alimento(id: 403, nome: "Chia", porcao: 5, tipo: "Proteína Vegetal", foto: "Chia", restricoes: [""]),
      ]
     
     let hort: [Alimento] = [
-        Alimento(id: 501, nome: "Alface", porcao: 7, tipo: "Hortaliça", foto: "Alface"),
-        Alimento(id: 502, nome: "Espinafre", porcao: 10, tipo: "Hortaliça", foto: "Espinafre"),
-        Alimento(id: 503, nome: "Brócolis", porcao: 25, tipo: "Hortaliça", foto: "Pao"),
-        Alimento(id: 504, nome: "Cenoura", porcao: 15, tipo: "Hortaliça", foto: "Cenoura"),
-        Alimento(id: 505, nome: "Chuchu", porcao: 5, tipo: "Hortaliça", foto: "Pao"),
-        Alimento(id: 506, nome: "Abóbora", porcao: 15, tipo: "Hortaliça", foto: "Pao"),
-        Alimento(id: 507, nome: "Vagem", porcao: 10, tipo: "Hortaliça", foto: "Pao"),
-        Alimento(id: 508, nome: "Berinjela", porcao: 26, tipo: "Hortaliça", foto: "Berinjela"),
-        Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba"),
-        Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve"),
+        Alimento(id: 501, nome: "Alface", porcao: 7, tipo: "Hortaliça", foto: "Alface", restricoes: [""]),
+        Alimento(id: 502, nome: "Espinafre", porcao: 10, tipo: "Hortaliça", foto: "Espinafre", restricoes: [""]),
+        Alimento(id: 503, nome: "Brócolis", porcao: 25, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        Alimento(id: 504, nome: "Cenoura", porcao: 15, tipo: "Hortaliça", foto: "Cenoura", restricoes: [""]),
+        Alimento(id: 505, nome: "Chuchu", porcao: 5, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        Alimento(id: 506, nome: "Abóbora", porcao: 15, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        Alimento(id: 507, nome: "Vagem", porcao: 10, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        Alimento(id: 508, nome: "Berinjela", porcao: 26, tipo: "Hortaliça", foto: "Berinjela", restricoes: [""]),
+        Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba", restricoes: [""]),
+        Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve", restricoes: [""]),
     ]
     
     func buscaCarboidratos () -> [Alimento] {

@@ -126,9 +126,9 @@ class CardViewController: UIViewController {
             }
         }
         else{
-            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos"))
-            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos"))
-            alimentos.append(Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo"))
+            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
+            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
+            alimentos.append(Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: [""]))
         }
         
         
