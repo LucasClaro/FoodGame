@@ -26,6 +26,12 @@ class name: UIViewController, UITextFieldDelegate{
         visualBotao(sender: varBotaoJoga)
         
     }
+  
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -83,6 +89,7 @@ class age: UIViewController, UITextFieldDelegate{
         print(defaults.integer(forKey: "Idade"))
         visualBotao(sender: bttTela3)
     }
+  
     
     // MARK: - Allowing text field to only get numbers
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
