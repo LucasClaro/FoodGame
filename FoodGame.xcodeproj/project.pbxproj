@@ -55,6 +55,7 @@
 		F23C0345244645D800BC921A /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C0344244645D800BC921A /* Game.storyboard */; };
 		F23C034824464C2E00BC921A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C034724464C2E00BC921A /* Game.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
+		F26D4FE22461FEFE00FCFEB8 /* ConfigPauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */; };
 		F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274045E243B90C800855269 /* ImagineTheGame.swift */; };
 		F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740460243B90E800855269 /* ImagineTheGame.storyboard */; };
 		F2740463243B936700855269 /* MealResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2740462243B936700855269 /* MealResult.swift */; };
@@ -146,6 +147,7 @@
 		F23C0344244645D800BC921A /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		F23C034724464C2E00BC921A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
+		F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPauseVC.swift; sourceTree = "<group>"; };
 		F274045E243B90C800855269 /* ImagineTheGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagineTheGame.swift; sourceTree = "<group>"; };
 		F2740460243B90E800855269 /* ImagineTheGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagineTheGame.storyboard; sourceTree = "<group>"; };
 		F2740462243B936700855269 /* MealResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResult.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DD84AC2444F1EF00106F25 /* PauseVC.swift */,
+				F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */,
 			);
 			path = Pause;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,
+				F26D4FE22461FEFE00FCFEB8 /* ConfigPauseVC.swift in Sources */,
 				050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */,
 				78C6611F2445FD98000AEC7B /* Alimento.swift in Sources */,
 				78C661212445FDC0000AEC7B /* AlimentoService.swift in Sources */,
