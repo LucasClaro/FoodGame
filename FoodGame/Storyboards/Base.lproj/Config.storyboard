@@ -172,7 +172,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5bn-Nu-KUV"/>
                     <connections>
-                        <outlet property="viewCreditos" destination="P1s-Nc-g14" id="oD3-bY-EQj"/>
+                        <outlet property="viewCreditos" destination="P1s-Nc-g14" id="8wV-Tg-O2w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFH-S1-x1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
