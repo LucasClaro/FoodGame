@@ -33,21 +33,6 @@ class PratoTableVC: UITableViewController {
         return textos[section].count
     }
     
-    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
-        let sectionName: String
-        switch section {
-            case 0:
-                sectionName = NSLocalizedString("mySectionName", comment: "mySectionName")
-            case 1:
-                sectionName = NSLocalizedString("myOtherSectionName", comment: "myOtherSectionName")
-            // ...
-            default:
-                sectionName = ""
-        }
-        return sectionName
-    }*/
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionName: String
         switch section {
