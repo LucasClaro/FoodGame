@@ -59,7 +59,7 @@ class AlimentoService {
         Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba", restricoes: [""]),
         Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve", restricoes: [""]),
         Alimento(id: 511, nome: "Pepino", porcao:9, tipo: "Hortaliça", foto: "pepino", restricoes: [""]),
-        Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "Tomate", restricoes: [""]),
+        Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "tomate", restricoes: [""]),
     ]
     
     let frutas : [Alimento] = [
@@ -70,8 +70,8 @@ class AlimentoService {
     ]
     
     let bebs : [Alimento] = [
-        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Bebida", foto: "Cafe", restricoes: [""]),
-        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Bebida", foto: "Refrigerante", restricoes: [""]),
+        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Bebida", foto: "Cafe", restricoes: ["Gastrite"]),
+        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Bebida", foto: "Refrigerante", restricoes: ["Diabetes","Gastrite"]),
         Alimento(id: 703, nome: "Suco de laranja", porcao:2, tipo: "Bebida", foto: "Suco de laranja", restricoes: [""]),
         Alimento(id: 704, nome: "Suco de melancia", porcao:2, tipo: "Bebida", foto: "Suco de melancia", restricoes: [""]),
     ]

@@ -25,6 +25,8 @@ struct AlimentosPorTipo
     let prots : [Alimento]
     let protsV : [Alimento]
     let hort : [Alimento]
+    let fruta : [Alimento]
+    let bebs : [Alimento]
 }
 
 //MARK: Class
@@ -60,6 +62,8 @@ class Calculo {
         var vprots = [Alimento]()
         var vprotsV = [Alimento]()
         var vhort = [Alimento]()
+        var vfruta = [Alimento]()
+        var vbebs = [Alimento]()
         
         for a in alimentos {
             switch a.tipo {
@@ -78,11 +82,16 @@ class Calculo {
             case "Hortaliça":
                 vhort.append(a)
                 break
+            case "Fruta":
+                vfruta.append(a)
+                break
+            case "Bebida":
+                vbebs.append(a)
             default:
                 break
             }
         }
-        return AlimentosPorTipo(carbos: vcarbos, legs: vlegs, prots: vprots, protsV: vprotsV, hort: vhort)
+        return AlimentosPorTipo(carbos: vcarbos, legs: vlegs, prots: vprots, protsV: vprotsV, hort: vhort,fruta: vfruta,bebs: vbebs)
     }
     
     //Calula(soma) a quantidade de gramas de carboidrato na struct AlimentoPorTipo
@@ -120,4 +129,13 @@ class Calculo {
         }
         return porcao
     }
+    
+//    static func calcularFrutas() -> Int
+//    {
+//        var porcao = 0
+//        for fruta in Calculo.aliPorTipo.hort {
+//            porcao += fruta.porcao
+//        }
+//        return porcao
+//    }
 }
