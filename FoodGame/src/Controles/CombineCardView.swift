@@ -20,7 +20,16 @@ class CombineCardView: UIView {
                   fraseLabelp.text = alimento.nome
                   let porcao = String(alimento.porcao)
                   let tipo = alimento.tipo
-                  fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + "g"
+                  if(tipo == "Bebida")
+                  {
+                      fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm um copo de  " + porcao + "mL"
+                  }
+                  else if (tipo == "Fruta"){
+                    fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + " unidade"
+                }
+                  else {
+                        fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + "g"
+                }
              }
           }
       }

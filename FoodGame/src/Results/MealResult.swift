@@ -5,6 +5,8 @@ struct Meal {
   var carbohydrates = 0
   var proteins = 0
   var vegetables = 0
+  var fruta = 0
+  var bebida = 0
 }
 
 class MealViewController: UIViewController {
@@ -156,7 +158,11 @@ class MealViewController: UIViewController {
         let prot = abs(Float32(mealDict["\(currentMeal)"]!.proteins) - Calculo.maxValue.gProt)
         let veg = abs(Float32(mealDict["\(currentMeal)"]!.vegetables) - Calculo.maxValue.gVeg)
         
-        let somaNutrientes = carb+prot+veg
+        let fruta = abs(mealDict["\(currentMeal)"]!.fruta - Calculo.maxValue.uFruta)
+        
+        let bebs = abs(Float32(mealDict["\(currentMeal)"]!.bebida) - Calculo.maxValue.mlBeb)
+        
+        let somaNutrientes = carb+prot+veg - Float(fruta) - bebs
       
         switch somaNutrientes {
         case ..<(totalNutrientes*0.05):
@@ -193,7 +199,7 @@ class MealViewController: UIViewController {
             {
                 if con[a.restricoes[i]] ?? false
                 {
-                    texto += "\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode comer " + a.nome + "!"
+                    texto += "\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode consumir " + a.nome + "!"
                 }
             }
         }
