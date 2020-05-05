@@ -144,6 +144,18 @@ class CardViewController: UIViewController {
             alimentos.append(lista[index])
         }
         
+        lista = AlimentoService.shared.buscaFrutas()
+        lista.shuffle()
+        for index in 0...1{
+            alimentos.append(lista[index])
+        }
+        
+        lista = AlimentoService.shared.buscaBebidas()
+        lista.shuffle()
+        for index in 0...2{
+            alimentos.append(lista[index])
+        }
+        
         alimentos.shuffle()
         
         self.adicionarCards()

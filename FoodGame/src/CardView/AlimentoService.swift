@@ -70,10 +70,10 @@ class AlimentoService {
     ]
     
     let bebs : [Alimento] = [
-        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Fruta", foto: "Cafe", restricoes: [""]),
-        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Fruta", foto: "Refrigerante", restricoes: [""]),
-        Alimento(id: 703, nome: "Suco de laranja", porcao:2, tipo: "Fruta", foto: "Suco de laranja", restricoes: [""]),
-        Alimento(id: 704, nome: "Suco de melancia", porcao:2, tipo: "Fruta", foto: "Suco de melancia", restricoes: [""]),
+        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Bebida", foto: "Cafe", restricoes: [""]),
+        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Bebida", foto: "Refrigerante", restricoes: [""]),
+        Alimento(id: 703, nome: "Suco de laranja", porcao:2, tipo: "Bebida", foto: "Suco de laranja", restricoes: [""]),
+        Alimento(id: 704, nome: "Suco de melancia", porcao:2, tipo: "Bebida", foto: "Suco de melancia", restricoes: [""]),
     ]
     func buscaCarboidratos () -> [Alimento] {
         return self.carbs
@@ -93,6 +93,14 @@ class AlimentoService {
     
     func buscaHortlicas () -> [Alimento] {
         return self.hort
+    }
+    
+    func buscaFrutas () -> [Alimento] {
+        return self.frutas
+    }
+    
+    func buscaBebidas () -> [Alimento] {
+        return self.bebs
     }
     
 }
