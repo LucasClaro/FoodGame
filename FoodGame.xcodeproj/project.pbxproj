@@ -61,6 +61,7 @@
 		F2740469243B93A300855269 /* DayResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740468243B93A300855269 /* DayResult.storyboard */; };
 		F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */; };
 		F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E83C31244636320085BF25 /* InitialMenu.swift */; };
+		F2F907862461DAC100805F55 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F907852461DAC100805F55 /* CreditosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		F2740468243B93A300855269 /* DayResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayResult.storyboard; sourceTree = "<group>"; };
 		F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		F2E83C31244636320085BF25 /* InitialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMenu.swift; sourceTree = "<group>"; };
+		F2F907852461DAC100805F55 /* CreditosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		05BFA2A024465B41006E126A /* Configuracao */ = {
 			isa = PBXGroup;
 			children = (
+				F2F907852461DAC100805F55 /* CreditosViewController.swift */,
 				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
 				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
 				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
@@ -562,6 +565,7 @@
 				B669F7C52452292E002464FC /* PratoCell.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
 				02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */,
+				F2F907862461DAC100805F55 /* CreditosViewController.swift in Sources */,
 				B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */,
 				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
