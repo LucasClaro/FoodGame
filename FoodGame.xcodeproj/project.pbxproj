@@ -44,6 +44,8 @@
 		B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6948C64242D45C800A2315C /* LaunchScreen.storyboard */; };
 		B6948C71242D45C800A2315C /* FoodGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C70242D45C800A2315C /* FoodGameTests.swift */; };
 		B6948C7C242D45C800A2315C /* FoodGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C7B242D45C800A2315C /* FoodGameUITests.swift */; };
+		B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A694402461E63300BF8DAA /* Perfil.storyboard */; };
+		B6A694462461EA6300BF8DAA /* PerfilTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */; };
 		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
 		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
 		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
@@ -133,6 +135,8 @@
 		B6948C72242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
+		B6A694402461E63300BF8DAA /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
+		B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableVC.swift; sourceTree = "<group>"; };
 		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
@@ -315,6 +319,14 @@
 			path = FoodGameUITests;
 			sourceTree = "<group>";
 		};
+		B6A694422461E94300BF8DAA /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
 		B6DD84AB2444F1DC00106F25 /* Pause */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +370,7 @@
 				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
 				02777BBA243BD75200521891 /* Personagem.storyboard */,
 				B669F7C224522900002464FC /* Prato.storyboard */,
+				B6A694402461E63300BF8DAA /* Perfil.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -365,6 +378,7 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B6A694422461E94300BF8DAA /* Perfil */,
 				B669F7BF2452287C002464FC /* Prato */,
 				78C661142445FC14000AEC7B /* CardView */,
 				05BFA2A024465B41006E126A /* Configuracao */,
@@ -504,6 +518,7 @@
 			files = (
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
+				B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
 				05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
@@ -558,6 +573,7 @@
 				B6DD84BE2448EBE900106F25 /* UIView.swift in Sources */,
 				B6948C5A242D45C600A2315C /* AppDelegate.swift in Sources */,
 				050ADBEB243BDA0900FF22DB /* CustomCollectionCell.swift in Sources */,
+				B6A694462461EA6300BF8DAA /* PerfilTableVC.swift in Sources */,
 				05D70B63243F99D1006E6094 /* TutorialPageViewController.swift in Sources */,
 				050ADBEF243BDA9000FF22DB /* TableViewController.swift in Sources */,
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
