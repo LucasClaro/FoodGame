@@ -15,6 +15,8 @@ struct MaxValues
     let gCarbo : Float32
     let gProt : Float32
     let gVeg : Float32
+    let uFruta : Int
+    let mlBeb : Float32
 }
 
 //Separa os alimentos aceitos nos cards por tipo para realizar o calculo
@@ -51,7 +53,7 @@ class Calculo {
         
         //300g no prato infantil
         //PlaceHolders
-        Calculo.maxValue = MaxValues(gCarbo: 300/4, gProt: 300/4, gVeg: 300/2)
+        Calculo.maxValue = MaxValues(gCarbo: 300/4, gProt: 300/4, gVeg: 300/2,uFruta: 1,mlBeb: 150)
     }
     
     //Recebe lista de alimentos, separa por tipo e Retorna uma struct de Alimentos por tipo
@@ -130,12 +132,21 @@ class Calculo {
         return porcao
     }
     
-//    static func calcularFrutas() -> Int
-//    {
-//        var porcao = 0
-//        for fruta in Calculo.aliPorTipo.hort {
-//            porcao += fruta.porcao
-//        }
-//        return porcao
-//    }
+    static func calcularFrutas() -> Int
+    {
+        var porcao = 0
+        for fruta in Calculo.aliPorTipo.fruta {
+            porcao += fruta.porcao
+        }
+        return porcao
+    }
+    
+    static func calcularBebidas() -> Int
+    {
+        var porcao = 0
+        for bebida in Calculo.aliPorTipo.bebs {
+            porcao += bebida.porcao
+        }
+        return porcao
+    }
 }
