@@ -35,7 +35,8 @@ class MealViewController: UIViewController {
   var currentMeal : String = ""
     
   var alimentosAceitos : [Alimento] = []
-  
+
+  let dicCondtions: [String: String] = ["Diabetes": "diabetes", "Hipertensao": "hipertensão", "Lactose": "intolerância à lactose", "Gastrite": "gastrite", "Gluten": "intolerância ao gluten"]
   // MARK: View Lifecycle
   
   override func viewDidLoad() {
@@ -112,7 +113,6 @@ class MealViewController: UIViewController {
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {
     let sumOfNutrients = calcPerNutrient()
-    print(sumOfNutrients)
     givingTips(sumOfNutrients: sumOfNutrients)
     
     for star in arrayOfStars {
@@ -120,6 +120,7 @@ class MealViewController: UIViewController {
         star.tintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
       }
     }
+    verConditions()
   }
   
   // Função que dá a dica da refeição
@@ -179,6 +180,26 @@ class MealViewController: UIViewController {
         }
     }
   
+    func verConditions()
+    {
+        ///["Diabetes", "Hipertensao", "Lactose", "Vegetariano", "Gastrite", "Gluten"]
+        let con = (UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String:Bool])
+        
+        var texto = "Mas além disso, existem alguns problemas:"
+        
+        for a in alimentosAceitos
+        {
+            for i in 0 ... a.restricoes.count - 1
+            {
+                if con[a.restricoes[i]] ?? false
+                {
+                    texto += "\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode comer " + a.nome + "!"
+                }
+            }
+        }
+        print(texto)
+    }
+    
   // MARK: View Data Output
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -197,5 +218,14 @@ class MealViewController: UIViewController {
     
     
   }
+
+  @IBAction func goMenu(_ sender: Any) {
+      let alert = UIAlertController(title: "Deseja mesmo voltar ao menu?", message: "Saindo você perderá todo o progresso atual", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindToMenu", sender: nil)}))
+    alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+      
+      self.present(alert, animated: true)
+  }
+
 }
 

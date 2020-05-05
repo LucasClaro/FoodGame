@@ -14,6 +14,6 @@ struct Alimento {
     let porcao: Int
     let tipo: String
     let foto: String
-    
+    let restricoes : [String]
 }
 

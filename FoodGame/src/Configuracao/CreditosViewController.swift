@@ -2,13 +2,13 @@ import UIKit
 
 class CreditosViewController: UIViewController {
   
-  @IBOutlet weak var mainView: UIView!
+  @IBOutlet weak var viewCreditos: UIView!
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    mainView.layer.cornerRadius = 30
+    viewCreditos.layer.cornerRadius = 30
     
   }
 }

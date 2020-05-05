@@ -91,17 +91,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0A-oq-E8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2ii-FI-qTd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1181.1594202898552" y="-773.4375"/>
-        </scene>
-        <!--Game-->
-        <scene sceneID="4QE-bQ-R0E">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="ScJ-AC-8kf" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="zPo-0X-2TT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-Rb-UEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-669" y="-844"/>
+            <point key="canvasLocation" x="-1114" y="-773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KCm-zw-706">
@@ -129,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEH-Tn-tV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="-824"/>
+            <point key="canvasLocation" x="-142" y="-773"/>
         </scene>
         <!--Config-->
         <scene sceneID="EvO-Jz-fEH">
@@ -139,7 +129,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfl-bt-oHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-664" y="-573"/>
+            <point key="canvasLocation" x="548" y="-773"/>
         </scene>
     </scenes>
 </document>
