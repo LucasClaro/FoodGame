@@ -67,11 +67,13 @@ class PratoTableVC: UITableViewController {
     
     func preencherTextos(){
         let infos = ["Refeição: " + currentMeal,
-                     "Carboidrato: \(mealDict[currentMeal]!.carbohydrates)g/\(Calculo.maxValue.gCarbo)",
-                     "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)",
-                     "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)",
-                    "Fruta: \(mealDict[currentMeal]!.fruta)unidade/\(Calculo.maxValue.uFruta)",
-                    "Bebida: \(mealDict[currentMeal]!.bebida)mL/\(Calculo.maxValue.mlBeb)"]
+                     "Carboidrato: \(mealDict[currentMeal]!.carbohydrates)g/\(Calculo.maxValue.gCarbo)g",
+                     "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)g",
+                     "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)g",
+                     "Frutas: \(mealDict[currentMeal]!.fruta)un/\(Calculo.maxValue.uFruta)un",
+                     "Bebidas: \(mealDict[currentMeal]!.bebida)ml/\(Calculo.maxValue.mlBeb)ml"
+                    ]
+
         var nomes: [String] = []
         
         textos.append(infos)
