@@ -25,4 +25,17 @@ class TableViewController : UITableViewController
         cell.lblCell.text = dataSource[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            Bundle.setLanguage("en")
+        case 1:
+            Bundle.setLanguage("pt-br")
+        default:
+            Bundle.setLanguage("pt-br")
+        }
+        
+        navigationController?.popViewController(animated: true)
+    }
 }
