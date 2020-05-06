@@ -45,6 +45,9 @@
                                 <state key="normal" image="person.crop.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="36"/>
                                 </state>
+                                <connections>
+                                    <segue destination="h21-HP-amZ" kind="show" id="tU9-Kj-pZ5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Café da Manhã" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW3-fM-ar0">
                                 <rect key="frame" x="120" y="62" width="174" height="24"/>
@@ -104,6 +107,16 @@
             </objects>
             <point key="canvasLocation" x="580" y="325"/>
         </scene>
+        <!--Perfil-->
+        <scene sceneID="DMk-I7-5fx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Perfil" id="h21-HP-amZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VAy-K5-4EF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjJ-YP-wz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="-165"/>
+        </scene>
         <!--MealResult-->
         <scene sceneID="Qhg-6P-Z8b">
             <objects>
@@ -112,7 +125,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pm0-g6-6Co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="-200"/>
+            <point key="canvasLocation" x="701" y="76"/>
         </scene>
     </scenes>
     <resources>

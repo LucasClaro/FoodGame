@@ -15,6 +15,8 @@ struct MaxValues
     let gCarbo : Float32
     let gProt : Float32
     let gVeg : Float32
+    let uFruta : Int
+    let mlBeb : Float32
 }
 
 //Separa os alimentos aceitos nos cards por tipo para realizar o calculo
@@ -25,6 +27,8 @@ struct AlimentosPorTipo
     let prots : [Alimento]
     let protsV : [Alimento]
     let hort : [Alimento]
+    let fruta : [Alimento]
+    let bebs : [Alimento]
 }
 
 //MARK: Class
@@ -49,7 +53,7 @@ class Calculo {
         
         //300g no prato infantil
         //PlaceHolders
-        Calculo.maxValue = MaxValues(gCarbo: 300/4, gProt: 300/4, gVeg: 300/2)
+        Calculo.maxValue = MaxValues(gCarbo: 300/4, gProt: 300/4, gVeg: 300/2,uFruta: 1,mlBeb: 150)
     }
     
     //Recebe lista de alimentos, separa por tipo e Retorna uma struct de Alimentos por tipo
@@ -60,6 +64,8 @@ class Calculo {
         var vprots = [Alimento]()
         var vprotsV = [Alimento]()
         var vhort = [Alimento]()
+        var vfruta = [Alimento]()
+        var vbebs = [Alimento]()
         
         for a in alimentos {
             switch a.tipo {
@@ -78,11 +84,16 @@ class Calculo {
             case "Hortaliça":
                 vhort.append(a)
                 break
+            case "Fruta":
+                vfruta.append(a)
+                break
+            case "Bebida":
+                vbebs.append(a)
             default:
                 break
             }
         }
-        return AlimentosPorTipo(carbos: vcarbos, legs: vlegs, prots: vprots, protsV: vprotsV, hort: vhort)
+        return AlimentosPorTipo(carbos: vcarbos, legs: vlegs, prots: vprots, protsV: vprotsV, hort: vhort,fruta: vfruta,bebs: vbebs)
     }
     
     //Calula(soma) a quantidade de gramas de carboidrato na struct AlimentoPorTipo
@@ -117,6 +128,24 @@ class Calculo {
         }
         for protV in Calculo.aliPorTipo.legs {
             porcao += protV.porcao
+        }
+        return porcao
+    }
+    
+    static func calcularFrutas() -> Int
+    {
+        var porcao = 0
+        for fruta in Calculo.aliPorTipo.fruta {
+            porcao += fruta.porcao
+        }
+        return porcao
+    }
+    
+    static func calcularBebidas() -> Int
+    {
+        var porcao = 0
+        for bebida in Calculo.aliPorTipo.bebs {
+            porcao += bebida.porcao
         }
         return porcao
     }

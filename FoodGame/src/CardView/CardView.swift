@@ -318,6 +318,9 @@ extension CardViewController {
         mealDict[currentMeal]?.carbohydrates = Calculo.calularCarbo()
         mealDict[currentMeal]?.proteins = Calculo.calularProteina()
         mealDict[currentMeal]?.vegetables = Calculo.calcularVegetais()
+        mealDict[currentMeal]?.fruta = Calculo.calcularFrutas()
+        mealDict[currentMeal]?.bebida = Calculo.calcularBebidas()
+
     }
     
     //MARK: SEGUES

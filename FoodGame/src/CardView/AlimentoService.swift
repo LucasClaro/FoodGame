@@ -59,22 +59,23 @@ class AlimentoService {
         Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba", restricoes: [""]),
         Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve", restricoes: [""]),
         Alimento(id: 511, nome: "Pepino", porcao:9, tipo: "Hortaliça", foto: "pepino", restricoes: [""]),
-        Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "Tomate", restricoes: [""]),
+        Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "tomate", restricoes: [""]),
     ]
     
     let frutas : [Alimento] = [
-        Alimento(id: 601, nome: "Banana", porcao:9, tipo: "Fruta", foto: "Banana", restricoes: [""]),
-        Alimento(id: 602, nome: "Laranja", porcao:9, tipo: "Fruta", foto: "Laranja", restricoes: [""]),
-        Alimento(id: 603, nome: "Maçã", porcao:9, tipo: "Fruta", foto: "Maca", restricoes: [""]),
-        Alimento(id: 604, nome: "Melancia", porcao:9, tipo: "Fruta", foto: "Melancia", restricoes: [""]),
+        Alimento(id: 601, nome: "Banana", porcao:1, tipo: "Fruta", foto: "Banana", restricoes: [""]),
+        Alimento(id: 602, nome: "Laranja", porcao:1, tipo: "Fruta", foto: "Laranja", restricoes: [""]),
+        Alimento(id: 603, nome: "Maçã", porcao:1, tipo: "Fruta", foto: "Maca", restricoes: [""]),
+        Alimento(id: 604, nome: "Melancia", porcao:1, tipo: "Fruta", foto: "Melancia", restricoes: [""]),
     ]
     
     let bebs : [Alimento] = [
-        Alimento(id: 701, nome: "Cafe", porcao:2, tipo: "Bebida", foto: "Cafe", restricoes: [""]),
-        Alimento(id: 702, nome: "Refrigerante", porcao:2, tipo: "Bebida", foto: "Refrigerante", restricoes: [""]),
-        Alimento(id: 703, nome: "Suco de laranja", porcao:2, tipo: "Bebida", foto: "Suco de laranja", restricoes: [""]),
-        Alimento(id: 704, nome: "Suco de melancia", porcao:2, tipo: "Bebida", foto: "Suco de melancia", restricoes: [""]),
+        Alimento(id: 701, nome: "Cafe", porcao:150, tipo: "Bebida", foto: "Cafe", restricoes: ["Gastrite"]),
+        Alimento(id: 702, nome: "Refrigerante", porcao:150, tipo: "Bebida", foto: "Refrigerante", restricoes: ["Diabetes","Gastrite"]),
+        Alimento(id: 703, nome: "Suco de laranja", porcao:150, tipo: "Bebida", foto: "Suco de laranja", restricoes: [""]),
+        Alimento(id: 704, nome: "Suco de melancia", porcao:150, tipo: "Bebida", foto: "Suco de melancia", restricoes: [""]),
     ]
+    
     func buscaCarboidratos () -> [Alimento] {
         return self.carbs
     }
