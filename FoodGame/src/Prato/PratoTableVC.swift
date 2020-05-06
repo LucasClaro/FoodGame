@@ -71,8 +71,9 @@ class PratoTableVC: UITableViewController {
                      "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)g",
                      "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)g",
                      "Frutas: \(mealDict[currentMeal]!.fruta)un/\(Calculo.maxValue.uFruta)un",
-                     "Bebidas: \(mealDict[currentMeal]!.bebida)ml/\(Calculo.maxValue.mlBeb)ml",
-      ]
+                     "Bebidas: \(mealDict[currentMeal]!.bebida)ml/\(Calculo.maxValue.mlBeb)ml"
+                    ]
+
         var nomes: [String] = []
         
         textos.append(infos)

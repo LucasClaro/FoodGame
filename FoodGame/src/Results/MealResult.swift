@@ -31,14 +31,22 @@ class MealViewController: UIViewController {
   
   @IBOutlet var arrayOfStars: [UIImageView]!
   
-  // Logic Variables
+    @IBOutlet weak var btnProb: UIButton!
+    // Logic Variables
   var mealDict:[String:Meal] = [:]
   
   var currentMeal : String = ""
     
   var alimentosAceitos : [Alimento] = []
 
-  let dicCondtions: [String: String] = ["Diabetes": "diabetes", "Hipertensao": "hipertensão", "Lactose": "intolerância à lactose", "Gastrite": "gastrite", "Gluten": "intolerância ao gluten"]
+  var dicCondtions: [String: String] =  ["Diabetes": "\nComo você tem diabetes, não pode comer ",
+  "Hipertensao": "\nComo você tem hipertensão, não pode comer ",
+  "Lactose": "\nComo você tem intolerância à lactose, não pode comer ",
+  "Gastrite": "\nComo você tem gastrite, não pode comer ",
+  "Gluten": "\nComo você tem intolerância ao gluten, não pode comer "]
+
+    
+  var textoCondicoes : [String] = []
   // MARK: View Lifecycle
   
   override func viewDidLoad() {
@@ -51,8 +59,10 @@ class MealViewController: UIViewController {
     labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
     labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
     labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
-
+    
     coloringStars()
+    
+    btnProb.isHidden = textoCondicoes.count == 0
   }
   
   // MARK: Layout Methods
@@ -89,6 +99,7 @@ class MealViewController: UIViewController {
     buttonDish.layer.cornerRadius = 30
     buttonNextMeal.layer.cornerRadius = 30
     buttonHome.layer.cornerRadius = 30
+    btnProb.layer.cornerRadius = 20
   }
   
   // MARK: Internal Logic Methods
@@ -186,25 +197,33 @@ class MealViewController: UIViewController {
         }
     }
   
-    func verConditions()
-    {
-        ///["Diabetes", "Hipertensao", "Lactose", "Vegetariano", "Gastrite", "Gluten"]
-        let con = (UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String:Bool])
-        
-        var texto = "Mas além disso, existem alguns problemas:"
-        
-        for a in alimentosAceitos
+     func verConditions()
+       {
+           ///["Diabetes", "Hipertensao", "Lactose", "Vegetariano", "Gastrite", "Gluten"]
+           let con = (UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String:Bool])
+           
+           
+           for a in alimentosAceitos
+           {
+               for i in 0 ... a.restricoes.count - 1
+               {
+                   if con[a.restricoes[i]] ?? false
+                   {
+                       //textoCondicoes.append("\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode consumir " + a.nome + "!")
+                       dicCondtions[a.restricoes[i]]! += (a.nome+", ")
+                   }
+               }
+           }
+        for c in dicCondtions.keys
         {
-            for i in 0 ... a.restricoes.count - 1
+            if con[c] ?? false
             {
-                if con[a.restricoes[i]] ?? false
-                {
-                    texto += "\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode consumir " + a.nome + "!"
+                if !dicCondtions[c]!.hasSuffix("comer "){
+                    textoCondicoes.append(dicCondtions[c]!)
                 }
             }
         }
-        print(texto)
-    }
+       }
     
   // MARK: View Data Output
   
@@ -221,7 +240,9 @@ class MealViewController: UIViewController {
         pratoTableVC.currentMeal = currentMeal
         pratoTableVC.alimentos = alimentosAceitos
     }
-    
+    else if let probVC = segue.destination as? ProblemViewController{
+        probVC.texto = textoCondicoes
+    }
     
   }
 

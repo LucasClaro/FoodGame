@@ -117,6 +117,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiT-FV-NOr">
+                                        <rect key="frame" x="167" y="469" width="45" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="exclamationmark.triangle" catalog="system"/>
+                                        <connections>
+                                            <segue destination="bdL-sV-qUf" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="j6t-eJ-J0I"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -181,6 +192,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="btnProb" destination="LiT-FV-NOr" id="k0a-W6-NQy"/>
                         <outlet property="buttonDish" destination="Vf4-Bh-jTq" id="pOl-RO-QCh"/>
                         <outlet property="buttonHome" destination="3be-KP-RB7" id="Emc-7T-26r"/>
                         <outlet property="buttonNextMeal" destination="tgQ-pD-3yy" id="s98-bK-1nU"/>
@@ -189,6 +201,8 @@
                         <outlet property="labelQuantityOfCarbohydrates" destination="4yY-3w-AcH" id="hDG-v1-Zzm"/>
                         <outlet property="labelQuantityOfProteins" destination="eWW-GN-Thf" id="Tw3-dq-glT"/>
                         <outlet property="labelQuantityOfVegetables" destination="b0O-8l-Uwb" id="ARn-wY-Luj"/>
+                        <outlet property="lblCondicoes" destination="fd8-6g-WD1" id="Pb2-b9-g6T"/>
+                        <outlet property="scrollViewCondicoes" destination="oJ8-pD-mio" id="POC-0l-QXT"/>
                         <outlet property="uiViewMealInfos" destination="ILP-Oy-cht" id="IUq-ZP-ldb"/>
                         <outletCollection property="arrayOfStars" destination="hMF-op-QaS" collectionClass="NSMutableArray" id="Ahm-hr-VZS"/>
                         <outletCollection property="arrayOfStars" destination="5RE-ph-xwk" collectionClass="NSMutableArray" id="QOf-LJ-Nkl"/>
@@ -204,6 +218,92 @@
                 <exit id="0Ft-80-sVy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="107.8125"/>
+        </scene>
+        <!--Problem View Controller-->
+        <scene sceneID="4x2-Kp-Ufr">
+            <objects>
+                <viewController id="bdL-sV-qUf" customClass="ProblemViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W3z-Na-1Do">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaE-ab-SJp">
+                                <rect key="frame" x="20.5" y="118.5" width="373" height="669"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJ8-pD-mio">
+                                        <rect key="frame" x="32" y="105" width="310" height="531"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-6g-WD1">
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fd8-6g-WD1" firstAttribute="leading" secondItem="oJ8-pD-mio" secondAttribute="leading" id="1BN-ON-2xv"/>
+                                            <constraint firstAttribute="bottom" secondItem="fd8-6g-WD1" secondAttribute="bottom" constant="510.5" placeholder="YES" id="7c2-cA-T9R"/>
+                                            <constraint firstAttribute="trailing" secondItem="fd8-6g-WD1" secondAttribute="trailing" constant="1" id="8qq-B7-Kph"/>
+                                            <constraint firstAttribute="width" constant="310" id="Qu0-Cj-uC2"/>
+                                            <constraint firstAttribute="height" constant="531" id="X4d-R8-gcv"/>
+                                            <constraint firstItem="fd8-6g-WD1" firstAttribute="width" secondItem="oJ8-pD-mio" secondAttribute="width" multiplier="0.996774" id="vpr-sT-9Vq"/>
+                                            <constraint firstItem="fd8-6g-WD1" firstAttribute="top" secondItem="oJ8-pD-mio" secondAttribute="top" id="xT9-tH-9zJ"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="PN4-NR-0jT"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="msN-eT-epX"/>
+                                    </scrollView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mas tiveram alguns problemas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-gN-hWb">
+                                        <rect key="frame" x="34" y="42" width="305" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="SsN-Qp-2fn"/>
+                                            <constraint firstAttribute="width" constant="305" id="Xxd-9N-Cj0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="669" id="3S7-8g-Pw6"/>
+                                    <constraint firstItem="oJ8-pD-mio" firstAttribute="top" secondItem="EPa-gN-hWb" secondAttribute="bottom" constant="39" id="HfH-eM-l8T"/>
+                                    <constraint firstItem="EPa-gN-hWb" firstAttribute="centerX" secondItem="MaE-ab-SJp" secondAttribute="centerX" id="IYk-fn-nBf"/>
+                                    <constraint firstItem="EPa-gN-hWb" firstAttribute="top" secondItem="MaE-ab-SJp" secondAttribute="top" constant="42" id="SWW-pp-dQV"/>
+                                    <constraint firstAttribute="width" constant="373" id="bE5-8t-H2r"/>
+                                    <constraint firstItem="oJ8-pD-mio" firstAttribute="leading" secondItem="MaE-ab-SJp" secondAttribute="leading" constant="32" id="gfN-Pb-Xgf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PW-VO-FZJ">
+                                <rect key="frame" x="20" y="44" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                                </state>
+                                <connections>
+                                    <action selector="goMenu:" destination="A8r-2P-kYP" eventType="touchUpInside" id="Hhy-7W-ijF"/>
+                                    <action selector="voltarClicked:" destination="bdL-sV-qUf" eventType="touchUpInside" id="T9X-86-Ube"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.57441131161971826" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MaE-ab-SJp" firstAttribute="centerY" secondItem="OeI-gx-9L6" secondAttribute="centerY" id="YUY-rM-FWw"/>
+                            <constraint firstItem="MaE-ab-SJp" firstAttribute="centerX" secondItem="OeI-gx-9L6" secondAttribute="centerX" id="ob0-Qg-faG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OeI-gx-9L6"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnvolta" destination="8PW-VO-FZJ" id="I0u-3h-6zd"/>
+                        <outlet property="lblCondicoes" destination="fd8-6g-WD1" id="zG9-R7-bMF"/>
+                        <outlet property="scrollViewCondicoes" destination="oJ8-pD-mio" id="UG3-wA-wZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewe-re-Tc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298.5507246376812" y="105.80357142857143"/>
         </scene>
         <!--Prato-->
         <scene sceneID="pEM-Gn-0Ll">
@@ -227,8 +327,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
