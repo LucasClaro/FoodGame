@@ -156,6 +156,10 @@ class sex: UIViewController {
     @IBOutlet weak var checkFem: UIButton!
     @IBOutlet weak var checkMasc: UIButton!
     @IBOutlet weak var bttProx: UIButton!
+    @IBOutlet weak var imgViewPerso: UIImageView!
+  
+  
+  
     let defaults = UserDefaults.standard
     var sexo: String = String()
     
@@ -163,7 +167,7 @@ class sex: UIViewController {
         super.viewDidLoad()
         visualBotao(sender: bttProx)
     }
-    
+  
     func getSexo() -> String{
         return sexo
     }
@@ -181,6 +185,7 @@ class sex: UIViewController {
             self.sexo = "F"
             bttProx.isHidden = false
         }
+      imgViewPerso.image = UIImage(named: "Menina")
     }
     
     @IBAction func bttMasc(_ sender: UIButton) {
@@ -196,6 +201,7 @@ class sex: UIViewController {
             self.sexo = "M"
             bttProx.isHidden = false
         }
+      imgViewPerso.image = UIImage(named: "Menino")
     }
     
 }
