@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Jantar"; ObjectID = "72R-fS-R6l"; */
+"72R-fS-R6l.text" = "Dinner";
+
+/* Class = "UILabel"; text = "Almoço"; ObjectID = "D1E-JM-NWc"; */
+"D1E-JM-NWc.text" = "Lunch";
+
+/* Class = "UILabel"; text = "Você completou o dia, parabéns!"; ObjectID = "EiD-1b-sbu"; */
+"EiD-1b-sbu.text" = "You have completed the day, congrats!";
+
+/* Class = "UIButton"; normalTitle = "Jogar Novamente"; ObjectID = "RcO-ci-c3S"; */
+"RcO-ci-c3S.normalTitle" = "Play again";
+
+/* Class = "UILabel"; text = "Dica"; ObjectID = "drw-rb-Po1"; */
+"drw-rb-Po1.text" = "Tip";
+
+/* Class = "UILabel"; text = "Café da manhã"; ObjectID = "h0N-bM-emC"; */
+"h0N-bM-emC.text" = "Breakfast";
+
+/* Class = "UIButton"; normalTitle = "Menu Inicial"; ObjectID = "upl-hx-8hO"; */
+"upl-hx-8hO.normalTitle" = "Start menu";

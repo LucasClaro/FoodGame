@@ -128,22 +128,22 @@ class MealViewController: UIViewController {
     
     switch sumOfNutrients {
     case 0:
-      labelMealTips.text = "Você não comeu nada, coma alguma coisa"
+      labelMealTips.text = NSLocalizedString("refeicaoMtRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 0 e 3")
       break
     case 1:
-      labelMealTips.text = "Um pouquinho mais de cada comida"
+      labelMealTips.text = NSLocalizedString("refeicaoRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 3 e 6")
       break
     case 2:
-      labelMealTips.text = "Você deve comer mais alimentos amiguinho"
+      labelMealTips.text = NSLocalizedString("refeicaoOk", comment: "Aviso que aparece quando a pontuação do usuário é entre 6 e 9")
       break
     case 3:
-      labelMealTips.text = "Está chegando lá, coma mais coisas"
+      labelMealTips.text = NSLocalizedString("refeicaoBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 9 e 12")
       break
     case 4:
-      labelMealTips.text = "Está quase lá, faltou só um pouquinho"
+      labelMealTips.text = NSLocalizedString("refeicaoMtBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 12 e 15")
       break
     default:
-      labelMealTips.text = "UMA REFEIÇÃO PERFEITA!!!"
+      labelMealTips.text = NSLocalizedString("refeicaoPft", comment: "Aviso que aparece caso a refeição tenha sido perfeita")
       break
     }
   }

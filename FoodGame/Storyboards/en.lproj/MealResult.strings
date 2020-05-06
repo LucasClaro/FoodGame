@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Carbo"; ObjectID = "4yY-3w-AcH"; */
+"4yY-3w-AcH.text" = "Carbs";
+
+/* Class = "UIButton"; normalTitle = "Meu prato"; ObjectID = "Vf4-Bh-jTq"; */
+"Vf4-Bh-jTq.normalTitle" = "My plate";
+
+/* Class = "UILabel"; text = "Você fez um ótimo trabalho montando um prato bem equilibrado"; ObjectID = "Yle-CI-Uub"; */
+"Yle-CI-Uub.text" = "You have made a great job making a balanced meal";
+
+/* Class = "UILabel"; text = "Veget"; ObjectID = "b0O-8l-Uwb"; */
+"b0O-8l-Uwb.text" = "Vegetables";
+
+/* Class = "UILabel"; text = "Prote"; ObjectID = "eWW-GN-Thf"; */
+"eWW-GN-Thf.text" = "Proteins";
+
+/* Class = "UIButton"; normalTitle = "Próxima refeição"; ObjectID = "tgQ-pD-3yy"; */
+"tgQ-pD-3yy.normalTitle" = "Next meal";
+
+/* Class = "UILabel"; text = "Parabéns!"; ObjectID = "uuh-AN-3Gd"; */
+"uuh-AN-3Gd.text" = "Congrats!";
