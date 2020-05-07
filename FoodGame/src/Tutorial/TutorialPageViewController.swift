@@ -16,22 +16,22 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     // MARK: Valores tutorial
     
     //TOP
-    let titleTu = ["Como funciona?","F"]
-    let pageHeadingsTop = ["Navegação intuitiva","Verso"]
-    let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arratando o card.","Bacon"]
+    let titleTu = ["Como funciona?","Leve em conta"]
+    let pageHeadingsTop = ["Navegação intuitiva","Alimentos"]
+    let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arrastando o card.","Sempre disponiveis para consulta no prato."]
     
     let pageImagesTop = ["IconsCard.png","IconsCard.png"]
     
     //MID
-    let pageHeadingsMid = ["Monte um prato","Chocolate"]
-    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Meio amargo"]
+    let pageHeadingsMid = ["Monte um prato","Porções"]
+    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Leve em conta a quantidade que está sendo colocada no prato."]
     
     let pageImagesMid = ["IconsPrato.png","IconsPrato.png"]
     
     
     //BOT
-    let pageHeadingsBot = ["Personagem","Cake"]
-    let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","is a lie"]
+    let pageHeadingsBot = ["Personagem","Condições"]
+    let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","Suas condições farão diferença na hora do resultado."]
     
     let pageImagesBot = ["IconsPersonagem.png","IconsPersonagem.png"]
     

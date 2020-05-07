@@ -38,7 +38,8 @@ class TutorialViewController: UIViewController, TutorialPageViewControllerDelega
     
     @IBAction func skipTutorial(sender: UIButton)
     {
-        dismiss(animated: true, completion: nil)
+        UserDefaults.standard.set(true, forKey: "fezTutorial")
+        performSegue(withIdentifier: "PersonagemVC", sender: nil)
     }
     
     func updateUI() {
