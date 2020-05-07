@@ -53,7 +53,12 @@ class PerfilTableVC: UITableViewController {
         
         customCell.textLabel?.text = UserDefaults.standard.string(forKey: "Nome")
         customCell.detailTextLabel?.text = String(UserDefaults.standard.integer(forKey: "Idade")) + " anos"
-        //customCell.imageView?.image = ...
+        if UserDefaults.standard.string(forKey: "Sexo") == "M"{
+            customCell.imageView?.image = UIImage(named: "Menino")
+        }
+        else{
+            customCell.imageView?.image = UIImage(named: "Menina")
+        }
         
         
         if(indexPath.section > 0){
@@ -74,32 +79,32 @@ class PerfilTableVC: UITableViewController {
             case "Diabetes":
                 if(value){
                     condicoes.append("Diabetes")
-                    descricoes.append("lorenD")
+                    descricoes.append("Busque evitar muito Açucar")
                 }
             case "Hipertensao":
                 if(value){
                     condicoes.append("Hipertensao");
-                    descricoes.append("lorenH")
+                    descricoes.append("Evite alimentos gordurosos e manere no sal")
                 }
             case "Lactose":
                 if(value){
-                    condicoes.append("Lactose");
-                    descricoes.append("lorenL")
+                    condicoes.append("Intolerância a Lactose");
+                    descricoes.append("Evite alimentos com base de leite")
                 }
             case "Vegetariano":
                 if(value){
                     condicoes.append("Vegetariano");
-                    descricoes.append("lorenV")
+                    descricoes.append("Não se esqueça de ingerir outras fornas de proteína")
                 }
             case "Gastrite":
                 if(value){
                     condicoes.append("Gastrite");
-                    descricoes.append("lorenG")
+                    descricoes.append("Evite alimentos muito processados e de difícil digestão")
                 }
             case "Gluten":
                 if(value){
-                    condicoes.append("Gluten");
-                    descricoes.append("lorenG")
+                    condicoes.append("Intolerância a Gluten");
+                    descricoes.append("Cuidado com alimentos a base de trigo")
                 }
             default:
                 print("default")
