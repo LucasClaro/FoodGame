@@ -52,7 +52,7 @@ class CombineCardView: UIView {
         super.init(frame: frame)
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 8
+        layer.cornerRadius = 40
         clipsToBounds = true
         
         fraseLabels.addShadow()
