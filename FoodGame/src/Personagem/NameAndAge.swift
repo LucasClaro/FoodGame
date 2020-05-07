@@ -71,7 +71,6 @@ class name: UIViewController, UITextFieldDelegate{
     
 class age: UIViewController, UITextFieldDelegate{
     
-    var datePicker: UIDatePicker?
     @IBOutlet var bttTela3: UIButton!
     @IBOutlet weak var idadeatual: UILabel!
     @IBOutlet var caixaTexto: UITextField!
@@ -79,58 +78,82 @@ class age: UIViewController, UITextFieldDelegate{
     let defaults = UserDefaults.standard
     var idade: Int = Int()
     var anoN: String = String()
+    let datePicker = UIDatePicker()
+    let calendar = Calendar(identifier: .gregorian)
+    let currentDate = Date()
+    var components = DateComponents()
+
     
     // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        caixaTexto.delegate = self
-        idadeatual.isHidden = true
+        //caixaTexto.delegate = self
+        //idadeatual.isHidden = true
         label.numberOfLines = 10
+        createDatePicker(caixaTexto: caixaTexto)
         print(defaults.integer(forKey: "Idade"))
         visualBotao(sender: bttTela3)
     }
   
+    //MARK: - Define calendar
+    func defineCalendar(datePicker: UIDatePicker){
+        components.calendar = calendar
+        components.year = -1
+        components.month = 12
+        let maxDate = calendar.date(byAdding: components, to: currentDate)!
+
+        components.year = -50
+        let minDate = calendar.date(byAdding: components, to: currentDate)!
+
+        datePicker.minimumDate = minDate
+        datePicker.maximumDate = maxDate
+    }
+    //MARK: - Date picker
+    func createDatePicker(caixaTexto: UITextField){
+        defineCalendar(datePicker: datePicker)
+        caixaTexto.textAlignment = .center
+        
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //bar button
+        let doneBtt = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtt], animated: true)
+        
+        //assign toolbar
+        caixaTexto.inputAccessoryView = toolbar
+        
+        //assign date picker to text field
+        caixaTexto.inputView = datePicker
+        
+        //create date picker mode
+        datePicker.datePickerMode = .date
+    }
     
-    // MARK: - Allowing text field to only get numbers
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    // MARK: - Done pressed
+    @objc func donePressed(){
+        //formater
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        formatter.dateFormat = "dd/MM/yyy"
         
-        let allowedCharacters = "0123456789"
-        let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
-        let typedCharacterSet = CharacterSet(charactersIn: string)
-        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
-    }
-    // MARK: - Validate user entry
-    func valida (caixaTexto: UITextField, avisoIdade: UILabel, botao: UIButton){
-        let ano = Int(caixaTexto.text!)
-        let anoNasc = caixaTexto.text
-        var conta: Int = 1
-        let data = Date()
+        caixaTexto.text = formatter.string(from: datePicker.date)
+        bttTela3.isHidden = false
+        self.view.endEditing(true)
+        
+        //Realiza conta
         let calendario = Calendar.current
+        let ano:Int
+        let idade: Int
+        ano = calendar.dateComponents([.year], from: datePicker.date).year!  
+        idade = calendario.component(.year, from: currentDate) - ano
+        defaults.set(idade, forKey: "Idade")
+        defaults.set(ano, forKey: "Ano")
         
-        
-        if caixaTexto.text == nil || caixaTexto.text == ""{
-            avisoIdade.text = NSLocalizedString("anoEmBranco", comment: "Aviso para caso ano esteja em branco")
-            //"Insira um ano"
-            botao.isHidden = true
-               } else {
-            conta = calendario.component(.year, from: data) - ano!
-            botao.isHidden = true
-            if(conta < 0 || conta > 110){
-                avisoIdade.text = NSLocalizedString("anoInvalido", comment: "Aviso para caso ano seja inválido")
-                //"Insira um ano válido"
-                botao.isHidden = true
-            } else {
-                avisoIdade.text = ""
-                botao.isHidden = false
-                idade = conta
-                anoN = anoNasc!
-                defaults.set(idade, forKey: "Idade")
-                defaults.set(anoN, forKey: "Ano")
-            }
-        }
-        
-        avisoIdade.isHidden = false
     }
+
     
     func getIdade() -> Int{
         return idade
@@ -138,14 +161,6 @@ class age: UIViewController, UITextFieldDelegate{
     
     func getAno() -> String{
         return anoN
-    }
-    
-    
-      // MARK: - Keyboard goes off when return is clicked
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        valida(caixaTexto: caixaTexto, avisoIdade: idadeatual, botao: bttTela3)
-        return false
     }
     
     
