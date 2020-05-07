@@ -18,6 +18,8 @@ class AlimentoService {
         Alimento(id: 103, nome: "Pão Integral", porcao: 12, tipo: "Carboidrato", foto: "pao integral", restricoes: ["Gluten"]),
         Alimento(id: 104, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata", restricoes: [""]),
         Alimento(id: 105, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Macarrao", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 106, nome: "Bolo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 107, nome: "Biscoito", porcao: 12, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
         //Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: [""]),
     ]
     
