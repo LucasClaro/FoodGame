@@ -20,7 +20,16 @@ class CombineCardView: UIView {
                   fraseLabelp.text = alimento.nome
                   let porcao = String(alimento.porcao)
                   let tipo = alimento.tipo
-                  fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + "g"
+                  if(tipo == "Bebida")
+                  {
+                      fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm um copo de  " + porcao + "mL"
+                  }
+                  else if (tipo == "Fruta"){
+                    fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + " unidade"
+                }
+                  else {
+                        fraseLabels.text = "Este alimento é um(a) " + tipo + " e contêm uma porção de " + porcao + "g"
+                }
              }
           }
       }
@@ -43,7 +52,7 @@ class CombineCardView: UIView {
         super.init(frame: frame)
         layer.borderWidth = 0.3
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 8
+        layer.cornerRadius = 40
         clipsToBounds = true
         
         fraseLabels.addShadow()

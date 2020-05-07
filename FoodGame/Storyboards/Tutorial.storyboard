@@ -54,27 +54,27 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-lB-g1b">
-                                                <rect key="frame" x="75" y="4.6666666666666856" width="164" height="56"/>
+                                                <rect key="frame" x="75" y="6.0000000000000036" width="164" height="53.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-ab-YWR">
-                                                        <rect key="frame" x="41" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="164" height="23.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
-                                                        <rect key="frame" x="0.0" y="33.666666666666657" width="164" height="22.333333333333329"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="22.329999999999998" id="8Uj-gz-6j0"/>
-                                                            <constraint firstAttribute="width" constant="164" id="i09-3q-LKm"/>
-                                                        </constraints>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-L0-5wS">
+                                                        <rect key="frame" x="0.0" y="33.666666666666686" width="164" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="Na5-L0-5wS" firstAttribute="leading" secondItem="WJP-lB-g1b" secondAttribute="leading" id="0Gv-GN-H8n"/>
+                                                    <constraint firstItem="yEb-ab-YWR" firstAttribute="leading" secondItem="WJP-lB-g1b" secondAttribute="leading" id="BIF-HQ-FZ1"/>
+                                                    <constraint firstAttribute="width" constant="164" id="IgW-Ei-Mdj"/>
                                                     <constraint firstItem="Na5-L0-5wS" firstAttribute="leading" secondItem="WJP-lB-g1b" secondAttribute="leading" id="xpJ-H9-go6"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="164" id="zLD-Or-qYf"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -94,18 +94,22 @@
                                                 <rect key="frame" x="80" y="6.6666666666666288" width="159" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-LR-DBi">
-                                                        <rect key="frame" x="38.666666666666657" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="23.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-Ny-pS0">
-                                                        <rect key="frame" x="42.666666666666664" y="33.666666666666686" width="73.666666666666686" height="18.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-Ny-pS0">
+                                                        <rect key="frame" x="0.0" y="33.666666666666686" width="159" height="18.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="B1w-Ny-pS0" firstAttribute="leading" secondItem="7bp-JN-CYF" secondAttribute="leading" id="gsB-ls-pUV"/>
+                                                    <constraint firstItem="hAB-LR-DBi" firstAttribute="leading" secondItem="7bp-JN-CYF" secondAttribute="leading" id="sSd-f9-cA0"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -124,18 +128,22 @@
                                                 <rect key="frame" x="80" y="6.0000000000000036" width="159" height="53.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWA-st-K74">
-                                                        <rect key="frame" x="38.666666666666657" y="0.0" width="82" height="23.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="23.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-6C-vRG">
-                                                        <rect key="frame" x="40" y="33.666666666666629" width="79" height="19.666666666666671"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subheading" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-6C-vRG">
+                                                        <rect key="frame" x="0.0" y="33.666666666666629" width="159" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="pEi-6C-vRG" firstAttribute="leading" secondItem="FKV-XR-kGa" secondAttribute="leading" id="RS5-vk-yfs"/>
+                                                    <constraint firstItem="xWA-st-K74" firstAttribute="leading" secondItem="FKV-XR-kGa" secondAttribute="leading" id="t09-sN-uHg"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>

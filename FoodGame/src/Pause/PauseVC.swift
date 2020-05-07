@@ -24,16 +24,16 @@ class PauseVC: UIViewController {
     }
     
     @IBAction func sair(_ sender: Any) {
-        let alert = UIAlertController(title: "Deseja mesmo sair?", message: "Saindo você perderá todo o progresso atual", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindToMenu", sender: nil)}))
-      alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("confirmaSair", comment: "Confirmação para sair"), message: NSLocalizedString("sairAviso", comment: "Aviso sobre sair"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindToMenu", sender: nil)}))
+      alert.addAction(UIAlertAction(title: NSLocalizedString("cancelar", comment: "Cancelar opção"), style: .destructive, handler: nil))
         
         self.present(alert, animated: true)
     }
     
     @IBAction func reiniciar(_ sender: Any) {
-        let alert = UIAlertController(title: "Deseja mesmo Reiniciar?", message: "Reiniciando você recomeçará a refeição atual", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindWithSegue", sender: nil)}))
+        let alert = UIAlertController(title: NSLocalizedString("confirmaReinicio", comment: "Confirmação para reiniciar"), message: NSLocalizedString("reinicioAviso", comment: "Aviso sobre reiniciar"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindWithSegue", sender: nil)}))
         alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
         
         self.present(alert, animated: true)

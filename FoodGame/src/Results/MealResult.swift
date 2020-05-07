@@ -5,6 +5,8 @@ struct Meal {
   var carbohydrates = 0
   var proteins = 0
   var vegetables = 0
+  var fruta = 0
+  var bebida = 0
 }
 
 class MealViewController: UIViewController {
@@ -29,13 +31,22 @@ class MealViewController: UIViewController {
   
   @IBOutlet var arrayOfStars: [UIImageView]!
   
-  // Logic Variables
+    @IBOutlet weak var btnProb: UIButton!
+    // Logic Variables
   var mealDict:[String:Meal] = [:]
   
   var currentMeal : String = ""
     
   var alimentosAceitos : [Alimento] = []
-  
+
+  var dicCondtions: [String: String] =  ["Diabetes": "\nComo você tem diabetes, não pode consumir ",
+  "Hipertensao": "\nComo você tem hipertensão, não pode consumir ",
+  "Lactose": "\nComo você tem intolerância à lactose, não pode consumir ",
+  "Gastrite": "\nComo você tem gastrite, não pode consumir ",
+  "Gluten": "\nComo você tem intolerância ao gluten, não pode consumir "]
+
+    
+  var textoCondicoes : [String] = []
   // MARK: View Lifecycle
   
   override func viewDidLoad() {
@@ -48,8 +59,10 @@ class MealViewController: UIViewController {
     labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
     labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
     labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
-
+    
     coloringStars()
+    
+    btnProb.isHidden = textoCondicoes.count == 0
   }
   
   // MARK: Layout Methods
@@ -86,6 +99,7 @@ class MealViewController: UIViewController {
     buttonDish.layer.cornerRadius = 30
     buttonNextMeal.layer.cornerRadius = 30
     buttonHome.layer.cornerRadius = 30
+    btnProb.layer.cornerRadius = 30
   }
   
   // MARK: Internal Logic Methods
@@ -112,7 +126,6 @@ class MealViewController: UIViewController {
   // Função que colore as estrelas para dar a "nota" ao jogador
   func coloringStars() {
     let sumOfNutrients = calcPerNutrient()
-    print(sumOfNutrients)
     givingTips(sumOfNutrients: sumOfNutrients)
     
     for star in arrayOfStars {
@@ -120,6 +133,7 @@ class MealViewController: UIViewController {
         star.tintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
       }
     }
+    verConditions()
   }
   
   // Função que dá a dica da refeição
@@ -127,22 +141,22 @@ class MealViewController: UIViewController {
     
     switch sumOfNutrients {
     case 0:
-      labelMealTips.text = "Você não comeu nada, coma alguma coisa"
+      labelMealTips.text = NSLocalizedString("refeicaoMtRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 0 e 3")
       break
     case 1:
-      labelMealTips.text = "Um pouquinho mais de cada comida"
+      labelMealTips.text = NSLocalizedString("refeicaoRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 3 e 6")
       break
     case 2:
-      labelMealTips.text = "Você deve comer mais alimentos amiguinho"
+      labelMealTips.text = NSLocalizedString("refeicaoOk", comment: "Aviso que aparece quando a pontuação do usuário é entre 6 e 9")
       break
     case 3:
-      labelMealTips.text = "Está chegando lá, coma mais coisas"
+      labelMealTips.text = NSLocalizedString("refeicaoBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 9 e 12")
       break
     case 4:
-      labelMealTips.text = "Está quase lá, faltou só um pouquinho"
+      labelMealTips.text = NSLocalizedString("refeicaoMtBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 12 e 15")
       break
     default:
-      labelMealTips.text = "UMA REFEIÇÃO PERFEITA!!!"
+      labelMealTips.text = NSLocalizedString("refeicaoPft", comment: "Aviso que aparece caso a refeição tenha sido perfeita")
       break
     }
   }
@@ -155,7 +169,11 @@ class MealViewController: UIViewController {
         let prot = abs(Float32(mealDict["\(currentMeal)"]!.proteins) - Calculo.maxValue.gProt)
         let veg = abs(Float32(mealDict["\(currentMeal)"]!.vegetables) - Calculo.maxValue.gVeg)
         
-        let somaNutrientes = carb+prot+veg
+        let fruta = abs(mealDict["\(currentMeal)"]!.fruta - Calculo.maxValue.uFruta)
+        
+        let bebs = abs(Float32(mealDict["\(currentMeal)"]!.bebida) - Calculo.maxValue.mlBeb)
+        
+        let somaNutrientes = carb+prot+veg - Float(fruta) - bebs
       
         switch somaNutrientes {
         case ..<(totalNutrientes*0.05):
@@ -179,6 +197,34 @@ class MealViewController: UIViewController {
         }
     }
   
+     func verConditions()
+       {
+           ///["Diabetes", "Hipertensao", "Lactose", "Vegetariano", "Gastrite", "Gluten"]
+           let con = (UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String:Bool])
+           
+           
+           for a in alimentosAceitos
+           {
+               for i in 0 ... a.restricoes.count - 1
+               {
+                   if con[a.restricoes[i]] ?? false
+                   {
+                       //textoCondicoes.append("\n- Como você tem " + dicCondtions[a.restricoes[i]]! + ", nao pode consumir " + a.nome + "!")
+                       dicCondtions[a.restricoes[i]]! += (a.nome+", ")
+                   }
+               }
+           }
+        for c in dicCondtions.keys
+        {
+            if con[c] ?? false
+            {
+                if !dicCondtions[c]!.hasSuffix("consumir "){
+                    textoCondicoes.append(dicCondtions[c]!)
+                }
+            }
+        }
+       }
+    
   // MARK: View Data Output
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -194,8 +240,19 @@ class MealViewController: UIViewController {
         pratoTableVC.currentMeal = currentMeal
         pratoTableVC.alimentos = alimentosAceitos
     }
-    
+    else if let probVC = segue.destination as? ProblemViewController{
+        probVC.texto = textoCondicoes
+    }
     
   }
+
+  @IBAction func goMenu(_ sender: Any) {
+      let alert = UIAlertController(title: "Deseja mesmo voltar ao menu?", message: "Saindo você perderá todo o progresso atual", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "unwindToMenu", sender: nil)}))
+    alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+      
+      self.present(alert, animated: true)
+  }
+
 }
 

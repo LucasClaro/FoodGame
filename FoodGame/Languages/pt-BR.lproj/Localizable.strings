@@ -11,3 +11,28 @@
 "anoInvalido" = "Por favor insira um ano váido.";
 "labelEditaPersonagem" = "Edite seu personagem: ";
 "OlaNomeUser" = "Olá";
+
+//MARK: Day result
+"entre0e3" = "Seu dia não foi nem um pouco bom, mas você pode melhorar!";
+"entre3e6" = "Seu dia não foi bom, mas você pode melhorar!";
+"entre6e9" = "Seu dia não foi muito bom, mas você está chegando lá";
+"entre9e12" = "Seu dia foi bom!";
+"entre12e15" = "Seu dia foi muito bom, parabéns!";
+"entre15e15" = "Uau! Seu dia foi perfeito!";
+
+//MARK: Meal result
+"refeicaoMtRuim" = "Sua refeição não foi nem um pouco boa, mas você pode melhorar!";
+"refeicaoRuim" = "Sua refeição não foi boa, mas você pode melhorar!";
+"refeicaoOk" = "Sua refeição não foi muito boa, mas você está chegando lá.";
+"refeicaoBoa" = "Sua refeição foi boa!";
+"refeicaoMtBoa" = "Sua refeição foi muito boa, parabéns.";
+"refeicaoPft" = "Uau! Você teve uma refeição perfeita!";
+
+//MARK: Pause
+
+"confirmaSair" = "Deseja mesmo sair?";
+"sairAviso" = "Saindo você perderá todo o progresso atual";
+"cancelar" = "Cancelar";
+"confirmaReinicio" = "Deseja mesmo reiniciar?";
+"reinicioAviso" = "Reiniciando você recomeçará a refeição atual";
+

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024B6BBC24632A0A00D9DAD7 /* DayResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B6BBE24632A0A00D9DAD7 /* DayResult.storyboard */; };
+		024B6BC32463404C00D9DAD7 /* MealResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B6BC52463404C00D9DAD7 /* MealResult.storyboard */; };
+		024B6BCA2463488B00D9DAD7 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B6BCC2463488B00D9DAD7 /* Pause.storyboard */; };
 		02777BBC243BD75200521891 /* Personagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02777BBA243BD75200521891 /* Personagem.storyboard */; };
 		029BABD5245A03F800E02336 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029BABD7245A03F800E02336 /* Localizable.strings */; };
 		029BABE3245A192B00E02336 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029BABE5245A192B00E02336 /* Config.storyboard */; };
@@ -21,6 +24,7 @@
 		050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */; };
 		050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */; };
 		0525C4B72450B98000B51633 /* Calculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C4B62450B98000B51633 /* Calculo.swift */; };
+		056DC6D124633F6100BDF003 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DC6D024633F6100BDF003 /* ProblemViewController.swift */; };
 		05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33C244A33600092E3AE /* IconsPersonagem.png */; };
 		05CDA340244A33600092E3AE /* IconsCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33D244A33600092E3AE /* IconsCard.png */; };
 		05CDA341244A33600092E3AE /* IconsPrato.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33E244A33600092E3AE /* IconsPrato.png */; };
@@ -44,6 +48,10 @@
 		B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6948C64242D45C800A2315C /* LaunchScreen.storyboard */; };
 		B6948C71242D45C800A2315C /* FoodGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C70242D45C800A2315C /* FoodGameTests.swift */; };
 		B6948C7C242D45C800A2315C /* FoodGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6948C7B242D45C800A2315C /* FoodGameUITests.swift */; };
+		B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A694402461E63300BF8DAA /* Perfil.storyboard */; };
+		B6A694462461EA6300BF8DAA /* PerfilTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */; };
+		B6A694482463309300BF8DAA /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A694472463309300BF8DAA /* Bundle.swift */; };
+		B6A6944A2464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */; };
 		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
 		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
 		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
@@ -53,14 +61,14 @@
 		F23C0345244645D800BC921A /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C0344244645D800BC921A /* Game.storyboard */; };
 		F23C034824464C2E00BC921A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C034724464C2E00BC921A /* Game.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
+		F26D4FE22461FEFE00FCFEB8 /* ConfigPauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */; };
 		F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274045E243B90C800855269 /* ImagineTheGame.swift */; };
 		F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740460243B90E800855269 /* ImagineTheGame.storyboard */; };
 		F2740463243B936700855269 /* MealResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2740462243B936700855269 /* MealResult.swift */; };
 		F2740465243B937E00855269 /* DayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2740464243B937E00855269 /* DayResult.swift */; };
-		F2740467243B939500855269 /* MealResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740466243B939500855269 /* MealResult.storyboard */; };
-		F2740469243B93A300855269 /* DayResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2740468243B93A300855269 /* DayResult.storyboard */; };
 		F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */; };
 		F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E83C31244636320085BF25 /* InitialMenu.swift */; };
+		F2F907862461DAC100805F55 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F907852461DAC100805F55 /* CreditosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +89,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024B6BDF2464A0C800D9DAD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
+		024B6BBD24632A0A00D9DAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DayResult.storyboard; sourceTree = "<group>"; };
+		024B6BC024632A0E00D9DAD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DayResult.strings; sourceTree = "<group>"; };
+		024B6BC224632A0F00D9DAD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/DayResult.strings"; sourceTree = "<group>"; };
+		024B6BC42463404C00D9DAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MealResult.storyboard; sourceTree = "<group>"; };
+		024B6BC72463405100D9DAD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MealResult.strings; sourceTree = "<group>"; };
+		024B6BC92463405200D9DAD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MealResult.strings"; sourceTree = "<group>"; };
+		024B6BCB2463488B00D9DAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pause.storyboard; sourceTree = "<group>"; };
+		024B6BCE2463489100D9DAD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Pause.strings; sourceTree = "<group>"; };
+		024B6BD02463489100D9DAD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Pause.strings"; sourceTree = "<group>"; };
 		0266BA74245B448B00CFFB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Config.strings; sourceTree = "<group>"; };
 		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
 		029BABD6245A03F800E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -91,7 +109,6 @@
 		029BABDF245A05D000E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-BR"; path = "pt-BR.lproj/Info.plist"; sourceTree = "<group>"; };
 		029BABE1245A08DF00E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Personagem.strings; sourceTree = "<group>"; };
 		029BABE2245A0ABC00E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Personagem.strings"; sourceTree = "<group>"; };
-		029BABE7245A193400E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
 		029BABE8245A193600E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Config.storyboard; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
@@ -104,6 +121,7 @@
 		050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soviet-anthem.mp3"; sourceTree = "<group>"; };
 		0525C4B62450B98000B51633 /* Calculo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculo.swift; sourceTree = "<group>"; };
+		056DC6D024633F6100BDF003 /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		05CDA33C244A33600092E3AE /* IconsPersonagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPersonagem.png; sourceTree = "<group>"; };
 		05CDA33D244A33600092E3AE /* IconsCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsCard.png; sourceTree = "<group>"; };
 		05CDA33E244A33600092E3AE /* IconsPrato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPrato.png; sourceTree = "<group>"; };
@@ -119,7 +137,7 @@
 		B669F7C0245228BD002464FC /* PratoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PratoTableVC.swift; sourceTree = "<group>"; };
 		B669F7C224522900002464FC /* Prato.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prato.storyboard; sourceTree = "<group>"; };
 		B669F7C42452292E002464FC /* PratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PratoCell.swift; sourceTree = "<group>"; };
-		B6948C56242D45C600A2315C /* FoodGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6948C56242D45C600A2315C /* Tá no Prato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tá no Prato.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C59242D45C600A2315C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6948C5B242D45C600A2315C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B6948C5D242D45C600A2315C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +150,10 @@
 		B6948C72242D45C800A2315C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6948C77242D45C800A2315C /* FoodGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6948C7B242D45C800A2315C /* FoodGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGameUITests.swift; sourceTree = "<group>"; };
+		B6A694402461E63300BF8DAA /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
+		B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableVC.swift; sourceTree = "<group>"; };
+		B6A694472463309300BF8DAA /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = If_I_Had_a_Chicken.mp3; sourceTree = "<group>"; };
 		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
@@ -141,14 +163,14 @@
 		F23C0344244645D800BC921A /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		F23C034724464C2E00BC921A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
+		F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPauseVC.swift; sourceTree = "<group>"; };
 		F274045E243B90C800855269 /* ImagineTheGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagineTheGame.swift; sourceTree = "<group>"; };
 		F2740460243B90E800855269 /* ImagineTheGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagineTheGame.storyboard; sourceTree = "<group>"; };
 		F2740462243B936700855269 /* MealResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResult.swift; sourceTree = "<group>"; };
 		F2740464243B937E00855269 /* DayResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayResult.swift; sourceTree = "<group>"; };
-		F2740466243B939500855269 /* MealResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealResult.storyboard; sourceTree = "<group>"; };
-		F2740468243B93A300855269 /* DayResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayResult.storyboard; sourceTree = "<group>"; };
 		F2A4328A24463BA800B3BDC3 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		F2E83C31244636320085BF25 /* InitialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMenu.swift; sourceTree = "<group>"; };
+		F2F907852461DAC100805F55 /* CreditosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				029BABD7245A03F800E02336 /* Localizable.strings */,
+				B6A694472463309300BF8DAA /* Bundle.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -197,6 +220,7 @@
 		050ADBF5243BDD5100FF22DB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */,
 				050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */,
 			);
 			path = Sounds;
@@ -205,6 +229,7 @@
 		05BFA2A024465B41006E126A /* Configuracao */ = {
 			isa = PBXGroup;
 			children = (
+				F2F907852461DAC100805F55 /* CreditosViewController.swift */,
 				050ADBE6243BD87500FF22DB /* ConfigViewController.swift */,
 				050ADBE8243BD9C100FF22DB /* CollectionViewController.swift */,
 				050ADBEA243BDA0900FF22DB /* CustomCollectionCell.swift */,
@@ -268,7 +293,7 @@
 		B6948C57242D45C600A2315C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B6948C56242D45C600A2315C /* FoodGame.app */,
+				B6948C56242D45C600A2315C /* Tá no Prato.app */,
 				B6948C6C242D45C800A2315C /* FoodGameTests.xctest */,
 				B6948C77242D45C800A2315C /* FoodGameUITests.xctest */,
 			);
@@ -312,10 +337,19 @@
 			path = FoodGameUITests;
 			sourceTree = "<group>";
 		};
+		B6A694422461E94300BF8DAA /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
 		B6DD84AB2444F1DC00106F25 /* Pause */ = {
 			isa = PBXGroup;
 			children = (
 				B6DD84AC2444F1EF00106F25 /* PauseVC.swift */,
+				F26D4FE12461FEFE00FCFEB8 /* ConfigPauseVC.swift */,
 			);
 			path = Pause;
 			sourceTree = "<group>";
@@ -348,13 +382,14 @@
 				029BABE5245A192B00E02336 /* Config.storyboard */,
 				050ADBF0243BDAF400FF22DB /* Tutorial.storyboard */,
 				F2740460243B90E800855269 /* ImagineTheGame.storyboard */,
-				F2740466243B939500855269 /* MealResult.storyboard */,
-				F2740468243B93A300855269 /* DayResult.storyboard */,
+				024B6BC52463404C00D9DAD7 /* MealResult.storyboard */,
+				024B6BBE24632A0A00D9DAD7 /* DayResult.storyboard */,
 				F262015F243BA47D00F8E077 /* StartMenu.storyboard */,
 				78C661102445FA52000AEC7B /* CardView.storyboard */,
-				B6DD84A92444EDA900106F25 /* Pause.storyboard */,
+				024B6BCC2463488B00D9DAD7 /* Pause.storyboard */,
 				02777BBA243BD75200521891 /* Personagem.storyboard */,
 				B669F7C224522900002464FC /* Prato.storyboard */,
+				B6A694402461E63300BF8DAA /* Perfil.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -362,6 +397,7 @@
 		F274045D243B908300855269 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B6A694422461E94300BF8DAA /* Perfil */,
 				B669F7BF2452287C002464FC /* Prato */,
 				78C661142445FC14000AEC7B /* CardView */,
 				05BFA2A024465B41006E126A /* Configuracao */,
@@ -390,6 +426,7 @@
 				F274045E243B90C800855269 /* ImagineTheGame.swift */,
 				F2740462243B936700855269 /* MealResult.swift */,
 				F2740464243B937E00855269 /* DayResult.swift */,
+				056DC6D024633F6100BDF003 /* ProblemViewController.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -411,7 +448,7 @@
 			);
 			name = FoodGame;
 			productName = FoodGame;
-			productReference = B6948C56242D45C600A2315C /* FoodGame.app */;
+			productReference = B6948C56242D45C600A2315C /* Tá no Prato.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B6948C6B242D45C800A2315C /* FoodGameTests */ = {
@@ -501,6 +538,7 @@
 			files = (
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
+				B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
 				05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */,
 				02777BBC243BD75200521891 /* Personagem.storyboard in Resources */,
@@ -511,15 +549,16 @@
 				F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */,
 				F2740461243B90E800855269 /* ImagineTheGame.storyboard in Resources */,
 				05CDA341244A33600092E3AE /* IconsPrato.png in Resources */,
-				F2740469243B93A300855269 /* DayResult.storyboard in Resources */,
+				024B6BBC24632A0A00D9DAD7 /* DayResult.storyboard in Resources */,
 				B6948C63242D45C800A2315C /* Assets.xcassets in Resources */,
 				029BABE3245A192B00E02336 /* Config.storyboard in Resources */,
 				029BABD5245A03F800E02336 /* Localizable.strings in Resources */,
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
+				B6A6944A2464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 in Resources */,
 				05CDA340244A33600092E3AE /* IconsCard.png in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
-				F2740467243B939500855269 /* MealResult.storyboard in Resources */,
-				B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */,
+				024B6BC32463404C00D9DAD7 /* MealResult.storyboard in Resources */,
+				024B6BCA2463488B00D9DAD7 /* Pause.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E83C32244636320085BF25 /* InitialMenu.swift in Sources */,
+				B6A694482463309300BF8DAA /* Bundle.swift in Sources */,
 				F274045F243B90C800855269 /* ImagineTheGame.swift in Sources */,
 				B669F7C1245228BD002464FC /* PratoTableVC.swift in Sources */,
 				B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */,
@@ -555,6 +595,7 @@
 				B6DD84BE2448EBE900106F25 /* UIView.swift in Sources */,
 				B6948C5A242D45C600A2315C /* AppDelegate.swift in Sources */,
 				050ADBEB243BDA0900FF22DB /* CustomCollectionCell.swift in Sources */,
+				B6A694462461EA6300BF8DAA /* PerfilTableVC.swift in Sources */,
 				05D70B63243F99D1006E6094 /* TutorialPageViewController.swift in Sources */,
 				050ADBEF243BDA9000FF22DB /* TableViewController.swift in Sources */,
 				05D70B62243F99D1006E6094 /* TutorialViewController.swift in Sources */,
@@ -562,10 +603,12 @@
 				B669F7C52452292E002464FC /* PratoCell.swift in Sources */,
 				F2A4328B24463BA800B3BDC3 /* LaunchScreen.swift in Sources */,
 				02E361F72450B35800FC81F4 /* EditCharacter.swift in Sources */,
+				F2F907862461DAC100805F55 /* CreditosViewController.swift in Sources */,
 				B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */,
 				02E361F32447744F00FC81F4 /* Conditions.swift in Sources */,
 				050ADBED243BDA5100FF22DB /* TableCell.swift in Sources */,
 				05D70B61243F99D1006E6094 /* TutorialContentViewController.swift in Sources */,
+				F26D4FE22461FEFE00FCFEB8 /* ConfigPauseVC.swift in Sources */,
 				050ADBE7243BD87500FF22DB /* ConfigViewController.swift in Sources */,
 				78C6611F2445FD98000AEC7B /* Alimento.swift in Sources */,
 				78C661212445FDC0000AEC7B /* AlimentoService.swift in Sources */,
@@ -575,6 +618,7 @@
 				02E361F12447739A00FC81F4 /* NameAndAge.swift in Sources */,
 				78C661132445FB0E000AEC7B /* CardView.swift in Sources */,
 				F2740465243B937E00855269 /* DayResult.swift in Sources */,
+				056DC6D124633F6100BDF003 /* ProblemViewController.swift in Sources */,
 				B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +655,36 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		024B6BBE24632A0A00D9DAD7 /* DayResult.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				024B6BBD24632A0A00D9DAD7 /* Base */,
+				024B6BC024632A0E00D9DAD7 /* en */,
+				024B6BC224632A0F00D9DAD7 /* pt-BR */,
+			);
+			name = DayResult.storyboard;
+			sourceTree = "<group>";
+		};
+		024B6BC52463404C00D9DAD7 /* MealResult.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				024B6BC42463404C00D9DAD7 /* Base */,
+				024B6BC72463405100D9DAD7 /* en */,
+				024B6BC92463405200D9DAD7 /* pt-BR */,
+			);
+			name = MealResult.storyboard;
+			sourceTree = "<group>";
+		};
+		024B6BCC2463488B00D9DAD7 /* Pause.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				024B6BCB2463488B00D9DAD7 /* Base */,
+				024B6BCE2463489100D9DAD7 /* en */,
+				024B6BD02463489100D9DAD7 /* pt-BR */,
+			);
+			name = Pause.storyboard;
+			sourceTree = "<group>";
+		};
 		02777BBA243BD75200521891 /* Personagem.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -642,9 +716,9 @@
 		029BABE5245A192B00E02336 /* Config.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				029BABE7245A193400E02336 /* pt-BR */,
 				029BABE8245A193600E02336 /* Base */,
 				0266BA74245B448B00CFFB77 /* en */,
+				024B6BDF2464A0C800D9DAD7 /* pt-BR */,
 			);
 			name = Config.storyboard;
 			sourceTree = "<group>";
@@ -797,7 +871,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chalenge2.FoodGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tá no Prato";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -814,7 +888,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chalenge2.FoodGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tá no Prato";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

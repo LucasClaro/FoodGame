@@ -33,21 +33,6 @@ class PratoTableVC: UITableViewController {
         return textos[section].count
     }
     
-    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
-        let sectionName: String
-        switch section {
-            case 0:
-                sectionName = NSLocalizedString("mySectionName", comment: "mySectionName")
-            case 1:
-                sectionName = NSLocalizedString("myOtherSectionName", comment: "myOtherSectionName")
-            // ...
-            default:
-                sectionName = ""
-        }
-        return sectionName
-    }*/
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionName: String
         switch section {
@@ -82,9 +67,13 @@ class PratoTableVC: UITableViewController {
     
     func preencherTextos(){
         let infos = ["Refeição: " + currentMeal,
-                     "Carboidrato: \(mealDict[currentMeal]!.carbohydrates)g/\(Calculo.maxValue.gCarbo)",
-                     "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)",
-                     "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)"]
+                     "Carboidrato: \(mealDict[currentMeal]!.carbohydrates)g/\(Calculo.maxValue.gCarbo)g",
+                     "Proteinas: \(mealDict[currentMeal]!.proteins)g/\(Calculo.maxValue.gProt)g",
+                     "Vegetais: \(mealDict[currentMeal]!.vegetables)g/\(Calculo.maxValue.gVeg)g",
+                     "Frutas: \(mealDict[currentMeal]!.fruta)un/\(Calculo.maxValue.uFruta)un",
+                     "Bebidas: \(mealDict[currentMeal]!.bebida)ml/\(Calculo.maxValue.mlBeb)ml"
+                    ]
+
         var nomes: [String] = []
         
         textos.append(infos)

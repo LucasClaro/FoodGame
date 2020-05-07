@@ -5,6 +5,8 @@
   Created by Felipe Ferreira on 29/04/20.
   Copyright © 2020 Lucas Claro. All rights reserved.
 */
+
+//MARK: Personagem
 "avisoNomeVazio" = "Please enter a name.";
 "avisoNomeGrande" = "Please enter a shorter name.";
 "anoEmBranco" = "Please enter a year.";
@@ -12,3 +14,27 @@
 "labelEditaPersonagem" = "Edit your character: ";
 "OlaNomeUser" = "Hello";
 //"Hello \(defaults.string(forKey: "Nome") ?? "User")." + "\nType your character's name: ";
+
+//MARK: Day result
+"entre0e3" = "Your day wasn't good at all, but you can improve!";
+"entre3e6" = "Your day wasn't good, but you can improve!";
+"entre6e9" = "Your day wasn't that good, but you're getting there!";
+"entre9e12" = "Your day was good!";
+"entre12e15" = "Your day was really good, congrats!";
+"entre15e15" = "Wow! Your day was perfect!";
+
+//MARK: Meal result
+"refeicaoMtRuim" = "Your meal wasn't good at all, but you can improve!";
+"refeicaoRuim" = "Your meal wasn't good, but you can improve!";
+"refeicaoOk" = "Your meal wasn't that good, but you're getting there!";
+"refeicaoBoa" = "Your meal was good!";
+"refeicaoMtBoa" = "Your meal was really good, congrats!";
+"refeicaoPft" = "Wow! Your meal was perfect";
+
+//MARK: Pause
+
+"confirmaSair" = "Are you sure you want to quit?";
+"sairAviso" = "By quitting you will lose all your progress";
+"cancelar" = "Cancel";
+"confirmaReinicio" = "Are you sure you want to restart?";
+"reinicioAviso" = "By restarting you will restart your current meal";

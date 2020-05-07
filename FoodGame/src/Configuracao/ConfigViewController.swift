@@ -17,22 +17,22 @@ protocol VolumeChangedDelegate : class {
 class ConfigViewController: UITableViewController {
     
     @IBOutlet weak var musicVol: UISlider!
-    @IBOutlet weak var soundVol: UISlider!
+    //@IBOutlet weak var soundVol: UISlider!
     
     var volumeChangedDelegate : VolumeChangedDelegate?
 
     
     let mv = UserDefaults.standard.float(forKey: "musicVol")
-    let sv = UserDefaults.standard.float(forKey: "soundVol")
+    //let sv = UserDefaults.standard.float(forKey: "soundVol")
     //var player = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         musicVol.addTarget(self, action: #selector(musicVolChange), for: .valueChanged)
-        soundVol.addTarget(self, action: #selector(soundVolChange), for: .valueChanged)
+        //soundVol.addTarget(self, action: #selector(soundVolChange), for: .valueChanged)
 
         musicVol.value = mv
-        soundVol.value = sv
+        //soundVol.value = sv
       
         
     }
@@ -47,15 +47,19 @@ class ConfigViewController: UITableViewController {
       let volume = ["musicVolume": musicVol.value]
       NotificationCenter.default.post(name: NSNotification.Name("musicVolumeChange"), object: nil, userInfo: volume)
     }
-    @objc func soundVolChange()
-    {
-        volumeChangedDelegate?.changeVol(sender: soundVol, key: "soundVol")
-    }
+//    @objc func soundVolChange()
+//    {
+//        volumeChangedDelegate?.changeVol(sender: soundVol, key: "soundVol")
+//    }
     
     @IBAction func voltaTelaAnterior()
     {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
+    }
+  
+    @IBAction func unwindToConfig(segue: UIStoryboardSegue) {
+      
     }
     /*
     // MARK: - Navigation

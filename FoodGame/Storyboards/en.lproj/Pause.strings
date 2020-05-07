@@ -1,0 +1,21 @@
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "98Z-8S-tGa"; */
+"98Z-8S-tGa.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Qzu-fm-oQD"; */
+"Qzu-fm-oQD.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Continuar"; ObjectID = "TYx-CH-WG0"; */
+"TYx-CH-WG0.normalTitle" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Opções"; ObjectID = "bk7-Jr-RiB"; */
+"bk7-Jr-RiB.normalTitle" = "Options";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cLd-t8-6wZ"; */
+"cLd-t8-6wZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Sair"; ObjectID = "eM7-88-glV"; */
+"eM7-88-glV.normalTitle" = "Quit";
+
+/* Class = "UIButton"; normalTitle = "Reiniciar"; ObjectID = "yFH-OO-n8R"; */
+"yFH-OO-n8R.normalTitle" = "Restart";

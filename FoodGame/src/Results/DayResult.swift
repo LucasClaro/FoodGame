@@ -83,22 +83,28 @@ class DayViewController: UIViewController {
     
     switch coloredStars {
     case 0..<3:
-      labelMealTips.text = "Você não comeu nada, coma alguma coisa"
+      labelMealTips.text = NSLocalizedString("entre0e3", comment: "Aviso que aparece quando a pontuação do usuário é entre 0 e 3")
+      //"Você não comeu nada, coma alguma coisa"
       break
     case 3..<6:
-      labelMealTips.text = "Um pouquinho mais de cada comida"
+      labelMealTips.text = NSLocalizedString("entre3e6", comment: "Aviso que aparece quando a pontuação do usuário é entre 3 e 6")
+      //"Um pouquinho mais de cada comida"
       break
     case 6..<9:
-      labelMealTips.text = "Você deve comer mais alimentos amiguinho"
+      labelMealTips.text = NSLocalizedString("entre6e9", comment: "Aviso que aparece quando a pontuação do usuário é entre 6 e 9")
+      //"Você deve comer mais alimentos amiguinho"
       break
     case 9..<12:
-      labelMealTips.text = "Está chegando lá, coma mais coisas"
+      labelMealTips.text = NSLocalizedString("entre9e12", comment: "Aviso que aparece quando a pontuação do usuário é entre 9 e 12")
+      //"Está chegando lá, coma mais coisas"
       break
     case 12..<15:
-      labelMealTips.text = "Está quase lá, faltou só um pouquinho"
+      labelMealTips.text = NSLocalizedString("entre12e15", comment: "Aviso que aparece quando a pontuação do usuário é entre 12 e 15")
+      //"Está quase lá, faltou só um pouquinho"
       break
     default:
-      labelMealTips.text = "UMA REFEIÇÃO PERFEITA!!!"
+      labelMealTips.text = NSLocalizedString("entre15e15", comment: "Aviso que aparece caso a refeição tenha sido perfeita")
+      //"UMA REFEIÇÃO PERFEITA!!!"
       break
     }
   }
