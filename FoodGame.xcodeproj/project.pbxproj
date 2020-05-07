@@ -55,7 +55,6 @@
 		B6DD84BA2448EB9800106F25 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84B92448EB9800106F25 /* UIImageView.swift */; };
 		B6DD84BC2448EBC300106F25 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84BB2448EBC300106F25 /* UILabel.swift */; };
 		B6DD84BE2448EBE900106F25 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84BD2448EBE900106F25 /* UIView.swift */; };
-		F2182F322464956700B2B19F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2182F312464956700B2B19F /* logo.png */; };
 		F23C0345244645D800BC921A /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C0344244645D800BC921A /* Game.storyboard */; };
 		F23C034824464C2E00BC921A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C034724464C2E00BC921A /* Game.swift */; };
 		F2620160243BA47D00F8E077 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F262015F243BA47D00F8E077 /* StartMenu.storyboard */; };
@@ -151,7 +150,6 @@
 		B6DD84B92448EB9800106F25 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		B6DD84BB2448EBC300106F25 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B6DD84BD2448EBE900106F25 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		F2182F312464956700B2B19F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Desktop/logo.png; sourceTree = "<group>"; };
 		F23C0344244645D800BC921A /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		F23C034724464C2E00BC921A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F262015F243BA47D00F8E077 /* StartMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 				B6948C62242D45C800A2315C /* Assets.xcassets */,
 				B6948C64242D45C800A2315C /* LaunchScreen.storyboard */,
 				B6948C67242D45C800A2315C /* Info.plist */,
-				F2182F312464956700B2B19F /* logo.png */,
 			);
 			path = FoodGame;
 			sourceTree = "<group>";
@@ -532,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				050ADBF1243BDAF400FF22DB /* Tutorial.storyboard in Resources */,
-				F2182F322464956700B2B19F /* logo.png in Resources */,
 				B6948C66242D45C800A2315C /* LaunchScreen.storyboard in Resources */,
 				B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */,
 				F23C0345244645D800BC921A /* Game.storyboard in Resources */,
