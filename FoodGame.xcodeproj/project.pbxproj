@@ -87,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024B6BDF2464A0C800D9DAD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
 		0266BA74245B448B00CFFB77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Config.strings; sourceTree = "<group>"; };
 		02777BBB243BD75200521891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personagem.storyboard; sourceTree = "<group>"; };
 		029BABD6245A03F800E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		029BABDF245A05D000E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pt-BR"; path = "pt-BR.lproj/Info.plist"; sourceTree = "<group>"; };
 		029BABE1245A08DF00E02336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Personagem.strings; sourceTree = "<group>"; };
 		029BABE2245A0ABC00E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Personagem.strings"; sourceTree = "<group>"; };
-		029BABE7245A193400E02336 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Config.strings"; sourceTree = "<group>"; };
 		029BABE8245A193600E02336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Config.storyboard; sourceTree = "<group>"; };
 		02E361F02447739A00FC81F4 /* NameAndAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndAge.swift; sourceTree = "<group>"; };
 		02E361F22447744F00FC81F4 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
@@ -674,9 +674,9 @@
 		029BABE5245A192B00E02336 /* Config.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				029BABE7245A193400E02336 /* pt-BR */,
 				029BABE8245A193600E02336 /* Base */,
 				0266BA74245B448B00CFFB77 /* en */,
+				024B6BDF2464A0C800D9DAD7 /* pt-BR */,
 			);
 			name = Config.storyboard;
 			sourceTree = "<group>";
