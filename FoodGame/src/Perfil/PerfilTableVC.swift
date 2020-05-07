@@ -71,6 +71,14 @@ class PerfilTableVC: UITableViewController {
         return customCell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.section == 0){
+            return 95.0
+        }
+        
+        return 52.0
+    }
+    
     func pegarCondicoes(){
         let dicionario = ((UserDefaults.standard.dictionary(forKey: "Condicoes") as? [String: Bool])!)
         
