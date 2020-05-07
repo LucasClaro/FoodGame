@@ -18,8 +18,8 @@ class AlimentoService {
         Alimento(id: 103, nome: "Pão Integral", porcao: 12, tipo: "Carboidrato", foto: "pao integral", restricoes: ["Gluten"]),
         Alimento(id: 104, nome: "Batata", porcao: 75, tipo: "Carboidrato", foto: "Batata", restricoes: [""]),
         Alimento(id: 105, nome: "Macarrão", porcao: 75, tipo: "Carboidrato", foto: "Macarrao", restricoes: ["Diabetes","Gluten"]),
-        Alimento(id: 106, nome: "Bolo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
-        Alimento(id: 107, nome: "Biscoito", porcao: 12, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 106, nome: "Bolo", porcao: 75, tipo: "Carboidrato", foto: "Bolo", restricoes: ["Diabetes","Gluten"]),
+        Alimento(id: 107, nome: "Biscoito", porcao: 12, tipo: "Carboidrato", foto: "Biscoito", restricoes: ["Diabetes","Gluten"]),
         //Alimento(id: 105, nome: "Derivados do Trigo", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: [""]),
     ]
     
@@ -54,9 +54,9 @@ class AlimentoService {
         Alimento(id: 502, nome: "Espinafre", porcao: 10, tipo: "Hortaliça", foto: "Espinafre", restricoes: [""]),
         Alimento(id: 503, nome: "Brócolis", porcao: 25, tipo: "Hortaliça", foto: "Brocolis", restricoes: [""]),
         Alimento(id: 504, nome: "Cenoura", porcao: 15, tipo: "Hortaliça", foto: "Cenoura", restricoes: [""]),
-        Alimento(id: 505, nome: "Chuchu", porcao: 5, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
-        Alimento(id: 506, nome: "Abóbora", porcao: 15, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
-        Alimento(id: 507, nome: "Vagem", porcao: 10, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        //Alimento(id: 505, nome: "Chuchu", porcao: 5, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        //Alimento(id: 506, nome: "Abóbora", porcao: 15, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
+        //Alimento(id: 507, nome: "Vagem", porcao: 10, tipo: "Hortaliça", foto: "Pao", restricoes: [""]),
         Alimento(id: 508, nome: "Berinjela", porcao: 26, tipo: "Hortaliça", foto: "Berinjela", restricoes: [""]),
         Alimento(id: 509, nome: "Beterraba", porcao: 17, tipo: "Hortaliça", foto: "Beterraba", restricoes: [""]),
         Alimento(id: 510, nome: "Couve", porcao:9, tipo: "Hortaliça", foto: "Couve", restricoes: [""]),

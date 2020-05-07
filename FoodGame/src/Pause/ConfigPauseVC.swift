@@ -13,22 +13,22 @@ import AVFoundation
 class ConfigPauseViewController: UITableViewController {
     
   @IBOutlet weak var musicVol2: UISlider!
-  @IBOutlet weak var soundVol2: UISlider!
+  //@IBOutlet weak var soundVol2: UISlider!
     
     var volumeChangedDelegate : VolumeChangedDelegate?
 
     
     let mv = UserDefaults.standard.float(forKey: "musicVol")
-    let sv = UserDefaults.standard.float(forKey: "soundVol")
+    //let sv = UserDefaults.standard.float(forKey: "soundVol")
     //var player = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         musicVol2.addTarget(self, action: #selector(musicVolChange), for: .valueChanged)
-        soundVol2.addTarget(self, action: #selector(soundVolChange), for: .valueChanged)
+        //soundVol2.addTarget(self, action: #selector(soundVolChange), for: .valueChanged)
 
         musicVol2.value = mv
-        soundVol2.value = sv
+        //soundVol2.value = sv
       
         
     }
@@ -43,10 +43,10 @@ class ConfigPauseViewController: UITableViewController {
       let volume = ["musicVolume": musicVol2.value]
       NotificationCenter.default.post(name: NSNotification.Name("musicVolumeChange"), object: nil, userInfo: volume)
     }
-    @objc func soundVolChange()
-    {
-        volumeChangedDelegate?.changeVol(sender: soundVol2, key: "soundVol")
-    }
+//    @objc func soundVolChange()
+//    {
+//        volumeChangedDelegate?.changeVol(sender: soundVol2, key: "soundVol")
+//    }
     
   
     @IBAction func voltarTelaAnteriorz()

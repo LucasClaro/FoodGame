@@ -10,6 +10,10 @@ class InitialMenuViewController: UIViewController {
   
   var player = AVAudioPlayer()
     
+    var queuePlayer = AVQueuePlayer()
+    var playerLooper: AVPlayerLooper?
+
+    
   // MARK: View Lifecycle
   
   override func viewDidLoad() {
@@ -22,6 +26,7 @@ class InitialMenuViewController: UIViewController {
     let mv = UserDefaults.standard.float(forKey: "musicVol")
     //let sv = UserDefaults.standard.float(forKey: "soundVol")
 
+    /*
      player = AVAudioPlayer()
      do {
          let path = Bundle.main.path(forResource: "If_I_Had_a_Chicken", ofType: "mp3")
@@ -32,7 +37,12 @@ class InitialMenuViewController: UIViewController {
      }
      catch {
          print(error)
-     }
+     }*/
+    guard let url = Bundle.main.url(forResource: "If_I_Had_a_Chicken", withExtension: "mp3") else {return}
+    let playerItem = AVPlayerItem(asset: AVAsset(url: url))
+    playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+    queuePlayer.volume = mv
+    queuePlayer.play()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +78,8 @@ class InitialMenuViewController: UIViewController {
   @objc func musicChange(_ notification: Notification){
     let volume:Float = (notification.userInfo?["musicVolume"] ?? 0) as! Float
     
-    player.volume = volume
+    //player.volume = volume
+    queuePlayer.volume = volume
     UserDefaults.standard.set(volume, forKey: "musicVol")
     
   }
@@ -82,7 +93,8 @@ class InitialMenuViewController: UIViewController {
 extension InitialMenuViewController : VolumeChangedDelegate {
  
     func changeVol(sender: UISlider,key : String) {
-        player.volume = sender.value
+        //player.volume = sender.value
+        queuePlayer.volume = sender.value
         UserDefaults.standard.set(sender.value, forKey: key)
     }
     

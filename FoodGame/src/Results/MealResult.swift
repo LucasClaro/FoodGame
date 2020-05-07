@@ -39,11 +39,11 @@ class MealViewController: UIViewController {
     
   var alimentosAceitos : [Alimento] = []
 
-  var dicCondtions: [String: String] =  ["Diabetes": "\nComo você tem diabetes, não pode comer ",
-  "Hipertensao": "\nComo você tem hipertensão, não pode comer ",
-  "Lactose": "\nComo você tem intolerância à lactose, não pode comer ",
-  "Gastrite": "\nComo você tem gastrite, não pode comer ",
-  "Gluten": "\nComo você tem intolerância ao gluten, não pode comer "]
+  var dicCondtions: [String: String] =  ["Diabetes": "\nComo você tem diabetes, não pode consumir ",
+  "Hipertensao": "\nComo você tem hipertensão, não pode consumir ",
+  "Lactose": "\nComo você tem intolerância à lactose, não pode consumir ",
+  "Gastrite": "\nComo você tem gastrite, não pode consumir ",
+  "Gluten": "\nComo você tem intolerância ao gluten, não pode consumir "]
 
     
   var textoCondicoes : [String] = []
@@ -218,7 +218,7 @@ class MealViewController: UIViewController {
         {
             if con[c] ?? false
             {
-                if !dicCondtions[c]!.hasSuffix("comer "){
+                if !dicCondtions[c]!.hasSuffix("consumir "){
                     textoCondicoes.append(dicCondtions[c]!)
                 }
             }
