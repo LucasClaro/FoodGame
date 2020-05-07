@@ -24,7 +24,7 @@ class InitialMenuViewController: UIViewController {
 
      player = AVAudioPlayer()
      do {
-         let path = Bundle.main.path(forResource: "soviet-anthem", ofType: "mp3")
+         let path = Bundle.main.path(forResource: "If_I_Had_a_Chicken", ofType: "mp3")
          try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
          player.prepareToPlay()
          player.volume = mv

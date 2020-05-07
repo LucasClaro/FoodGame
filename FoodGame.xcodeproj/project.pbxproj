@@ -48,6 +48,7 @@
 		B6A694412461E63300BF8DAA /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A694402461E63300BF8DAA /* Perfil.storyboard */; };
 		B6A694462461EA6300BF8DAA /* PerfilTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */; };
 		B6A694482463309300BF8DAA /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A694472463309300BF8DAA /* Bundle.swift */; };
+		B6A6944A2464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */; };
 		B6DD84AA2444EDA900106F25 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DD84A92444EDA900106F25 /* Pause.storyboard */; };
 		B6DD84AD2444F1EF00106F25 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AC2444F1EF00106F25 /* PauseVC.swift */; };
 		B6DD84B02444FBD600106F25 /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD84AF2444FBD600106F25 /* CustonButton.swift */; };
@@ -143,6 +144,7 @@
 		B6A694402461E63300BF8DAA /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
 		B6A694452461EA6300BF8DAA /* PerfilTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableVC.swift; sourceTree = "<group>"; };
 		B6A694472463309300BF8DAA /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = If_I_Had_a_Chicken.mp3; sourceTree = "<group>"; };
 		B6DD84A92444EDA900106F25 /* Pause.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		B6DD84AC2444F1EF00106F25 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		B6DD84AF2444FBD600106F25 /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		050ADBF5243BDD5100FF22DB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B6A694492464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 */,
 				050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */,
 			);
 			path = Sounds;
@@ -547,6 +550,7 @@
 				029BABE3245A192B00E02336 /* Config.storyboard in Resources */,
 				029BABD5245A03F800E02336 /* Localizable.strings in Resources */,
 				B6948C61242D45C600A2315C /* Main.storyboard in Resources */,
+				B6A6944A2464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 in Resources */,
 				05CDA340244A33600092E3AE /* IconsCard.png in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
 				F2740467243B939500855269 /* MealResult.storyboard in Resources */,
