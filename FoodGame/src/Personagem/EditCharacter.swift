@@ -103,6 +103,22 @@ class edit: UIViewController, UITextFieldDelegate{
         
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if(textField == self.fieldAno){
+        let allowedCharacters = "0123456789"
+        let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+        let typedCharacterSet = CharacterSet(charactersIn: string)
+        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
+        }
+        else {
+            let allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXIZ"
+            let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+            let typedCharacterSet = CharacterSet(charactersIn: string)
+            return allowedCharacterSet.isSuperset(of: typedCharacterSet)
+        }
+    }
+    
     
     @IBAction func checkDiabetes(_ sender: UIButton) {
         if bttDiab.isSelected {
@@ -234,6 +250,7 @@ class edit: UIViewController, UITextFieldDelegate{
         }
         
  }
+        
     
     //MARK: - Define calendar
            func defineCalendar(datePicker: UIDatePicker){
