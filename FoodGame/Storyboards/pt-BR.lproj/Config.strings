@@ -30,7 +30,7 @@
 "GIO-c6-apb.text" = "Felipe Ferreira";
 
 /* Class = "UILabel"; text = "Digite seu ano de nascimento:"; ObjectID = "Hgi-tu-chh"; */
-"Hgi-tu-chh.text" = "Digite seu ano de nascimento:";
+"Hgi-tu-chh.text" = "Data de nascimento: ";
 
 /* Class = "UILabel"; text = "Gastrite"; ObjectID = "J2e-kD-HOU"; */
 "J2e-kD-HOU.text" = "Gastrite";

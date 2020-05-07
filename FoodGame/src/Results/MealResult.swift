@@ -99,7 +99,7 @@ class MealViewController: UIViewController {
     buttonDish.layer.cornerRadius = 30
     buttonNextMeal.layer.cornerRadius = 30
     buttonHome.layer.cornerRadius = 30
-    btnProb.layer.cornerRadius = 20
+    btnProb.layer.cornerRadius = 30
   }
   
   // MARK: Internal Logic Methods

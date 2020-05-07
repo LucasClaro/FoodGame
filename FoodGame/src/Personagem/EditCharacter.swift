@@ -28,9 +28,12 @@ class edit: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var labelEditaPersonagem: UILabel!
     var idade: Int = Int()
     let defaults = UserDefaults.standard
-    var vetorCondicoes: [String] = []
-    var vetor: [String] = []
     var dicionario: [String: Bool] = [:]
+    let datePicker = UIDatePicker()
+    let calendar = Calendar(identifier: .gregorian)
+    let currentDate = Date()
+    var components = DateComponents()
+
     
     override func viewDidLoad() {
         // MARK: - Set array to variable
@@ -52,8 +55,7 @@ class edit: UIViewController, UITextFieldDelegate{
         
         // MARK: - Keyboard and delegation
         fieldNome.delegate = self
-        fieldAno.delegate = self
-        
+        createDatePicker(caixaTexto: fieldAno)
         print(dicionario["Diabetes"]!)
         print(dicionario["Hipertensao"]!)
         print(dicionario["Lactose"]!)
@@ -195,66 +197,101 @@ class edit: UIViewController, UITextFieldDelegate{
         defaults.set(dicionario, forKey: "Condicoes")
         defaults.set(fieldNome.text, forKey: "Nome")
         defaults.set(idade, forKey: "Idade")
-        defaults.set(fieldAno.text, forKey: "Ano")
+        defaults.set(fieldAno.text, forKey: "Data")
         print("Salvo")
     }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        if verificaEdicao() != 2 {
-            bttSalva.isHidden = true
-        } else {
+        if verificaEdicao() == true {
             bttSalva.isHidden = false
+        } else {
+            bttSalva.isHidden = true
         }
         return false
     }
     
-    func verificaEdicao() -> Int{
-        let ano = Int(fieldAno.text!)
-        var conta: Int = Int()
-        var aux: Int = 0
-        let data = Date()
-        let calendario = Calendar.current
+    func verificaEdicao() -> Bool{
         
         bttSalva.isEnabled = !fieldNome.text!.trimmingCharacters(in: .whitespaces).isEmpty
         if fieldNome.text == "" || bttSalva.isEnabled == false{
             avisoNome.isHidden = false
             avisoNome.text = NSLocalizedString("avisoNomeVazio", comment: "Aviso caso nome seja inválido")
             //"Digite o seu nome"
+            return false
         }  else if fieldNome.text!.count > 15{
             avisoNome.isHidden = false
             avisoNome.text = NSLocalizedString("avisoNomeGrande", comment: "Aviso caso nome seja grande")
             //"Digite um nome menor"
+            return false
         }
         else {
             avisoNome.isHidden = true
             lblOla.text = NSLocalizedString("OlaNomeUser", comment: "Label para receber o usuário com o nome dele carregado") + " " +
                 fieldNome.text!
-            aux += 1
+            return true
         }
         
-        
-        if ano == nil || fieldAno.text == ""{
-            avisoAno.isHidden = false
-            avisoAno.text = NSLocalizedString("anoEmBranco", comment: "Aviso para caso ano esteja em branco")
-            //"Insira um ano"
-               } else {
-            conta = calendario.component(.year, from: data) - ano!
-            if(conta < 0 || conta > 110){
-                avisoAno.text = NSLocalizedString("anoInvalido", comment: "Aviso para caso ano seja inválido")
-                //"Insira um ano válido"
-            } else {
-                avisoAno.isHidden = true
-                idade = conta
-                aux += 1
-            }
-        }
-        return aux;
-    }
+ }
     
+    //MARK: - Define calendar
+           func defineCalendar(datePicker: UIDatePicker){
+               components.calendar = calendar
+               components.year = -1
+               components.month = 12
+               let maxDate = calendar.date(byAdding: components, to: currentDate)!
 
-    
+               components.year = -50
+               let minDate = calendar.date(byAdding: components, to: currentDate)!
 
-    
+               datePicker.minimumDate = minDate
+               datePicker.maximumDate = maxDate
+           }
+           //MARK: - Date picker
+           func createDatePicker(caixaTexto: UITextField){
+               defineCalendar(datePicker: datePicker)
+               caixaTexto.textAlignment = .center
+                
+               //toolbar
+               let toolbar = UIToolbar()
+               toolbar.sizeToFit()
+               
+               //bar button
+               let doneBtt = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+               toolbar.setItems([doneBtt], animated: true)
+               
+               //assign toolbar
+               caixaTexto.inputAccessoryView = toolbar
+               
+               //assign date picker to text field
+               caixaTexto.inputView = datePicker
+               
+               //create date picker mode
+               datePicker.datePickerMode = .date
+           }
+           
+           // MARK: - Done pressed
+           @objc func donePressed(){
+               //formater
+               let formatter = DateFormatter()
+               formatter.dateStyle = .medium
+               formatter.timeStyle = .none
+               
+               fieldAno.text = formatter.string(from: datePicker.date)
+               bttSalva.isHidden = false
+               self.view.endEditing(true)
+               
+               //Realiza conta
+               let calendario = Calendar.current
+               let ano:Int
+               ano = calendar.dateComponents([.year], from: datePicker.date).year!
+               idade = calendario.component(.year, from: currentDate) - ano
+               defaults.set(ano, forKey: "Ano")
+               
+           }
+
+       
+           
+ 
 }
