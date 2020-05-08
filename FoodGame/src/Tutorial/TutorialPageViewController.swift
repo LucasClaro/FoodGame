@@ -20,20 +20,20 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     let pageHeadingsTop = ["Navegação intuitiva","Alimentos"]
     let pageSubHeadingsTop = ["Aceite ou negue um alimeto simplesmente arrastando o card.","Sempre disponiveis para consulta no prato."]
     
-    let pageImagesTop = ["IconsCard.png","IconsCard.png"]
+    let pageImagesTop = ["IconsCard.png","melancia.png"]
     
     //MID
     let pageHeadingsMid = ["Monte um prato","Porções"]
-    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Leve em conta a quantidade que está sendo colocada no prato."]
+    let pageSubHeadingsMid = ["Escolha os alimentos corretos para montar um prato saudável.","Leve em conta a quantidade que está sendo colocada no prato. Nem muito, nem pouco"]
     
-    let pageImagesMid = ["IconsPrato.png","IconsPrato.png"]
+    let pageImagesMid = ["IconsPrato.png","pao.png"]
     
     
     //BOT
     let pageHeadingsBot = ["Personagem","Condições"]
     let pageSubHeadingsBot = ["Leve em conta as condições do seu personagem.","Suas condições farão diferença na hora do resultado."]
     
-    let pageImagesBot = ["IconsPersonagem.png","IconsPersonagem.png"]
+    let pageImagesBot = ["IconsPersonagem.png","beterra.png"]
     
     weak var tutorialDelegate : TutorialPageViewControllerDelegate?
     
