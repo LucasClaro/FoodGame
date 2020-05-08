@@ -55,7 +55,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Início" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-6V-V6q">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Início" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-6V-V6q">
                                 <rect key="frame" x="28" y="56" width="358" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,6 +107,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Início" width="1024" height="1024"/>
+        <image name="Início" width="1024" height="1024"/>
     </resources>
 </document>

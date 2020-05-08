@@ -60,7 +60,17 @@ class DayViewController: UIViewController {
     
     for meal in dayMealArray{
       
-      let sumOfNutrients = (mealDict["\(meal)"]!.carbohydrates + mealDict["\(meal)"]!.proteins + mealDict["\(meal)"]!.vegetables)/3
+      let carb = abs(Float32(mealDict["\(meal)"]!.carbohydrates) - Calculo.maxValue.gCarbo)
+      let prot = abs(Float32(mealDict["\(meal)"]!.proteins) - Calculo.maxValue.gProt)
+      let veg = abs(Float32(mealDict["\(meal)"]!.vegetables) - Calculo.maxValue.gVeg)
+      
+      let fruta = abs(mealDict["\(meal)"]!.fruta - Calculo.maxValue.uFruta)
+      
+      let bebs = abs(Float32(mealDict["\(meal)"]!.bebida) - Calculo.maxValue.mlBeb)
+      
+      let somaNutrientes = carb+prot+veg + Float(fruta*100) + bebs
+      
+      let sumOfNutrients = calcPerNutrient(somaNutrientes: Float(somaNutrientes))
       
       for star in arrayOfStars {
         if starListIndex < star.tag && star.tag <= starListIndex+5 {
@@ -76,6 +86,32 @@ class DayViewController: UIViewController {
     
     givingTips(coloredStars: quantityOfColoredStars)
     
+  }
+  
+  func calcPerNutrient(somaNutrientes: Float) -> Int {
+    
+    let totalNutrientes = (Calculo.maxValue.gCarbo + Calculo.maxValue.gProt + Calculo.maxValue.gVeg + Float(Calculo.maxValue.uFruta * 100) + Calculo.maxValue.mlBeb)
+    
+      switch somaNutrientes {
+      case ..<(totalNutrientes*0.10):
+        //5%
+        return 5
+      case ..<(totalNutrientes*0.20):
+        //10%
+        return 4
+      case ..<(totalNutrientes*0.35):
+        //25%
+        return 3
+      case ..<(totalNutrientes*0.50):
+        //50%
+        return 2
+      case ..<(totalNutrientes*0.75):
+        //75%
+        return 1
+      default:
+        //0 Estrelas
+        return 0
+      }
   }
   
   // Função que dá a dica em relação à refeição

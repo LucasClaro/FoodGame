@@ -106,42 +106,65 @@ class CardViewController: UIViewController {
         var lista : [Alimento] = []
         let user = UserDefaults.standard.dictionary(forKey: "Condicoes") as! [String: Bool]
         
-        lista = AlimentoService.shared.buscaCarboidratos()
-        lista.shuffle()
-        for index in 0...2{
-            alimentos.append(lista[index])
-        }
-        
-        lista = AlimentoService.shared.buscaLeguminosas()
-        lista.shuffle()
-        for index in 0...1{
-            alimentos.append(lista[index])
-        }
-        
-        lista = AlimentoService.shared.buscaProteinas()
-        lista.shuffle()
-        if !(user["Vegetariano"]!){
-            for index in 0...3{
-                alimentos.append(lista[index])
+        if currentMeal == "Café"{
+            alimentos.append(Alimento(id: 102, nome: "Pão", porcao: 75, tipo: "Carboidrato", foto: "Pao", restricoes: ["Diabetes","Gluten"]))
+            alimentos.append(Alimento(id: 103, nome: "Pão Integral", porcao: 12, tipo: "Carboidrato", foto: "pao integral", restricoes: ["Gluten"]))
+            alimentos.append(Alimento(id: 106, nome: "Bolo", porcao: 75, tipo: "Carboidrato", foto: "Bolo", restricoes: ["Diabetes","Gluten"]))
+            alimentos.append(Alimento(id: 107, nome: "Biscoito", porcao: 12, tipo: "Carboidrato", foto: "Biscoito", restricoes: ["Diabetes","Gluten"]))
+            
+            alimentos.append(Alimento(id: 205, nome: "Grão-de-Bico", porcao: 150, tipo: "Leguminosa", foto: "Grao de bico", restricoes: [""]))
+            
+            alimentos.append(Alimento(id: 305, nome: "Ovo frito", porcao: 75, tipo: "Proteína", foto: "Ovo frito", restricoes: ["Diabetes","Hipertensao"]))
+            if !(user["Vegetariano"]!){
+                alimentos.append(Alimento(id: 307, nome: "Bacon", porcao: 75, tipo: "Proteína", foto: "bacon", restricoes: ["Diabetes","Hipertensao","Gastrite"]))
             }
+            alimentos.append(Alimento(id: 309, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: ["Lactose","Gastrite","Gluten"]))
+            
+            alimentos.append(Alimento(id: 403, nome: "Chia", porcao: 5, tipo: "Proteína Vegetal", foto: "Chia", restricoes: [""]))
+            
+            alimentos.append(Alimento(id: 512, nome: "Tomate", porcao:9, tipo: "Hortaliça", foto: "tomate", restricoes: [""]))
+            
+            
         }
         else{
-            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
-            alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
-            alimentos.append(Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: [""]))
-        }
-        
-        
-        lista = AlimentoService.shared.buscaProteinasVegetais()
-        lista.shuffle()
-        for index in 0...1{
-            alimentos.append(lista[index])
-        }
-        
-        lista = AlimentoService.shared.buscaHortlicas()
-        lista.shuffle()
-        for index in 0...4{
-            alimentos.append(lista[index])
+            lista = AlimentoService.shared.buscaCarboidratos()
+            lista.shuffle()
+            for index in 1..<2{
+                alimentos.append(lista[index])
+            }
+            
+            lista = AlimentoService.shared.buscaLeguminosas()
+            lista.shuffle()
+            for index in 0..<1{
+                alimentos.append(lista[index])
+            }
+            
+            lista = AlimentoService.shared.buscaProteinas()
+            lista.shuffle()
+            if !(user["Vegetariano"]!){
+                for index in 0..<2{
+                    alimentos.append(lista[index])
+                }
+            }
+            else{
+                alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
+                alimentos.append(Alimento(id: 304, nome: "Ovos", porcao: 75, tipo: "Proteína", foto: "Ovos", restricoes: [""]))
+                alimentos.append(Alimento(id: 308, nome: "Queijo", porcao: 75, tipo: "Proteína", foto: "Queijo", restricoes: [""]))
+            }
+            
+            
+            lista = AlimentoService.shared.buscaProteinasVegetais()
+            lista.shuffle()
+            for index in 0..<1{
+                alimentos.append(lista[index])
+            }
+            
+            lista = AlimentoService.shared.buscaHortlicas()
+            lista.shuffle()
+            for index in 1..<3{
+                alimentos.append(lista[index])
+            }
+            
         }
         
         lista = AlimentoService.shared.buscaFrutas()
@@ -152,12 +175,11 @@ class CardViewController: UIViewController {
         
         lista = AlimentoService.shared.buscaBebidas()
         lista.shuffle()
-        for index in 0...2{
+        for index in 1...2{
             alimentos.append(lista[index])
         }
         
         alimentos.shuffle()
-        
         self.adicionarCards()
     }
 }

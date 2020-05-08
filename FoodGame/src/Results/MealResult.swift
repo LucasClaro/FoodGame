@@ -16,10 +16,13 @@ class MealViewController: UIViewController {
   // ViewController objects
   
   @IBOutlet weak var labelCurrentMeal: UILabel!
-  
+    @IBOutlet weak var avaliacao: UILabel!
+    
   @IBOutlet weak var labelQuantityOfCarbohydrates: UILabel!
   @IBOutlet weak var labelQuantityOfProteins: UILabel!
   @IBOutlet weak var labelQuantityOfVegetables: UILabel!
+  @IBOutlet weak var labelQuantityOfFruits: UILabel!
+  @IBOutlet weak var labelQuantityOfLiquid: UILabel!
   
   @IBOutlet weak var labelMealTips: UILabel!
   
@@ -56,9 +59,11 @@ class MealViewController: UIViewController {
     
     adjustLayout()
    
-    labelQuantityOfCarbohydrates.text = "Carboidratos: \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
-    labelQuantityOfProteins.text = "Proteinas: \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
-    labelQuantityOfVegetables.text = "Vegetais: \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
+    labelQuantityOfCarbohydrates.text = "Carboidratos:       \(mealDict["\(currentMeal)"]!.carbohydrates) / \(Calculo.maxValue.gCarbo)"
+    labelQuantityOfProteins.text = "Proteinas:           \(mealDict["\(currentMeal)"]!.proteins) / \(Calculo.maxValue.gProt)"
+    labelQuantityOfVegetables.text = "Vegetais:             \(mealDict["\(currentMeal)"]!.vegetables) / \(Calculo.maxValue.gVeg)"
+    labelQuantityOfFruits.text = "Frutas:                      \(mealDict["\(currentMeal)"]!.fruta) / \(Calculo.maxValue.uFruta)"
+    labelQuantityOfLiquid.text = "Líquidos:            \(mealDict["\(currentMeal)"]!.bebida) / \(Calculo.maxValue.mlBeb)"
     
     coloringStars()
     
@@ -142,28 +147,34 @@ class MealViewController: UIViewController {
     switch sumOfNutrients {
     case 0:
       labelMealTips.text = NSLocalizedString("refeicaoMtRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 0 e 3")
+      avaliacao.text = "Poxa vida..."
       break
     case 1:
       labelMealTips.text = NSLocalizedString("refeicaoRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 3 e 6")
+      avaliacao.text = "Poxa vida..."
       break
     case 2:
       labelMealTips.text = NSLocalizedString("refeicaoOk", comment: "Aviso que aparece quando a pontuação do usuário é entre 6 e 9")
+      avaliacao.text = "Ok!"
       break
     case 3:
       labelMealTips.text = NSLocalizedString("refeicaoBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 9 e 12")
+      avaliacao.text = "Oba!"
       break
     case 4:
       labelMealTips.text = NSLocalizedString("refeicaoMtBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 12 e 15")
+      avaliacao.text = "Uau!"
       break
     default:
       labelMealTips.text = NSLocalizedString("refeicaoPft", comment: "Aviso que aparece caso a refeição tenha sido perfeita")
+      avaliacao.text = "Parabéns..."
       break
     }
   }
   
     func calcPerNutrient() -> Int {
       
-        let totalNutrientes = (Calculo.maxValue.gCarbo + Calculo.maxValue.gProt + Calculo.maxValue.gVeg)
+      let totalNutrientes = (Calculo.maxValue.gCarbo + Calculo.maxValue.gProt + Calculo.maxValue.gVeg + Float(Calculo.maxValue.uFruta * 100) + Calculo.maxValue.mlBeb)
         
         let carb = abs(Float32(mealDict["\(currentMeal)"]!.carbohydrates) - Calculo.maxValue.gCarbo)
         let prot = abs(Float32(mealDict["\(currentMeal)"]!.proteins) - Calculo.maxValue.gProt)
@@ -173,16 +184,16 @@ class MealViewController: UIViewController {
         
         let bebs = abs(Float32(mealDict["\(currentMeal)"]!.bebida) - Calculo.maxValue.mlBeb)
         
-        let somaNutrientes = carb+prot+veg - Float(fruta) - bebs
+        let somaNutrientes = carb+prot+veg + Float(fruta*100) + bebs
       
         switch somaNutrientes {
-        case ..<(totalNutrientes*0.05):
+        case ..<(totalNutrientes*0.10):
           //5%
           return 5
-        case ..<(totalNutrientes*0.10):
+        case ..<(totalNutrientes*0.20):
           //10%
           return 4
-        case ..<(totalNutrientes*0.25):
+        case ..<(totalNutrientes*0.35):
           //25%
           return 3
         case ..<(totalNutrientes*0.50):
