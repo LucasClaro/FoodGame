@@ -108,20 +108,20 @@ class CardViewController: UIViewController {
         
         lista = AlimentoService.shared.buscaCarboidratos()
         lista.shuffle()
-        for index in 0...2{
+        for index in 1..<2{
             alimentos.append(lista[index])
         }
         
         lista = AlimentoService.shared.buscaLeguminosas()
         lista.shuffle()
-        for index in 0...1{
+        for index in 0..<1{
             alimentos.append(lista[index])
         }
         
         lista = AlimentoService.shared.buscaProteinas()
         lista.shuffle()
         if !(user["Vegetariano"]!){
-            for index in 0...3{
+            for index in 0..<2{
                 alimentos.append(lista[index])
             }
         }
@@ -134,13 +134,13 @@ class CardViewController: UIViewController {
         
         lista = AlimentoService.shared.buscaProteinasVegetais()
         lista.shuffle()
-        for index in 0...1{
+        for index in 0..<1{
             alimentos.append(lista[index])
         }
         
         lista = AlimentoService.shared.buscaHortlicas()
         lista.shuffle()
-        for index in 0...4{
+        for index in 1..<3{
             alimentos.append(lista[index])
         }
         
@@ -152,7 +152,7 @@ class CardViewController: UIViewController {
         
         lista = AlimentoService.shared.buscaBebidas()
         lista.shuffle()
-        for index in 0...2{
+        for index in 1...2{
             alimentos.append(lista[index])
         }
         
