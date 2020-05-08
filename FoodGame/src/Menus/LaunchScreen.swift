@@ -3,6 +3,13 @@ import UIKit
 class LaunchScreenViewController: UIViewController {
   
   // MARK: View Lifecycle
+    var timer : Timer!
+    override func viewDidLoad() {
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {
+            timer in
+            self.performSegue(withIdentifier: "VaiMenu", sender: nil)
+        })
+    }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -14,6 +21,7 @@ class LaunchScreenViewController: UIViewController {
     super.viewWillDisappear(animated)
     
     navigationController?.setNavigationBarHidden(false, animated: false)
+    timer.invalidate()
   }
 }
 

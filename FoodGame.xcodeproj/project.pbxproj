@@ -25,6 +25,7 @@
 		050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */; };
 		0525C4B72450B98000B51633 /* Calculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C4B62450B98000B51633 /* Calculo.swift */; };
 		056DC6D124633F6100BDF003 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DC6D024633F6100BDF003 /* ProblemViewController.swift */; };
+		059D05772465B293005584F6 /* Início.png in Resources */ = {isa = PBXBuildFile; fileRef = 059D05762465B293005584F6 /* Início.png */; };
 		05CDA33F244A33600092E3AE /* IconsPersonagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33C244A33600092E3AE /* IconsPersonagem.png */; };
 		05CDA340244A33600092E3AE /* IconsCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33D244A33600092E3AE /* IconsCard.png */; };
 		05CDA341244A33600092E3AE /* IconsPrato.png in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA33E244A33600092E3AE /* IconsPrato.png */; };
@@ -127,6 +128,7 @@
 		050ADBF6243BDD6E00FF22DB /* soviet-anthem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soviet-anthem.mp3"; sourceTree = "<group>"; };
 		0525C4B62450B98000B51633 /* Calculo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculo.swift; sourceTree = "<group>"; };
 		056DC6D024633F6100BDF003 /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
+		059D05762465B293005584F6 /* Início.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Início.png"; sourceTree = "<group>"; };
 		05CDA33C244A33600092E3AE /* IconsPersonagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPersonagem.png; sourceTree = "<group>"; };
 		05CDA33D244A33600092E3AE /* IconsCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsCard.png; sourceTree = "<group>"; };
 		05CDA33E244A33600092E3AE /* IconsPrato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconsPrato.png; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				F2263AE82465159000366E48 /* pao.png */,
 				05CDA33D244A33600092E3AE /* IconsCard.png */,
 				05CDA33C244A33600092E3AE /* IconsPersonagem.png */,
+				059D05762465B293005584F6 /* Início.png */,
 				05CDA33E244A33600092E3AE /* IconsPrato.png */,
 				05D70B65243F9A9A006E6094 /* img.jpg */,
 			);
@@ -576,6 +579,7 @@
 				B6A6944A2464A08200BF8DAA /* If_I_Had_a_Chicken.mp3 in Resources */,
 				F2263AEC2465159000366E48 /* iconPrato.svg in Resources */,
 				F2263AEA2465159000366E48 /* beterra.png in Resources */,
+				059D05772465B293005584F6 /* Início.png in Resources */,
 				F2263AED2465159000366E48 /* melancia.png in Resources */,
 				05CDA340244A33600092E3AE /* IconsCard.png in Resources */,
 				050ADBF7243BDD6E00FF22DB /* soviet-anthem.mp3 in Resources */,
