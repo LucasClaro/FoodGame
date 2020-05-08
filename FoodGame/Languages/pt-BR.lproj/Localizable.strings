@@ -13,9 +13,9 @@
 "OlaNomeUser" = "Olá";
 
 //MARK: Day result
-"entre0e3" = "Seu dia não foi nem um pouco bom, mas você pode melhorar!";
-"entre3e6" = "Seu dia não foi bom, mas você pode melhorar!";
-"entre6e9" = "Seu dia não foi muito bom, mas você está chegando lá";
+"entre0e3" = "Seu dia não foi nem um pouco bom,\n mas você pode melhorar!";
+"entre3e6" = "Seu dia não foi bom,\n mas você pode melhorar!";
+"entre6e9" = "Seu dia não foi muito bom,\n mas você está chegando lá";
 "entre9e12" = "Seu dia foi bom!";
 "entre12e15" = "Seu dia foi muito bom, parabéns!";
 "entre15e15" = "Uau! Seu dia foi perfeito!";
