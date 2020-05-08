@@ -10,7 +10,7 @@
         <!--Meal View Controller-->
         <scene sceneID="vZm-xB-PMk">
             <objects>
-                <viewController id="A8r-2P-kYP" customClass="MealViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A8r-2P-kYP" customClass="MealViewController" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uhw-Ck-UeK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,8 +55,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWW-GN-Thf" userLabel="lblProte">
-                                        <rect key="frame" x="33" y="254" width="46" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Prote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWW-GN-Thf" userLabel="lblProte">
+                                        <rect key="frame" x="33" y="256" width="46" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,8 +111,22 @@
                                             <constraint firstAttribute="width" constant="237" id="Fo1-Ow-Bju"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0O-8l-Uwb" userLabel="lblVeget">
-                                        <rect key="frame" x="33" y="303" width="49.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Veget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0O-8l-Uwb" userLabel="lblVeget">
+                                        <rect key="frame" x="33" y="306" width="49.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fruit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKa-W2-akb" userLabel="lblFruit">
+                                        <rect key="frame" x="33" y="356" width="309" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liquid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-jl-6In" userLabel="lblLiquid">
+                                        <rect key="frame" x="33" y="406" width="309" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -194,6 +208,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="avaliacao" destination="uuh-AN-3Gd" id="dx7-pv-GEm"/>
                         <outlet property="btnProb" destination="LiT-FV-NOr" id="k0a-W6-NQy"/>
                         <outlet property="buttonDish" destination="Vf4-Bh-jTq" id="pOl-RO-QCh"/>
                         <outlet property="buttonHome" destination="3be-KP-RB7" id="Emc-7T-26r"/>
@@ -201,6 +216,8 @@
                         <outlet property="labelCurrentMeal" destination="uuh-AN-3Gd" id="AIQ-5T-CNQ"/>
                         <outlet property="labelMealTips" destination="Yle-CI-Uub" id="6Hj-Ow-P1k"/>
                         <outlet property="labelQuantityOfCarbohydrates" destination="4yY-3w-AcH" id="hDG-v1-Zzm"/>
+                        <outlet property="labelQuantityOfFruits" destination="RKa-W2-akb" id="6gN-TS-QVg"/>
+                        <outlet property="labelQuantityOfLiquid" destination="G5f-jl-6In" id="D2V-CO-7MU"/>
                         <outlet property="labelQuantityOfProteins" destination="eWW-GN-Thf" id="Tw3-dq-glT"/>
                         <outlet property="labelQuantityOfVegetables" destination="b0O-8l-Uwb" id="ARn-wY-Luj"/>
                         <outlet property="lblCondicoes" destination="fd8-6g-WD1" id="Pb2-b9-g6T"/>
@@ -224,7 +241,7 @@
         <!--Problem View Controller-->
         <scene sceneID="4x2-Kp-Ufr">
             <objects>
-                <viewController id="bdL-sV-qUf" customClass="ProblemViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bdL-sV-qUf" customClass="ProblemViewController" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W3z-Na-1Do">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
