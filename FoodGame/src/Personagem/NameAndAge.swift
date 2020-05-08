@@ -59,6 +59,13 @@ class name: UIViewController, UITextFieldDelegate{
             }
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXIZ"
+        let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+        let typedCharacterSet = CharacterSet(charactersIn: string)
+        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
+    }
+    
     func setNome(nome: String){
         self.nome = nome
     }

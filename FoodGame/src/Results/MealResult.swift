@@ -16,7 +16,8 @@ class MealViewController: UIViewController {
   // ViewController objects
   
   @IBOutlet weak var labelCurrentMeal: UILabel!
-  
+    @IBOutlet weak var avaliacao: UILabel!
+    
   @IBOutlet weak var labelQuantityOfCarbohydrates: UILabel!
   @IBOutlet weak var labelQuantityOfProteins: UILabel!
   @IBOutlet weak var labelQuantityOfVegetables: UILabel!
@@ -142,21 +143,27 @@ class MealViewController: UIViewController {
     switch sumOfNutrients {
     case 0:
       labelMealTips.text = NSLocalizedString("refeicaoMtRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 0 e 3")
+      avaliacao.text = "Poxa vida..."
       break
     case 1:
       labelMealTips.text = NSLocalizedString("refeicaoRuim", comment: "Aviso que aparece quando a pontuação do usuário é entre 3 e 6")
+      avaliacao.text = "Poxa vida..."
       break
     case 2:
       labelMealTips.text = NSLocalizedString("refeicaoOk", comment: "Aviso que aparece quando a pontuação do usuário é entre 6 e 9")
+      avaliacao.text = "Ok!"
       break
     case 3:
       labelMealTips.text = NSLocalizedString("refeicaoBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 9 e 12")
+      avaliacao.text = "Oba!"
       break
     case 4:
       labelMealTips.text = NSLocalizedString("refeicaoMtBoa", comment: "Aviso que aparece quando a pontuação do usuário é entre 12 e 15")
+      avaliacao.text = "Uau!"
       break
     default:
       labelMealTips.text = NSLocalizedString("refeicaoPft", comment: "Aviso que aparece caso a refeição tenha sido perfeita")
+      avaliacao.text = "Parabéns..."
       break
     }
   }
