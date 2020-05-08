@@ -78,6 +78,41 @@ class AlimentoService {
         Alimento(id: 704, nome: "Suco de melancia", porcao:150, tipo: "Bebida", foto: "Suco de melancia", restricoes: [""]),
     ]
     
+    func buscaCafe(Veg: Bool) -> [Alimento] {
+        var cafe : [Alimento] = []
+        for a in carbs{
+            if a.id == 102 || a.id == 103 || a.id == 106 || a.id == 107 {
+                cafe.append(a)
+            }
+        }
+        
+        for a in legs {
+            if a.id == 205{
+                cafe.append(a)
+            }
+        }
+        
+        for a in prots {
+            if a.id == 305 || a.id == 307 && !Veg || a.id == 309{
+                cafe.append(a)
+            }
+        }
+        
+        for a in protsV {
+            if a.id == 403{
+                cafe.append(a)
+            }
+        }
+        
+        for a in hort{
+            if a.id == 512{
+                cafe.append(a)
+            }
+        }
+        
+        return cafe;
+    }
+    
     func buscaCarboidratos () -> [Alimento] {
         return self.carbs
     }
@@ -92,6 +127,18 @@ class AlimentoService {
     
     func buscaProteinasVegetais () -> [Alimento] {
         return self.protsV
+    }
+    
+    func buscaProteinasVegan() -> [Alimento] {
+        var proteinasVegan : [Alimento] = []
+        for a in prots{
+            if a.id == 304 || a.id == 305 || a.id == 307 {
+                proteinasVegan.append(a)
+            }
+        }
+        proteinasVegan.append(contentsOf: protsV)
+        
+        return proteinasVegan
     }
     
     func buscaHortlicas () -> [Alimento] {
