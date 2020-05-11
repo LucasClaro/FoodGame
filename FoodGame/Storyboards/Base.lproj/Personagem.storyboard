@@ -10,7 +10,7 @@
         <!--Personagem-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="name" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="name" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,13 +65,13 @@
         <!--Age-->
         <scene sceneID="3LZ-0T-0RR">
             <objects>
-                <viewController id="ikL-ns-CLe" customClass="age" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ikL-ns-CLe" customClass="age" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4Z-uq-5u5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyo-v3-FTy">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Próximo">
@@ -109,6 +109,16 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-7m-pjz">
+                                <rect key="frame" x="349" y="66" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pular"/>
+                                <connections>
+                                    <action selector="pulaIdade:" destination="ikL-ns-CLe" eventType="touchUpInside" id="7m4-Xt-g8S"/>
+                                    <segue destination="9LJ-as-2GP" kind="show" id="hRV-Mh-9r2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eI8-rN-Poe"/>
@@ -128,7 +138,7 @@
         <!--Conditions-->
         <scene sceneID="skl-Gk-kwJ">
             <objects>
-                <viewController id="Xss-a5-b9W" customClass="conditions" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xss-a5-b9W" customClass="conditions" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CwW-5w-ece">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +254,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j83-lh-0ga">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Salvar"/>
@@ -285,13 +295,13 @@
         <!--Sex-->
         <scene sceneID="x6j-ka-5HX">
             <objects>
-                <viewController id="9LJ-as-2GP" customClass="sex" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9LJ-as-2GP" customClass="sex" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxB-m2-HUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diga também o seu  sexo." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98f-3c-0H2">
-                                <rect key="frame" x="23" y="53" width="355" height="112"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diga também o seu sexo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98f-3c-0H2">
+                                <rect key="frame" x="23" y="53" width="236" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -335,12 +345,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-Ib-oh4">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Próximo"/>
                                 <connections>
                                     <segue destination="Xss-a5-b9W" kind="show" id="5tM-jp-zat"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-6c-G0L">
+                                <rect key="frame" x="349" y="66" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pular"/>
+                                <connections>
+                                    <action selector="pularSexo:" destination="9LJ-as-2GP" eventType="touchUpInside" id="cH7-Gh-JYE"/>
+                                    <segue destination="Xss-a5-b9W" kind="show" id="e3g-t6-bfy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -360,6 +380,10 @@
             <point key="canvasLocation" x="2576.811594202899" y="-38.169642857142854"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hRV-Mh-9r2"/>
+        <segue reference="e3g-t6-bfy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkbox" width="96" height="96"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
