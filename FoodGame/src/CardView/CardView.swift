@@ -26,11 +26,14 @@ class CardViewController: UIViewController {
     @IBOutlet weak var buttonDish: UIButton!
   
     @IBOutlet weak var labelCurrentMeal: UILabel!
+    @IBOutlet weak var labelCount: UILabel!
+    
     // Logic variables
   
     var alimentos : [Alimento] = []
     var alimentosAceitos : [Alimento] = []
     var qtdCards : Int = 0
+    var totalCards : Int = 0
     
     var mealDict = ["Café": Meal(),
                      "Almoço": Meal(),
@@ -51,6 +54,8 @@ class CardViewController: UIViewController {
             
         self.buscaAlimentos()
         qtdCards = alimentos.count
+        totalCards = alimentos.count
+        labelCount.text = "1 / " + String(totalCards)
         Calculo.definirValoresMax()
         adjustLayout()
     }
@@ -166,6 +171,7 @@ class CardViewController: UIViewController {
         alimentos.shuffle()
         self.adicionarCards()
     }
+    
 }
 
 extension CardViewController {
@@ -310,11 +316,14 @@ extension CardViewController {
       
       
         qtdCards -= 1
-        if(qtdCards == 0)
+        
+        if (qtdCards == 0)
         {
             calculaAlimentacao()
             performSegue(withIdentifier: "resultado", sender: nil)
         }
+        
+        labelCount.text = String(totalCards - qtdCards + 1) + " / " + String(totalCards)
     }
     
     //Separa os alimentos por tipo e calcula os tipos

@@ -18,7 +18,7 @@
         <!--Card View Controller-->
         <scene sceneID="nZr-aG-I0R">
             <objects>
-                <viewController id="Nyk-6q-tFw" customClass="CardViewController" customModule="FoodGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nyk-6q-tFw" customClass="CardViewController" customModule="Tá_no_Prato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GO8-ba-rWh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,12 +57,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s9-dP-KFu">
-                                <rect key="frame" x="20" y="773" width="374" height="90"/>
+                                <rect key="frame" x="20" y="774" width="374" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="              Meu prato">
+                                <state key="normal" title="Meu prato">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K4r-xs-p9k">
-                                <rect key="frame" x="41" y="784.5" width="102" height="67"/>
+                                <rect key="frame" x="20" y="784.5" width="102" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="black"/>
@@ -81,6 +81,13 @@
                                 <color key="tintColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHW-hj-waA">
+                                <rect key="frame" x="160" y="94" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.74509803921568629" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bC6-P3-RTx"/>
@@ -89,6 +96,7 @@
                         <outlet property="buttonCharacter" destination="LYu-4s-Y2j" id="mLs-29-aQy"/>
                         <outlet property="buttonDish" destination="0s9-dP-KFu" id="8MF-th-Qis"/>
                         <outlet property="buttonPause" destination="2Ti-Bi-tVZ" id="3m0-zj-wUd"/>
+                        <outlet property="labelCount" destination="XHW-hj-waA" id="EsD-lx-WBf"/>
                         <outlet property="labelCurrentMeal" destination="yW3-fM-ar0" id="2s8-Ds-f1R"/>
                         <segue destination="hhW-Hx-lTc" kind="show" identifier="resultado" id="5OZ-TG-3li"/>
                     </connections>
