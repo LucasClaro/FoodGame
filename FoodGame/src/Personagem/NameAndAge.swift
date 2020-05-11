@@ -170,6 +170,10 @@ class age: UIViewController, UITextFieldDelegate{
         return anoN
     }
     
+    @IBAction func pulaIdade(_ sender: UIButton) {
+        defaults.set("0", forKey: "Ano")
+        defaults.set(0, forKey: "Idade")
+    }
     
     
 }
@@ -226,6 +230,9 @@ class sex: UIViewController {
       imgViewPerso.image = UIImage(named: "Menino")
     }
     
+    @IBAction func pularSexo(_ sender: UIButton) {
+        defaults.set("N/A", forKey: "Sexo")
+    }
 }
 
 func visualBotao(sender: UIButton){
