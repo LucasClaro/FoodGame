@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyo-v3-FTy">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Próximo">
@@ -110,9 +110,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-7m-pjz">
-                                <rect key="frame" x="336" y="58" width="42" height="34"/>
+                                <rect key="frame" x="349" y="66" width="45" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Pular"/>
                                 <connections>
                                     <action selector="pulaIdade:" destination="ikL-ns-CLe" eventType="touchUpInside" id="7m4-Xt-g8S"/>
@@ -254,7 +254,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j83-lh-0ga">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Salvar"/>
@@ -300,8 +300,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diga também o seu sexo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98f-3c-0H2">
-                                <rect key="frame" x="23" y="53" width="213" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diga também o seu sexo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98f-3c-0H2">
+                                <rect key="frame" x="23" y="53" width="236" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -345,7 +345,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-Ib-oh4">
-                                <rect key="frame" x="37" y="767" width="341" height="70"/>
+                                <rect key="frame" x="20" y="767" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Próximo"/>
@@ -354,12 +354,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-6c-G0L">
-                                <rect key="frame" x="352" y="53" width="42" height="34"/>
+                                <rect key="frame" x="349" y="66" width="45" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Pular"/>
                                 <connections>
                                     <action selector="pularSexo:" destination="9LJ-as-2GP" eventType="touchUpInside" id="cH7-Gh-JYE"/>
+                                    <segue destination="Xss-a5-b9W" kind="show" id="e3g-t6-bfy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -381,6 +382,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hRV-Mh-9r2"/>
+        <segue reference="e3g-t6-bfy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkbox" width="96" height="96"/>

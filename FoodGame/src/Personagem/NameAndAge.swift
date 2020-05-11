@@ -118,7 +118,7 @@ class age: UIViewController, UITextFieldDelegate{
     //MARK: - Date picker
     func createDatePicker(caixaTexto: UITextField){
         defineCalendar(datePicker: datePicker)
-        caixaTexto.textAlignment = .center
+        caixaTexto.textAlignment = .left
         
         //toolbar
         let toolbar = UIToolbar()
